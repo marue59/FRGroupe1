@@ -1,0 +1,56 @@
+// Arrière plan de couleur gris et flex pour positionner les différentes sections : "coordonnée", "Nous suivre" et "Nous contacter"
+.border {
+    background-color: #494848;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    padding: 25px 0;
+}
+
+// flex en colonnes pour les informations
+.coordonne {
+    display: flex;
+    flex-flow: wrap column;
+}
+
+// taille du logo de l'entreprise
+.logo {
+    height: 75px;
+    width: 200px;
+}
+
+// couleur blanche du texte du footer
+p {
+    color: white;
+}
+
+// couleur blanche pour les grands titres du footer
+h2 {
+    color: white;
+}
+
+// Positionnement du logo de l'entreprise : au centre de l'axe vertical
+.picture {
+    display: flex;
+    align-items: center;
+}
+
+// Flex en space-around pour les logos des réseaux sociaux
+.social {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+// Taille des logos des réseaux sociaux
+.social img {
+    height: 35px;
+    width: 35px;
+}
+
+// Flex en colonne pour le conteneur du h2 "Nous Suivre" et du conteneur des logos des réseaux sociaux
+.nousSuivre {
+    display: flex;
+    flex-flow: column wrap;
+    width: 190px; // Pour mettre un peu d'espace entre les logos, puisque comme ils sont en flex space-around avec le selecteur ".social", ce width permet d'éviter à ce qu'ils soient collés entre eux.
+}

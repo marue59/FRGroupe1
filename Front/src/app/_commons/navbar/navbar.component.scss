@@ -1,0 +1,32 @@
+// Background color pour la barre de navigation
+nav {
+    border: 1px black;
+    background-color: #f9f8fa;
+}
+
+// Décale les boutons de navigation à gauche et la barre de recherche à droite
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+// Ajuste la hauteur et la largeur de la barre de recherche
+input {
+    height: 25px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #8b8691;
+}
+
+// Positionne la barre de recherche à droite puis au centre de l'axe vertical
+.form {
+    display: flex;
+    align-items: center;
+}
+
+// Quand l'utilisateur aura cliqué sur le barre de recherche :
+input:focus {
+    box-shadow: 0 0 5px 1px #939ca7; // Met en valeur le text input de la barre de recherche
+    outline: none; // Désactive l'outine par défaut
+}
