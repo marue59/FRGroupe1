@@ -1,0 +1,79 @@
+{"domaines" : [
+  {
+    "id": 1,
+    "nom": "Intelligence artificielle"
+  },
+  {
+    "id": 2,
+    "nom": "Ressources humaines"
+  },
+  {
+    "id": 3,
+    "nom": "Management"
+  },
+  {
+    "id": 4,
+    "nom": "Informatique"
+  }
+],
+  "formations" : [
+    {
+      "id": 1,
+      "nom": "Developpeur Web Java",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "nom": "Developpeur Web php",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "nom": "Developpeur Web JS",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "nom": "Formation AJAX",
+      "description": ""
+    }
+  ],
+  "themes" : [
+    {
+      "id": 1,
+      "nom": "Réseaux"
+    },
+    {
+      "id": 2,
+      "nom": "Systeme d'exploitation"
+    },
+    {
+      "id": 3,
+      "nom": "Gestion de proojet"
+    },
+    {
+      "id": 4,
+      "nom": "Dev"
+    }
+  ],
+  "sousThemes" : [
+    {
+      "id": 1,
+      "nom": "JAva"
+    },
+    {
+      "id": 2,
+      "nom": "Js"
+    },
+    {
+      "id": 3,
+      "nom": "PHP"
+    },
+    {
+      "id": 4,
+      "nom": "TypeScript"
+    }
+  ]
+
+
+}

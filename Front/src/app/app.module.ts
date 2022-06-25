@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './_commons/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './_commons/footer/footer.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
