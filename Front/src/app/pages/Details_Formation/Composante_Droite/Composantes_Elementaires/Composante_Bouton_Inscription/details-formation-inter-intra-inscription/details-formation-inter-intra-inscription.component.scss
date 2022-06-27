@@ -1,0 +1,23 @@
+// Border none et outline none pour enlever les valeurs par défauts du bouton et pouvoir y apporter notre propre style
+button {
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    background: #25a197;
+    height: 30px;
+    cursor: pointer;
+}
+
+//  Le texte en gras pour les 3 boutons
+.text {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+button:hover {
+    background: #1f857c;
+}

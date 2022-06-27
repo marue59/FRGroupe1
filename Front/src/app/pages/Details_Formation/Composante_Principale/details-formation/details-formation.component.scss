@@ -1,0 +1,19 @@
+// Le conteneur des deux divs : (infos) & (InterIntra) que j'ai placé en ligne côte à côte avec le display flex
+.container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+// Le titre de la formation placé en haut de page au centre
+.titreFormation {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+// La couleur du texte pour le titre
+.titreFormation h1 {
+    color: #25a197;
+}
