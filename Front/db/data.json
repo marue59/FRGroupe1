@@ -35,9 +35,20 @@
     },
     {
       "id": 4,
-      "nom": "Formation AJAX",
+      "nom": "Formation AJAX2",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "nom": "Developpeur Web php2",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "nom": "Developpeur Web JS2",
       "description": ""
     }
+
   ],
   "themes" : [
     {

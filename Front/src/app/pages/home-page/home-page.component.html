@@ -1,20 +1,16 @@
-<div class="container">
-  <div class="futurSideNav"></div>
-  <div class="home-page d-flex">
-    <app-formation *ngFor="let formation; in: formations">
-      <div class="card mb-3">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
-        </div>
-      </div>
-    </app-formation>
+<div class="">
+  <div class="container">
+    <div class="futurSideNav"></div>
+    <h1 class="d-flex justify-content-center m-3">
+      Nos formations les plus populaires
+    </h1>
+    <div class="d-flex flex-wrap">
+      <app-formation
+        *ngFor="let formation of formations"
+        [formation]="formation"
+        class="home-formation m-3"
+      >
+      </app-formation>
+    </div>
   </div>
 </div>

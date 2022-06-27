@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import Formation from 'src/app/models/formation.model';
 
 @Component({
@@ -7,7 +7,9 @@ import Formation from 'src/app/models/formation.model';
   styleUrls: ['./formation.component.scss'],
 })
 export class FormationComponent implements OnInit {
-  formation: Formation[] = [];
+  @Input()
+  formation!: any;
+  formations: Formation[] = [];
   constructor() {}
 
   ngOnInit(): void {}
