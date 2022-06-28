@@ -1,0 +1,9 @@
+<!-- Composante bouton pour l'onglet avec les 4 options : Présentation, Objectifs, Programme, Contact -->
+<!-- Events (click) , (mouseover) et (mouseleave) pour récupérer l'info qu'a émis l'utiisateur, à savoir s'il a cliqué, passer la souris dessus, ou enlever la souris dessus -->
+<!-- Ngstyle pour appliquer le style voulu selon si le bouton est en focus, hover, ou leave. -->
+
+<button class="bouton" [ngStyle]="isHover? buttonHover() : buttonFocus()" (click)="clicked()" (mouseover)="hover()" (mouseleave)="leave()">
+  <span class="text" [ngStyle]="textFocus()">
+    {{text}}
+  </span>
+</button>

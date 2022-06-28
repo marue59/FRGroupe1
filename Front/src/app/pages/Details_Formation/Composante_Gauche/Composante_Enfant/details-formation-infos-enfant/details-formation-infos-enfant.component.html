@@ -1,0 +1,31 @@
+<!-- Composante enfant contenant les deux composantes : composante bouton (onglet : Présentation, Objectifs, Programme, Contact) et composante infos (le texte avec des informations sur la formation)   -->
+
+<div class="container">
+
+    <!-- Composante bouton -->
+    <div class="boutons">
+        <div *ngFor="let bouton of boutons; let index = index">
+            <!-- les events (onClick) , (onHover) , (onLeave) pour appliqué les méthodes correspondantes selon si l'utilisateur a cliqué, passer la souris, ou enlever la souris du bouton  -->
+            <app-details-formation-infos-bouton [text]="bouton.nom" [isFocus]="bouton.isFocus" [isHover]="bouton.isHover" (onClick)="changeFocus(index)" (onHover)="changeHover(index)" (onLeave)="changeLeave()"></app-details-formation-infos-bouton>
+        </div>
+
+    </div>
+
+    <!-- Composante infos -->
+    <div class="infos">
+
+        <div *ngFor="let bouton of boutons">
+
+            <!-- Condition if pour afficher le texte selon l'onglet où on se trouve -->
+            <div *ngIf="bouton.isFocus">
+
+                <app-details-formation-infos-card [text]="bouton.text"></app-details-formation-infos-card>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
