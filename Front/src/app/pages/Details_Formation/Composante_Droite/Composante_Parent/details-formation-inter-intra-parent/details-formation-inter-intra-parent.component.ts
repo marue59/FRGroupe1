@@ -19,19 +19,31 @@ export class DetailsFormationInterIntraParentComponent implements OnInit {
     nom : 'Inter',
     isFocus : true,
     text : 'Texte 1',
-    submit : 'Inscription'
+    submit : 'Inscription',
+    heure : 'Texte 1',
+    lieu : 'Texte 1',
+    prix: 'Texte 1',
+    date: 'Texte 1'
   },
   {
     nom : 'Intra',
     isFocus : false,
     text : 'Texte 2',
-    submit : 'Inscription'
+    submit : 'Inscription',
+    heure : 'Texte 2',
+    lieu : 'Texte 2',
+    prix: 'Texte 2',
+    date: 'Texte 2'
   },
   {
     nom : 'Personnalisée',
     isFocus : false,
     text : 'Texte 3',
-    submit : 'Demander un devis'
+    submit : 'Demander un devis',
+    heure : 'Texte 3',
+    lieu : 'Texte 3',
+    prix: 'Texte 3',
+    date: 'Texte 3'
   }
 ]
 
