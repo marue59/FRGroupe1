@@ -1,4 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/*Les boutons : utilisation de bootstrap */
+/*ajout script dans page html :*/ "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+/*ajout link dans page html :*/ "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+
+/*ajouter à votre classe "button" les classes suivantes :*/
+/* bouton valider */ "btn btn-success h-25 w-25 btn-lg"
+/* bouton annuler */ "btn btn-danger h-25 w-25 btn-lg"
+
+/* type de text */
+
+.textGeorgia{
+font-family : Georgia;
+
+}
+
+
