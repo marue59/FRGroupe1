@@ -1,5 +1,5 @@
-<!-- Composante enfant -->
-<!-- contenant : la bordure grise, les boutons d'onglets, le texte en dessous des boutons, et un bouton redirigeant vers la page du formulaire d'inscription -->
+<!-- Composante enfant : bordure grise -->
+<!-- contenant : les boutons d'onglets, le texte en dessous des boutons, et un bouton redirigeant vers la page du formulaire d'inscription -->
 
 <!-- Bordure de la composante -->
 <div class="bordure">
@@ -25,7 +25,21 @@
             <!-- Condition if pour afficher le texte selon si c'est l'option Inter, intra ou personnalisée qui est choisie -->
             <div *ngIf="bouton.isFocus">
 
-                {{bouton.text}}
+                <!-- Icons + texte dans la bordure grise en dessous des boutons d'onglet -->
+                <p class="hour">
+                    <ion-icon name="time-outline"></ion-icon> <span> {{bouton.text}}</span></p>
+
+                <p>
+                    <ion-icon name="location-outline"></ion-icon> <span>{{bouton.text}}</span>
+                </p>
+
+                <p>
+                    <ion-icon name="cash-outline"></ion-icon><span>{{bouton.text}}</span>
+                </p>
+
+                <p>
+                    <ion-icon name="calendar-outline"></ion-icon><span>{{bouton.text}}</span>
+                </p>
 
             </div>
 

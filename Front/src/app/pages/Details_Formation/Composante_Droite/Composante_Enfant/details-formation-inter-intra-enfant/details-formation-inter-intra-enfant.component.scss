@@ -18,11 +18,26 @@
 }
 
 .text {
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .inscription {
     padding-top: 20px;
     display: flex;
     justify-content: center;
+}
+
+// Taille de l'icon
+ion-icon {
+    font-size: 25px;
+}
+
+// Espace entre le texte et l'icon
+span {
+    padding: 4px 10px;
+    height: 100%;
+}
+
+p {
+    display: flex;
 }
