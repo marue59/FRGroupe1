@@ -1,0 +1,22 @@
+// Border none et outline none pour enlever les valeurs par défauts du bouton et pouvoir y ajouter notre propre style
+button {
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+    padding: 15px;
+}
+
+// Le texte en gras des nom des boutons
+.text {
+    color: rgb(0, 0, 0);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    // font-weight: bold;
+}

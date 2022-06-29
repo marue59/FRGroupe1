@@ -1,0 +1,16 @@
+// Largeur de la bordure réglé en 1000px
+// Flex flow en colonne pour coller les boutons d'onglets avec la bordure qui contient du texte sur les infos de la formation
+.container {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    width: 1000px;
+}
+
+.texte {
+    padding: 20px;
+}
+
+.boutons {
+    display: flex;
+}
