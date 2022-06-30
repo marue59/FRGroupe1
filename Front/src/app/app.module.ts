@@ -20,6 +20,7 @@ import { DetailsFormationInterIntraParentComponent } from './pages/Details_Forma
 import { DetailsFormationInterIntraEnfantComponent } from './pages/Details_Formation/Composante_Droite/Composante_Enfant/details-formation-inter-intra-enfant/details-formation-inter-intra-enfant.component';
 import { DetailsFormationInterIntraInscriptionComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_Inscription/details-formation-inter-intra-inscription/details-formation-inter-intra-inscription.component';
 import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_InterIntra/details-formation-inter-intra-bouton-options/details-formation-inter-intra-bouton-options.component';
+import { InterfaceUtilisateurCardInfosComponent } from './pages/InterfaceUtilisateur/ComposanteInfos/interface-utilisateur-card-infos/interface-utilisateur-card-infos.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Detail
     DetailsFormationInterIntraParentComponent,
     DetailsFormationInterIntraEnfantComponent,
     DetailsFormationInterIntraInscriptionComponent,
-    DetailsFormationInterIntraBoutonOptionsComponent
+    DetailsFormationInterIntraBoutonOptionsComponent,
+    InterfaceUtilisateurCardInfosComponent
   ],
   imports: [
     BrowserModule,
