@@ -24,6 +24,11 @@ import { DetailsFormationInterIntraEnfantComponent } from './pages/Details_Forma
 import { DetailsFormationInterIntraInscriptionComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_Inscription/details-formation-inter-intra-inscription/details-formation-inter-intra-inscription.component';
 import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_InterIntra/details-formation-inter-intra-bouton-options/details-formation-inter-intra-bouton-options.component';
 import { ThemeComponent } from './pages/theme/theme.component';
+import { ThemeListComponent } from './pages/theme/theme-list/theme-list.component';
+import { ThemeCardComponent } from './pages/theme/theme-card/theme-card.component';
+import { SousThemeComponent } from './pages/sous-theme/sous-theme.component';
+import { SousThemeCardComponent } from './pages/sous-theme/sous-theme-card/sous-theme-card.component';
+import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-theme-list.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +49,11 @@ import { ThemeComponent } from './pages/theme/theme.component';
     DetailsFormationInterIntraInscriptionComponent,
     DetailsFormationInterIntraBoutonOptionsComponent,
     ThemeComponent,
+    ThemeListComponent,
+    ThemeCardComponent,
+    SousThemeComponent,
+    SousThemeCardComponent,
+    SousThemeListComponent,
   ],
   imports: [
     BrowserModule,
