@@ -10,7 +10,10 @@ import { NavbarComponent } from './_commons/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './_commons/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { FormationComponent } from './pages/formations/formation.component';
+import { FormationComponent } from './pages/formation/formation.component';
+import { FormationListComponent } from './pages/formation/formation-list/formation-list.component';
+import { FormationCardComponent } from './pages/formation/formation-card/formation-card.component';
+
 import { DetailsFormationComponent } from './pages/Details_Formation/Composante_Principale/details-formation/details-formation.component';
 import { DetailsFormationInfosParentComponent } from './pages/Details_Formation/Composante_Gauche/Composante_Parent/details-formation-infos-parent/details-formation-infos-parent.component';
 import { DetailsFormationInfosEnfantComponent } from './pages/Details_Formation/Composante_Gauche/Composante_Enfant/details-formation-infos-enfant/details-formation-infos-enfant.component';
@@ -20,6 +23,12 @@ import { DetailsFormationInterIntraParentComponent } from './pages/Details_Forma
 import { DetailsFormationInterIntraEnfantComponent } from './pages/Details_Formation/Composante_Droite/Composante_Enfant/details-formation-inter-intra-enfant/details-formation-inter-intra-enfant.component';
 import { DetailsFormationInterIntraInscriptionComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_Inscription/details-formation-inter-intra-inscription/details-formation-inter-intra-inscription.component';
 import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_InterIntra/details-formation-inter-intra-bouton-options/details-formation-inter-intra-bouton-options.component';
+import { ThemeComponent } from './pages/theme/theme.component';
+import { ThemeListComponent } from './pages/theme/theme-list/theme-list.component';
+import { ThemeCardComponent } from './pages/theme/theme-card/theme-card.component';
+import { SousThemeComponent } from './pages/sous-theme/sous-theme.component';
+import { SousThemeCardComponent } from './pages/sous-theme/sous-theme-card/sous-theme-card.component';
+import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-theme-list.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +37,8 @@ import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Detail
     FooterComponent,
     HomePageComponent,
     FormationComponent,
+    FormationListComponent,
+    FormationCardComponent,
     DetailsFormationComponent,
     DetailsFormationInfosParentComponent,
     DetailsFormationInfosEnfantComponent,
@@ -36,7 +47,13 @@ import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Detail
     DetailsFormationInterIntraParentComponent,
     DetailsFormationInterIntraEnfantComponent,
     DetailsFormationInterIntraInscriptionComponent,
-    DetailsFormationInterIntraBoutonOptionsComponent
+    DetailsFormationInterIntraBoutonOptionsComponent,
+    ThemeComponent,
+    ThemeListComponent,
+    ThemeCardComponent,
+    SousThemeComponent,
+    SousThemeCardComponent,
+    SousThemeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +64,6 @@ import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Detail
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
