@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RouterModule, Routes } from '@angular/router';
-import { FormationComponent } from './pages/formations/formation.component';
+import { FormationComponent } from './pages/formation/formation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
