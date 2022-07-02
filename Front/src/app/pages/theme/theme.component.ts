@@ -18,7 +18,7 @@ export class ThemeComponent implements OnInit {
 
   // Recuperer la liste de tout les themes a travers l'observable
   ngOnInit(): void {
-    this.themeService.getThemes().subscribe((themes) => {
+    this.themeService.getThemes().subscribe((Theme) => {
       this.themes = this.themes;
     });
   }
