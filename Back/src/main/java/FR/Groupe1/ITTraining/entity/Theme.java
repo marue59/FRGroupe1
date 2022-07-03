@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "theme")
-public class ThemeDo {
+public class Theme {
 
     @Id
     @Column(name = "idTheme")
@@ -14,11 +14,11 @@ public class ThemeDo {
     @Column(name = "nom")
     private String nom;
 
-    public ThemeDo() {
+    public Theme() {
         super();
     }
 
-    public ThemeDo(Long id, String nom) {
+    public Theme(Long id, String nom) {
         this.id = id;
         this.nom = nom;
     }

@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "evaluationSession")
-public class EvaluationSession {
+public class Evaluation {
 
     @Id
     @Column(name = "idEvaluation")
@@ -35,14 +35,14 @@ public class EvaluationSession {
     @Column(name = "moyenne")
     private Integer moyenne;
 
-    public EvaluationSession() {
+    public Evaluation() {
         super();
     }
 
-    public EvaluationSession(Long id, Integer qualiteAccueil, Integer qualiteEnvironnement, Integer qualiteStage,
-                             Date date, Integer pedagogieFormateur, Integer maitriseDomaineFormateur, Integer disponibiliteFormateur,
-                             Integer reponseQuestionFormateur, Integer satisfactionUtilisateur,
-                             Integer autreProjetFormation, Integer moyenne) {
+    public Evaluation(Long id, Integer qualiteAccueil, Integer qualiteEnvironnement, Integer qualiteStage,
+                      Date date, Integer pedagogieFormateur, Integer maitriseDomaineFormateur, Integer disponibiliteFormateur,
+                      Integer reponseQuestionFormateur, Integer satisfactionUtilisateur,
+                      Integer autreProjetFormation, Integer moyenne) {
         this.id = id;
         this.qualiteAccueil = qualiteAccueil;
         this.qualiteEnvironnement = qualiteEnvironnement;

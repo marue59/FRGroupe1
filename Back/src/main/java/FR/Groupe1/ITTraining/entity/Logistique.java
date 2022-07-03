@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "logistique")
-public class LogistiqueDo {
+public class Logistique {
 
     @Id
     @Column(name = "idLogistique", nullable = false)
@@ -42,11 +42,11 @@ public class LogistiqueDo {
     public boolean ticketRepasImprime;
 
     // Construct
-    public LogistiqueDo() {
+    public Logistique() {
         super();
     }
 
-    public LogistiqueDo(Long id, boolean salleReserve, boolean salleInstallee, boolean supportImprime,
+    public Logistique(Long id, boolean salleReserve, boolean salleInstallee, boolean supportImprime,
                       boolean machineInstallee, boolean formateurContacte, boolean formulaireGenere,
                       boolean convocationStagiaireEnvoyee, boolean planningAJour, boolean listeImprimee,
                       boolean ticketRepasImprime) {

@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "entreprise")
-public class EntrepriseDo {
+public class Entreprise {
 
     @Id
     @Column(name = "id_entreprise")
@@ -30,11 +30,11 @@ public class EntrepriseDo {
     private String email;
 
   // Construct
-    public EntrepriseDo() {
+    public Entreprise() {
     }
 
 
-    public EntrepriseDo(String nom, String adresse, String codePostal, String telephone, String ville, String email) {
+    public Entreprise(String nom, String adresse, String codePostal, String telephone, String ville, String email) {
         this.nom = nom;
         this.adresse = adresse;
         this.codePostal = codePostal;
@@ -43,7 +43,7 @@ public class EntrepriseDo {
         this.email = email;
     }
 
-    public EntrepriseDo(Long id, String nom, String adresse, String codePostal, String telephone, String ville, String email) {
+    public Entreprise(Long id, String nom, String adresse, String codePostal, String telephone, String ville, String email) {
         this.id = id;
         this.nom = nom;
         this.adresse = adresse;

@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "domaine")
-public class DomaineDo {
+public class Domaine {
 
     @Id
     @Column(name = "idDomaine", nullable = false)
@@ -15,11 +15,11 @@ public class DomaineDo {
     private String nom;
 
      // Construct
-    public DomaineDo(){
+    public Domaine(){
         super();
     }
 
-    public DomaineDo(Long id, String nom) {
+    public Domaine(Long id, String nom) {
         this.id = id;
         this.nom = nom;
     }

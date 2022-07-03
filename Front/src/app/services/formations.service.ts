@@ -14,11 +14,11 @@ export class FormationsService {
   constructor(private httpClient: HttpClient) { }
 
   getFormations(): Observable<Formations[]>{
-    return this.httpClient.get<Formations[]>('${this.apiUrl}/formations');
+    return this.httpClient.get<Formations[]>(`${this.apiUrl}/formations`);
   }
 
   getFormation(id: number): Observable<Formations>{
-    return this.httpClient.get<Formations>('${apiUrl}/formations/${id}');
+    return this.httpClient.get<Formations>(`${this.apiUrl}/formations/${id}`);
   }
 
 

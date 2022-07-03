@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "test")
-public class TestDo {
+public class Test {
 
     @Id
     @Column(name = "idTest", nullable = false)
@@ -19,11 +19,11 @@ public class TestDo {
 
   // Construct
 
-    public  TestDo() {
+    public Test() {
         super();
     }
 
-    public TestDo(Long id, String question, String reponse) {
+    public Test(Long id, String question, String reponse) {
         this.id = id;
         this.question = question;
         this.reponse = reponse;

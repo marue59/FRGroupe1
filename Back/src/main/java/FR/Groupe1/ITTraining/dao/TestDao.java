@@ -1,7 +1,7 @@
 package FR.Groupe1.ITTraining.dao;
 
-import FR.Groupe1.ITTraining.entity.TestDo;
+import FR.Groupe1.ITTraining.entity.Test;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ITest extends JpaRepository<TestDo,Long> {
+public interface TestDao extends JpaRepository<Test,Long> {
 }
