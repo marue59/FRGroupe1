@@ -1,4 +1,4 @@
-<!-- Composante pour la bordure blanche qui contiendra les infos (détails) de la formation -->
+<!-- Composante qui contiendra les informations personnelles de l'utilisateur (comme le nom/prenom/email/...etc) -->
 
 <div class="globalContainer">
 
@@ -6,10 +6,13 @@
     <div class="infos">
 
         <div class="rightSection">
+
+            <!-- Le petit rectangle en haut à droite qui donne un peu de style à la carte -->
             <div class="petitRectangle">
 
             </div>
 
+            <!-- Donner la possibilité à l'utilisateur de changer son email ou son numéro de téléphone -->
             <div class="infosChange">
 
                 <a href="">
@@ -23,12 +26,12 @@
 
         </div>
 
-        <!-- Le texte des infos sur la formation -->
+        <!-- Les informations personnelles de l'utilisateur -->
         <div class="texte">
-            <p> <span>Prenom:</span> Amine</p>
-            <p> <span>Nom:</span> LAAROUSSI</p>
-            <p> <span>Email:</span> laaroussi.amine@yandex.com</p>
-            <p> <span>Numéro de téléphone:</span> 0758516949</p>
+            <p> <span>Prenom:</span> {{utilisateur.prenom}}</p>
+            <p> <span>Nom:</span> {{utilisateur.nom}}</p>
+            <p> <span>Email:</span> {{utilisateur.email}}</p>
+            <p> <span>Numéro de téléphone:</span> {{utilisateur.tel}}</p>
 
         </div>
     </div>

@@ -8,10 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class InterfaceUtilisateurCardInfosComponent implements OnInit {
 
   /**
-   * Le texte des infos sur la formation qu'on récupérera de la composante parent à celle-ci
+   * Les informations personnelles de l'utilisateur qui seront récupérés de la bdd
+   * contiendra : le nom, le prénom, l'email et le numéro de téléphone
    */
    @Input()
-   infos!: any;
+   utilisateur!: any;
 
   constructor() { }
 
