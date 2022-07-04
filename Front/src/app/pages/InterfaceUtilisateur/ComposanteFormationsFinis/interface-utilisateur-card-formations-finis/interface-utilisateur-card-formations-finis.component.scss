@@ -1,9 +1,7 @@
 .conteneurGlobal {
     display: flex;
-    flex-direction: column;
     // margin-top: 100px;
     // margin-left: 100px;
-    width: 1000px;
 }
 
 .conteneurCard {
@@ -46,6 +44,7 @@ span {
 
 .dateFormation {
     width: 300px;
+    margin-bottom: 28px;
 }
 
 .description {
@@ -59,4 +58,10 @@ span {
 
 #description {
     color: #1c7a73;
+}
+
+.certificat {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
 }

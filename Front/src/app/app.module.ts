@@ -22,6 +22,8 @@ import { DetailsFormationInterIntraInscriptionComponent } from './pages/Details_
 import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_InterIntra/details-formation-inter-intra-bouton-options/details-formation-inter-intra-bouton-options.component';
 import { InterfaceUtilisateurCardInfosComponent } from './pages/InterfaceUtilisateur/ComposanteInfos/interface-utilisateur-card-infos/interface-utilisateur-card-infos.component';
 import { InterfaceUtilisateurCardFormationEnCoursComponent } from './pages/InterfaceUtilisateur/ComposanteFormationEnCours/interface-utilisateur-card-formation-en-cours/interface-utilisateur-card-formation-en-cours.component';
+import { InterfaceUtilisateurCardFormationsFinisComponent } from './pages/InterfaceUtilisateur/ComposanteFormationsFinis/interface-utilisateur-card-formations-finis/interface-utilisateur-card-formations-finis.component';
+import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/ComposantePrincipale/interface-utilisateur/interface-utilisateur.component';
 
 
 
@@ -42,7 +44,9 @@ import { InterfaceUtilisateurCardFormationEnCoursComponent } from './pages/Inter
     DetailsFormationInterIntraInscriptionComponent,
     DetailsFormationInterIntraBoutonOptionsComponent,
     InterfaceUtilisateurCardInfosComponent,
-    InterfaceUtilisateurCardFormationEnCoursComponent
+    InterfaceUtilisateurCardFormationEnCoursComponent,
+    InterfaceUtilisateurCardFormationsFinisComponent,
+    InterfaceUtilisateurComponent
   ],
   imports: [
     BrowserModule,
