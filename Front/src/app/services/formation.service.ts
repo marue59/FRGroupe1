@@ -7,13 +7,13 @@ import Formation from '../models/formation.model';
   providedIn: 'root',
 })
 export class FormationService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:8080';
 
   constructor(private httpClient: HttpClient) {}
 
   // CRUD
   getFormations(): Observable<Formation[]> {
-    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations`);
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/home`);
     // ou en plus simple
     // return this.httpClient.get<Film>(this.apiUrl + '/formation');
   }
