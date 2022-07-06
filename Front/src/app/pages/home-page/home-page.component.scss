@@ -1,17 +1,10 @@
 @import "../Front/src/styles.scss";
-.body {
-  font-family : Georgia, $fourth-color;
-  font-size : 1rem;
+
+.cardHome{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 25%;
+  height: auto;
 }
 
-// H1
-.primary-title{
-font-family: $secondary-color, sans-serif;
-padding:20px;
-font-size : 1.3rem;
-font-stretch: expanded;
-font-weight: 900;
-text-align : center;
-margin : auto;
-margin-top: 20px;
-}

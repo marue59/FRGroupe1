@@ -1,1 +1,5 @@
-<app-sousTheme-list [sousTheme]="sousThemes">toto</app-sousTheme-list>
+<app-sousTheme-list
+  *ngFor="let sousTheme of sousThemes"
+  [sousTheme]="sousThemes"
+  >{{ sousTheme.nom }}</app-sousTheme-list
+>

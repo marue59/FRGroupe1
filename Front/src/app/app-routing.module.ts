@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'formations', component: FormationComponent },
   { path: 'themes', component: ThemeComponent },
   { path: 'sous-themes', component: SousThemeComponent },
+  { path: 'sous-themes/:id', component: SousThemeComponent },
 ];
 
 @NgModule({

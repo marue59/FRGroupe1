@@ -1,10 +1,10 @@
 @import "../Front/src/styles.scss";
 footer{
   line-height: 1.2rem;
+  background-color: $third-color
 }
 // Arrière plan de couleur gris et flex pour positionner les différentes sections : "coordonnée", "Nous suivre" et "Nous contacter"
-.border {
-    background-color: $third-color;
+.bottom {
     display: flex;
     font-size: 0.6rem;
     font-weight: 500;

@@ -8,8 +8,27 @@
 
 
 // Color :
-$primary-color: #219BAB;
+$primary-color: #25a197;
 $secondary-color: #A3BFA8;
-$third-color : #494848;
+$third-color : #6d6d6d;
 $fourth-color : #0a0a0a;
 
+// card
+body{
+  font-family : Georgia, serif;
+}
+p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+// H1
+.primary-title{
+  color: $fourth-color;
+  padding:20px;
+  font-size : 2rem;
+  font-stretch: expanded;
+  font-weight: 900;
+  text-align : center;
+  margin : auto;
+  margin-top: 20px;
+  }

@@ -29,6 +29,7 @@ import { ThemeCardComponent } from './pages/theme/theme-card/theme-card.componen
 import { SousThemeComponent } from './pages/sous-theme/sous-theme.component';
 import { SousThemeCardComponent } from './pages/sous-theme/sous-theme-card/sous-theme-card.component';
 import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-theme-list.component';
+import { SideBarComponent } from './_commons/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-
     SousThemeComponent,
     SousThemeCardComponent,
     SousThemeListComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
