@@ -1,19 +1,24 @@
+@import "../Front/src/styles.scss";
 // Background color pour la barre de navigation
 nav {
     border: 1px black;
-    background-color: #f9f8fa;
+    background-color: $secondary-color;
+    width: auto;
+    height: 120px;
+
 }
 
-// Décale les boutons de navigation à gauche et la barre de recherche à droite
-.container {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 100px;
-}
+.nav-link {
+  color : white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 30px;
+  margin-left: 30px;
 
+}
 // Ajuste la hauteur et la largeur de la barre de recherche
 input {
-    height: 25px;
+    height: 35px;
     width: 300px;
     border-radius: 5px;
     border: 1px solid #8b8691;
