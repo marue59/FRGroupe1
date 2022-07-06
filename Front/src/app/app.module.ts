@@ -10,7 +10,10 @@ import { NavbarComponent } from './_commons/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './_commons/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { FormationComponent } from './pages/formations/formation.component';
+import { FormationComponent } from './pages/formation/formation.component';
+import { FormationListComponent } from './pages/formation/formation-list/formation-list.component';
+import { FormationCardComponent } from './pages/formation/formation-card/formation-card.component';
+
 import { DetailsFormationComponent } from './pages/Details_Formation/Composante_Principale/details-formation/details-formation.component';
 import { DetailsFormationInfosParentComponent } from './pages/Details_Formation/Composante_Gauche/Composante_Parent/details-formation-infos-parent/details-formation-infos-parent.component';
 import { DetailsFormationInfosEnfantComponent } from './pages/Details_Formation/Composante_Gauche/Composante_Enfant/details-formation-infos-enfant/details-formation-infos-enfant.component';
@@ -24,8 +27,12 @@ import { InterfaceUtilisateurCardInfosComponent } from './pages/InterfaceUtilisa
 import { InterfaceUtilisateurCardFormationEnCoursComponent } from './pages/InterfaceUtilisateur/ComposanteFormationEnCours/interface-utilisateur-card-formation-en-cours/interface-utilisateur-card-formation-en-cours.component';
 import { InterfaceUtilisateurCardFormationsFinisComponent } from './pages/InterfaceUtilisateur/ComposanteFormationsFinis/interface-utilisateur-card-formations-finis/interface-utilisateur-card-formations-finis.component';
 import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/ComposantePrincipale/interface-utilisateur/interface-utilisateur.component';
-
-
+import { ThemeComponent } from './pages/theme/theme.component';
+import { ThemeListComponent } from './pages/theme/theme-list/theme-list.component';
+import { ThemeCardComponent } from './pages/theme/theme-card/theme-card.component';
+import { SousThemeComponent } from './pages/sous-theme/sous-theme.component';
+import { SousThemeCardComponent } from './pages/sous-theme/sous-theme-card/sous-theme-card.component';
+import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-theme-list.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +41,8 @@ import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/Comp
     FooterComponent,
     HomePageComponent,
     FormationComponent,
+    FormationListComponent,
+    FormationCardComponent,
     DetailsFormationComponent,
     DetailsFormationInfosParentComponent,
     DetailsFormationInfosEnfantComponent,
@@ -46,7 +55,13 @@ import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/Comp
     InterfaceUtilisateurCardInfosComponent,
     InterfaceUtilisateurCardFormationEnCoursComponent,
     InterfaceUtilisateurCardFormationsFinisComponent,
-    InterfaceUtilisateurComponent
+    InterfaceUtilisateurComponent,
+    ThemeComponent,
+    ThemeListComponent,
+    ThemeCardComponent,
+    SousThemeComponent,
+    SousThemeCardComponent,
+    SousThemeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +72,6 @@ import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/Comp
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
