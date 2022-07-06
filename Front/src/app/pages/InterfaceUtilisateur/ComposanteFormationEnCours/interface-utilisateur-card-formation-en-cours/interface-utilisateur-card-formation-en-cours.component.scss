@@ -1,0 +1,68 @@
+// Met en fmex colonne la carte et le lien pour l'évaluation
+.conteneurGlobal {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+
+// rendu 3d pour la carte
+.conteneurCard {
+    width: 1000px;
+    background: linear-gradient(4deg, rgba(251, 251, 251, 1) 37%, rgba(250, 250, 250, 1) 96%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 5px;
+    box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    display: flex;
+}
+
+// le contenu au milieu de la carte : nom formation + date
+.infosFormation {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+// Le lien vers l'évaluation de la session en cours
+// qui est placé en bas à droite de la carte
+.sessionEnCours {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.titre {
+    color: #25a197;
+    align-self: center;
+    display: inline;
+}
+
+// image de la formation
+img {
+    height: 150px;
+    width: 150px;
+    padding-top: 10px;
+}
+
+span {
+    color: #1c7a73;
+}
+
+// largeur de 300px pour les dates pour éviter que le texte descend d'une ligne et finalement donner un rendu pas très joli
+.dateFormation {
+    width: 300px;
+}
+
+// bordure grise pour la description
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e6e6e6;
+    padding: 10px;
+    margin: 10px;
+}
+
+#description {
+    color: #1c7a73;
+}

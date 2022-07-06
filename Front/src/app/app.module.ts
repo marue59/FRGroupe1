@@ -23,6 +23,10 @@ import { DetailsFormationInterIntraParentComponent } from './pages/Details_Forma
 import { DetailsFormationInterIntraEnfantComponent } from './pages/Details_Formation/Composante_Droite/Composante_Enfant/details-formation-inter-intra-enfant/details-formation-inter-intra-enfant.component';
 import { DetailsFormationInterIntraInscriptionComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_Inscription/details-formation-inter-intra-inscription/details-formation-inter-intra-inscription.component';
 import { DetailsFormationInterIntraBoutonOptionsComponent } from './pages/Details_Formation/Composante_Droite/Composantes_Elementaires/Composante_Bouton_InterIntra/details-formation-inter-intra-bouton-options/details-formation-inter-intra-bouton-options.component';
+import { InterfaceUtilisateurCardInfosComponent } from './pages/InterfaceUtilisateur/ComposanteInfos/interface-utilisateur-card-infos/interface-utilisateur-card-infos.component';
+import { InterfaceUtilisateurCardFormationEnCoursComponent } from './pages/InterfaceUtilisateur/ComposanteFormationEnCours/interface-utilisateur-card-formation-en-cours/interface-utilisateur-card-formation-en-cours.component';
+import { InterfaceUtilisateurCardFormationsFinisComponent } from './pages/InterfaceUtilisateur/ComposanteFormationsFinis/interface-utilisateur-card-formations-finis/interface-utilisateur-card-formations-finis.component';
+import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/ComposantePrincipale/interface-utilisateur/interface-utilisateur.component';
 import { ThemeComponent } from './pages/theme/theme.component';
 import { ThemeListComponent } from './pages/theme/theme-list/theme-list.component';
 import { ThemeCardComponent } from './pages/theme/theme-card/theme-card.component';
@@ -48,6 +52,10 @@ import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-
     DetailsFormationInterIntraEnfantComponent,
     DetailsFormationInterIntraInscriptionComponent,
     DetailsFormationInterIntraBoutonOptionsComponent,
+    InterfaceUtilisateurCardInfosComponent,
+    InterfaceUtilisateurCardFormationEnCoursComponent,
+    InterfaceUtilisateurCardFormationsFinisComponent,
+    InterfaceUtilisateurComponent,
     ThemeComponent,
     ThemeListComponent,
     ThemeCardComponent,
