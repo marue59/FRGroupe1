@@ -4,10 +4,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "formation")
-public class FormationDo {
+public class Formation {
 
     @Id
-    @Column(name = "idFormation")
+    @Column(name = "idformation")
     @GeneratedValue
     private Long id;
 
@@ -24,17 +24,17 @@ public class FormationDo {
     private boolean isPersonnalisee;
 
     // Construct
-    public FormationDo() {
+    public Formation() {
     }
 
-    public FormationDo(String nom, String contenu, int prix, boolean isPersonnalisee) {
+    public Formation(String nom, String contenu, int prix, boolean isPersonnalisee) {
         this.nom = nom;
         this.contenu = contenu;
         this.prix = prix;
         this.isPersonnalisee = isPersonnalisee;
     }
 
-    public FormationDo(Long id, String nom, String contenu, int prix, boolean isPersonnalisee) {
+    public Formation(Long id, String nom, String contenu, int prix, boolean isPersonnalisee) {
         this.id = id;
         this.nom = nom;
         this.contenu = contenu;

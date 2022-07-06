@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "utilisateur")
-public class UtilisateurDo {
+public class Utilisateur {
 
     @Id
     @Column(name = "idUtilisateur", nullable = false)
@@ -35,13 +35,13 @@ public class UtilisateurDo {
     private Role role;
 
     // Construct
-    public UtilisateurDo() {
+    public Utilisateur() {
         super();
     }
 
-    public UtilisateurDo(Long id, String nom, String prenom, String telephone, String email, boolean testIsValide,
-                         Double noteMoyenne, boolean seanceValidationTechnique, boolean seanceValidationPedagigique,
-                         boolean prerequisStagiaireValide, Role role) {
+    public Utilisateur(Long id, String nom, String prenom, String telephone, String email, boolean testIsValide,
+                       Double noteMoyenne, boolean seanceValidationTechnique, boolean seanceValidationPedagigique,
+                       boolean prerequisStagiaireValide, Role role) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;

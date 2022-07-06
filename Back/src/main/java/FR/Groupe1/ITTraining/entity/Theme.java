@@ -3,28 +3,26 @@ package FR.Groupe1.ITTraining.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "domaine")
-public class DomaineDo {
+@Table(name = "theme")
+public class Theme {
 
     @Id
-    @Column(name = "idDomaine", nullable = false)
+    @Column(name = "idTheme")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "nom")
     private String nom;
 
-     // Construct
-    public DomaineDo(){
+    public Theme() {
         super();
     }
 
-    public DomaineDo(Long id, String nom) {
+    public Theme(Long id, String nom) {
         this.id = id;
         this.nom = nom;
     }
 
-   // Getter Setter
     public Long getId() {
         return id;
     }
@@ -41,11 +39,9 @@ public class DomaineDo {
         this.nom = nom;
     }
 
-     // Methodes :
-
     @Override
     public String toString() {
-        return "Domaine{" +
+        return "ThemeDo{" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 '}';

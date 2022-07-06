@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "session")
-public class SessionDo {
+public class Session {
 
     @Id
     @Column(name = "idSession", nullable = false)
@@ -25,11 +25,11 @@ public class SessionDo {
     private String lieu;
 
     // Construct
-  public SessionDo() {
+  public Session() {
       super();
   }
 
-    public SessionDo(Long id, Date date, double prix, boolean isIntra, String lieu) {
+    public Session(Long id, Date date, double prix, boolean isIntra, String lieu) {
         this.id = id;
         this.date = date;
         this.prix = prix;

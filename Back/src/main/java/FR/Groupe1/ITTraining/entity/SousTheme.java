@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "sous_theme")
-public class SousThemeDo {
+public class SousTheme {
     @Id
     @Column(name = "idSousTheme")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,11 +13,11 @@ public class SousThemeDo {
     @Column(name = "nom_sous_theme")
     private String nomSousTheme;
 
-    public SousThemeDo() {
+    public SousTheme() {
         super();
     }
 
-    public SousThemeDo(Long id, String nomSousTheme) {
+    public SousTheme(Long id, String nomSousTheme) {
         this.id = id;
         this.nomSousTheme = nomSousTheme;
     }
