@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterfaceUtilisateurComponent implements OnInit {
 
+  /**
+   * Attribut boolean isActive qui permet d'afficher ou de cacher les formations finis
+   */
   isActive: boolean = false;
 
   constructor() { }
@@ -14,6 +17,9 @@ export class InterfaceUtilisateurComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Méthode appelé par l'event (click) pour mettre le boolean isActive en true ou en false
+   */
   onClick(){
     this.isActive = !this.isActive;
   }

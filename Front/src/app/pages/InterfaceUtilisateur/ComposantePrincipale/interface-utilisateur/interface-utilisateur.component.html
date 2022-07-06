@@ -1,9 +1,14 @@
+<!-- Composante principale regroupant les autres composantes : ComposanteInfos, ComposanteFormationEnCours et ComposanteFormatiosFinis -->
+
+
+<!-- Balise div appelant la composante pour la carte des informations personnelles -->
 <div class="infos">
     <h1>Informations personnelles :</h1>
 
     <app-interface-utilisateur-card-infos></app-interface-utilisateur-card-infos>
 </div>
 
+<!-- Balise div appelant la composante pour la carte de la formation en cours -->
 <div class="formationEnCours">
     <h1>Formation en cours :</h1>
 
@@ -11,9 +16,11 @@
 </div>
 
 
+<!-- Balise div contenant la composante pour la carte des formations finis, avec en plus un volet permettant d'afficher/cacher cette section -->
 <div class="formationsFinis">
     <h1>
         Formations finis et certifications :
+        <!-- Event click permettant de changer le triangle en haut ou en bas suivant si on a cliqué dessus ou pas -->
         <button (click)="onClick()">
           <svg *ngIf="!isActive" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-down-square-fill" viewBox="0 0 16 16">
             <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6H4z"/>
@@ -24,5 +31,6 @@
         </button>
     </h1>
 
+    <!-- NgIf pour afficher les formations suivant si isActive est en true ou en false et dont la méthode OnClick dans l'event au dessus permet de changer -->
     <app-interface-utilisateur-card-formations-finis *ngIf="isActive"></app-interface-utilisateur-card-formations-finis>
 </div>

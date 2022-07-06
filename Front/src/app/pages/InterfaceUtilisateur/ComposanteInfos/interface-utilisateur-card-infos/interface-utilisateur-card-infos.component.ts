@@ -7,10 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InterfaceUtilisateurCardInfosComponent implements OnInit {
 
-  /**
-   * Les informations personnelles de l'utilisateur qui seront récupérés de la bdd
-   * contiendra : le nom, le prénom, l'email et le numéro de téléphone
-   */
+/**
+ * L'utilisateur
+ * qui a pour attributs : id, nom, prenom, tel, email, role, isTest
+ */
    @Input()
    utilisateur!: any;
 

@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterfaceUtilisateurCardFormationsFinisComponent implements OnInit {
 
+  /**
+   * Attribut session, contenant :
+   * une date
+   * un prix
+   * un boolean : isIntra
+   */
   session!: any;
 
   constructor() { }
