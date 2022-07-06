@@ -1,23 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import Formations from 'src/app/models/formations.model';
-import { FormationsService } from 'src/app/services/formations.service';
+import Formation from 'src/app/models/formation.model';
+import { FormationService } from 'src/app/services/formation.service';
 
 @Component({
   selector: 'app-details-formation',
   templateUrl: './details-formation.component.html',
   styleUrls: ['./details-formation.component.scss'],
-  providers: [FormationsService]
 })
 export class DetailsFormationComponent implements OnInit {
 
-  /**
-   * Le titre de la formation
-   * (qui sera remplacé plus tard par une composante service pour le piocher dans la bdd)
-   */
-   formation!: Formations;
 
-  constructor( private router: Router, private route: ActivatedRoute, private formationsService: FormationsService) { }
+   formation!: Formation;
+
+  constructor( private router: Router, private route: ActivatedRoute, private formationService: FormationService) { }
 
   ngOnInit(): void {
 
@@ -28,7 +24,7 @@ export class DetailsFormationComponent implements OnInit {
   }
 
   private subscribeFormations(id: number){
-    this.formationsService.getFormation(id).subscribe((formation) => {
+    this.formationService.getFormation(id).subscribe((formation) => {
       this.formation = formation;
     })
   }
