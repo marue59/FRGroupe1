@@ -11,7 +11,7 @@
     </button>
     <div class="w3-dropdown-content w3-bar-block w3-large">
       <button class="w3-button w3-padding-24 w3-large">
-        <app-sousTheme-list></app-sousTheme-list>
+        <app-theme-list [themes]="themes"></app-theme-list>
       </button>
     </div>
   </div>
@@ -21,6 +21,7 @@
       Sous-Thèmes<i class="fa fa-caret-down"></i>
     </button>
     <div class="w3-dropdown-content w3-bar-block">
+      <app-sousTheme-list></app-sousTheme-list>
       <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-medium">Link</a>
       <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-medium">Link</a>
     </div>

@@ -1,6 +1,20 @@
 <div class="d-flex justify-content-center">
-  <app-theme-card
+  <!-- <app-theme-card
     *ngFor="let theme of themes"
     [themes]="theme"
-  ></app-theme-card>
+  ></app-theme-card>-->
+  <ul>
+    <li *ngFor="let theme of themes">
+      {{ theme.nom }}
+
+      <ul>
+        <li
+          *ngFor="let sousTheme of theme.soustheme"
+          routerLink="sous-themes/{{ sousTheme.id }}"
+        >
+          {{ sousTheme.nom }}
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>
