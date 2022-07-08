@@ -33,6 +33,9 @@ import { ThemeCardComponent } from './pages/theme/theme-card/theme-card.componen
 import { SousThemeComponent } from './pages/sous-theme/sous-theme.component';
 import { SousThemeCardComponent } from './pages/sous-theme/sous-theme-card/sous-theme-card.component';
 import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-theme-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormulaireInscriptionComponent } from './pages/formulaire-inscription/formulaire-inscription.component';
+
 
 @NgModule({
   declarations: [
@@ -62,6 +65,7 @@ import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-
     SousThemeComponent,
     SousThemeCardComponent,
     SousThemeListComponent,
+    FormulaireInscriptionComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +73,7 @@ import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

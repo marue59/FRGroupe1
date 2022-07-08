@@ -1,0 +1,49 @@
+<div formGroupName="address">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      
+      <div id="container " class="d-flex flex-direction justify-content-around flex-column">
+        <h1>Formulaire d'inscription</h1>
+       <p class="d-flex">
+        <label for="first-name"> <span>Nom :</span></label>
+        <input id="first-name" type="text" formControlName="firstName" size="100"  required>
+       </p>
+         
+        <p class="d-flex"> <label for="last-name"><span>Prénom :</span> </label>
+            <input id="last-name" type="text" formControlName="lastName" size="100"  required>
+        </p>
+
+        <p class="d-flex"><label for="street"><span>Rue : </span></label>
+          <input id="street" type="text" formControlName="street" size="100" required>
+        </p> 
+
+        <p class="d-flex">
+          <label for="city"><span>Ville : </span></label>
+          <input id="city" type="text" formControlName="city" size="100" required>
+        </p>
+         
+        <p class="d-flex">
+          <label for="state"><span>Pays : </span></label>
+          <input id="state" type="text" formControlName="state" size="100" required> 
+        </p>
+         
+        <p class="d-flex">
+          <label for="email"><span>Email : </span></label>
+          <input id="email" type="text" formControlName="email" size="100" required>
+        </p> 
+
+         <p class="d-flex">
+          <label for="numTel"><span>Telephone : </span></label>
+          <input id="numTel" type="text" formControlName="numTel" size="100" required>
+         </p>
+         
+         <div id="button">
+          <button type="submit" [disabled]="!profileForm.valid">Valider</button>
+      </div>
+
+      </div>
+
+        <p>Form Status: {{ profileForm.status }}</p>
+
+    </form>
+</div>
+
