@@ -1,10 +1,5 @@
 @import "../Front/src/styles.scss";
 
-.cardHome{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 25%;
-  height: auto;
+app-formation-card {
+  width: 100%;
 }
-

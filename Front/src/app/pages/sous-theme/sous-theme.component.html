@@ -1,5 +1,7 @@
-<app-sousTheme-list
-  *ngFor="let sousTheme of sousThemes"
-  [sousTheme]="sousThemes"
-  >{{ sousTheme.nom }}</app-sousTheme-list
->
+<div class="d-flex flex-column">
+  <h1 class="primary-title">Les sous-thèmes</h1>
+  <app-sous-theme-card
+    class="d-flex flex-wrap"
+    [sousThemes]="sousThemes"
+  ></app-sous-theme-card>
+</div>

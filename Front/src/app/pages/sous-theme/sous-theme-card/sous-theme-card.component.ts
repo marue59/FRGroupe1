@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sous-theme-card.component.scss'],
 })
 export class SousThemeCardComponent implements OnInit {
-  @Input() sousTheme: any;
+  @Input() sousThemes: any;
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,7 +1,13 @@
-<div class="w3-card-4">
-  <img src="" alt="" />
-  <div class="w3-container w3-center">
-    <h5 class="card-title">titre</h5>
-    <p class="card-text">text</p>
+<div
+  *ngFor="let formation of formations"
+  class="container-card d-flex justify-content-space-around"
+  routerLink="/formations/{{ formation.id }}"
+>
+  <div class="card bg-light">
+    <img src="" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h2 class="card-title secondary-title">{{ formation.nom }}</h2>
+      <p class="card-text">{{ formation.description }}</p>
+    </div>
   </div>
 </div>

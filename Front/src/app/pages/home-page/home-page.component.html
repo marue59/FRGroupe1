@@ -1,10 +1,5 @@
-<h1 class="primary-title">Nos formations les plus populaires</h1>
-<div class="cardHome" *ngFor="let formation of formations">
-  <div class="w3-display-container w3-hover-opacity">
-    <img src="../../../assets/IT_Training.png" alt="Avatar" />
-    <div class="w3-display-middle w3-display-hover">
-      <button class="w3-button w3-black">Informations</button>
-    </div>
-    <app-formation-card [formations]="formation"> </app-formation-card>
-  </div>
+<div class="d-flex flex-column">
+  <h1 class="primary-title">Nos formations les plus populaires</h1>
+  <app-formation-card class="d-flex flex-wrap" [formations]="formations">
+  </app-formation-card>
 </div>

@@ -1,5 +1,5 @@
 <div
-  class="w3-sidebar w3-bar-block w3-collapse w3-card"
+  class="w3-bar-block w3-collapse w3-card"
   style="width: 300px"
   id="mySidebar"
 >
@@ -10,30 +10,29 @@
       Thèmes<i class="fa fa-caret-down"></i>
     </button>
     <div class="w3-dropdown-content w3-bar-block w3-large">
-      <button class="w3-button w3-padding-24 w3-large">
+      <p class="w3-button w3-padding-24 w3-large">
         <app-theme-list [themes]="themes"></app-theme-list>
-      </button>
+      </p>
     </div>
   </div>
+
   <!-- Sous-Themes -->
   <div class="w3-dropdown-hover">
     <button class="w3-button w3-padding-24 w3-large" routerLink="/sous-themes">
       Sous-Thèmes<i class="fa fa-caret-down"></i>
     </button>
     <div class="w3-dropdown-content w3-bar-block">
-      <app-sousTheme-list></app-sousTheme-list>
-      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-medium">Link</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-medium">Link</a>
+      <app-sous-theme-list [sousThemes]="sousThemes"></app-sous-theme-list>
     </div>
   </div>
+
   <!-- Formations -->
   <div class="w3-dropdown-hover">
     <button class="w3-button w3-padding-24 w3-large" routerLink="/formations">
-      Formation<i class="fa fa-caret-down"></i>
+      Formations<i class="fa fa-caret-down"></i>
     </button>
     <div class="w3-dropdown-content w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-medium">Link</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-medium">Link</a>
+      <app-formation-list [formations]="formations"></app-formation-list>
     </div>
   </div>
 </div>

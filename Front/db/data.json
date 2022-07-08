@@ -59,12 +59,25 @@
         "id": 1,
         "nom": "JAva",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-      },
+    },
       {
         "id": 2,
         "nom": "Js",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-
+        ,"soustheme" : [{
+          "id": 1,
+          "nom": "JAva",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        }]
+      },{
+        "id": 3,
+        "nom": "php",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        ,"soustheme" : [{
+          "id": 1,
+          "nom": "symfony",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        }]
       }
     ]
     },

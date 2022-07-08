@@ -9,7 +9,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'formations', component: FormationComponent },
+  { path: 'formations/:id', component: FormationComponent },
   { path: 'themes', component: ThemeComponent },
+  { path: 'themes/:id', component: ThemeComponent },
   { path: 'sous-themes', component: SousThemeComponent },
   { path: 'sous-themes/:id', component: SousThemeComponent },
 ];

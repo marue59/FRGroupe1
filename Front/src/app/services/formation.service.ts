@@ -17,7 +17,7 @@ export class FormationService {
     // ou en plus simple
     // return this.httpClient.get<Film>(this.apiUrl + '/formation');
   }
-  /*
+
   getFormation(id: number): Observable<Formation> {
     return this.httpClient.get<Formation>(`${this.apiUrl}/formations/${id}`);
   }
@@ -34,5 +34,5 @@ export class FormationService {
       `${this.apiUrl}/albums/${formation.id}`,
       formation
     );
-  }*/
+  }
 }

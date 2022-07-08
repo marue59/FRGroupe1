@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import Formation from 'src/app/models/formation.model';
 
 @Component({
   selector: 'app-formation-card',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./formation-card.component.scss'],
 })
 export class FormationCardComponent implements OnInit {
-  @Input() formation: any;
+  @Input() formations: any;
   constructor() {}
 
   ngOnInit(): void {}
