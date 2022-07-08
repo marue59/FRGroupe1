@@ -1,16 +1,5 @@
-<div class="">
-  <div class="container">
-    <div class="futurSideNav"></div>
-    <h1 class="d-flex justify-content-center m-3">
-      Nos formations les plus populaires
-    </h1>
-    <div class="d-flex flex-wrap">
-      <app-formation
-        *ngFor="let formation of formations"
-        [formations]="formation"
-        class="home-formation m-3"
-      >
-      </app-formation>
-    </div>
-  </div>
+<div class="d-flex flex-column">
+  <h1 class="primary-title">Nos formations les plus populaires</h1>
+  <app-formation-card class="d-flex flex-wrap" [formations]="formations">
+  </app-formation-card>
 </div>

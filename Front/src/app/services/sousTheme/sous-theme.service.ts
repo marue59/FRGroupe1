@@ -9,9 +9,19 @@ import SousTheme from 'src/app/models/sousTheme.models';
 export class SousThemeService {
   private apiUrl = 'http://localhost:3000';
 
-  constructor(private httpClient: HttpClient) {}
+  sousTheme = [];
+  sousThemes: any = {};
+
+  constructor(private httpClient: HttpClient) {
+    if (this.sousTheme.length > 0) {
+      this.sousTheme = this.sousThemes;
+    }
+  }
 
   getSousThemes(): Observable<SousTheme[]> {
     return this.httpClient.get<SousTheme[]>(`${this.apiUrl}/sousThemes`);
+  }
+  getSousTheme(id: number): Observable<SousTheme> {
+    return this.httpClient.get<SousTheme>(`${this.apiUrl}/sousThemes/${id}`);
   }
 }

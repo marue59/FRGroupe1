@@ -1,21 +1,50 @@
-<nav>
-    <div class="container">
-        <!-- Sépare les boutons de la barre de recherche -->
-        <div class="buttons">
-            <!-- Les 3 boutons de la barre de navigation -->
-            <button mat-button>Accueil</button>
-            <button mat-button>Formations</button>
-            <button mat-button>Nous connaître</button>
-        </div>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="../../../assets/IT_Training.png"
+        alt="IT Training"
+        class="logo"
+        width="150px"
+        height="50px"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-flex justify-content-around">
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav p-2">
+          <li class="nav-item m-2">
+            <a class="nav-link w3-large" routerLink="/">Accueil</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link w3-large" routerLink="/">Actualités</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link w3-large" routerLink="/formations">Formations</a>
+          </li>
 
-        <div class="form">
+          <li class="nav-item m-2">
+            <a class="nav-link w3-large" routerLink="/">Connexion</a>
+          </li>
+          <div class="form m-2">
             <!-- div form pour séparer la barre de recherche des 3 boutons et pouvoir àjuster sa position -->
-            <form>
-                <!-- barre de recherche -->
-                <input type="search" placeholder=" Rechercher une formation">
+            <form class="w3-large">
+              <!-- barre de recherche -->
+              <input type="search" placeholder=" Rechercher une formation" />
             </form>
-        </div>
-
+          </div>
+        </ul>
+      </div>
     </div>
-
+  </div>
 </nav>

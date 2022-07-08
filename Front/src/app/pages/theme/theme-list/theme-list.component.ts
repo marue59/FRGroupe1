@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SousThemeListComponent } from '../../sous-theme/sous-theme-list/sous-theme-list.component';
 
 @Component({
   selector: 'app-theme-list',
