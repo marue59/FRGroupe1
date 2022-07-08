@@ -1,12 +1,6 @@
-/*ajouter à votre classe "button" les classes suivantes :*/
-/* bouton valider  "btn btn-success h-25 w-25 btn-lg"*/
-/* bouton annuler  "btn btn-danger h-25 w-25 btn-lg"*/
-
 html, body { height: 100%; font-family : Georgia, serif;}
 
 // Buttons :
-
-
 
 // Color :
 $primary-color: #25a197;
@@ -14,13 +8,12 @@ $secondary-color: #A3BFA8;
 $third-color : #6d6d6d;
 $fourth-color : #0a0a0a;
 
-
 // Card
 p {
   font-size: 0.9rem;
   font-weight: 500;
 }
-// H1
+
 .primary-title{
   color: $fourth-color;
   padding:20px;
@@ -41,9 +34,11 @@ p {
   margin : auto;
   margin-top: 20px;
 }
+
 app-home-page, app-theme, app-sous-theme{
   width: 100%;
 }
+
 app-formation-card, app-sous-theme-card , app-theme-card{
   justify-content: center;
 }

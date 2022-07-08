@@ -1,0 +1,29 @@
+// couleur des textes comme : Informations personnelles, Formation en cours et Formations finis et certfications
+h1 {
+    color: #25a197;
+}
+
+// marge pour l'espace entre les différentes balises des composantes
+.infos {
+    margin: 50px 100px;
+}
+
+.formationEnCours {
+    margin: 50px 100px;
+}
+
+.formationsFinis {
+    margin: 0 100px;
+}
+
+// style du button en none pour enlever les valeurs par défauts
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+// couleur du triangle qui permet d'afficher/cacher les formations
+svg {
+    color: #25a197;
+}
