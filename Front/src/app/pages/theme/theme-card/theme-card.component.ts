@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import Themes from 'src/app/models/theme.model';
+import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
   selector: 'app-theme-card',
@@ -6,8 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./theme-card.component.scss'],
 })
 export class ThemeCardComponent implements OnInit {
-  @Input() theme: any;
-  constructor() {}
+  @Input() themes: any;
+
+  themeArray: Themes[] = [];
+
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {}
 }

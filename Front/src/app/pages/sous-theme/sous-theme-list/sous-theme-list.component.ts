@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SousThemeListComponent implements OnInit {
   @Input() sousThemes: any;
-
   constructor() {}
 
   ngOnInit(): void {}

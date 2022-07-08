@@ -1,1 +1,7 @@
-<app-sousTheme-list [sousTheme]="sousThemes">toto</app-sousTheme-list>
+<div class="d-flex flex-column">
+  <h1 class="primary-title">Les sous-thèmes</h1>
+  <app-sous-theme-card
+    class="d-flex flex-wrap"
+    [sousThemes]="sousThemes"
+  ></app-sous-theme-card>
+</div>

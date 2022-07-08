@@ -1,16 +1,44 @@
-/*Les boutons : utilisation de bootstrap */
+html, body { height: 100%; font-family : Georgia, serif;}
 
-/*ajout script dans page html : "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"*/
-/*ajout link dans page html : "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"*/
+// Buttons :
 
-/*ajouter à votre classe "button" les classes suivantes :*/
-/* bouton valider  "btn btn-success h-25 w-25 btn-lg"*/
-/* bouton annuler  "btn btn-danger h-25 w-25 btn-lg"*/
+// Color :
+$primary-color: #25a197;
+$secondary-color: #A3BFA8;
+$third-color : #6d6d6d;
+$fourth-color : #0a0a0a;
 
-/* bouton annuler  "btn btn-danger h-25 w-25 btn-lg" /*
+// Card
+p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 
-/* type de text */
+.primary-title{
+  color: $fourth-color;
+  padding:20px;
+  font-size : 2rem;
+  font-stretch: expanded;
+  font-weight: 900;
+  text-align : center;
+  margin : auto;
+  margin-top: 20px;
+  }
 
-.textGeorgia {
-    font-family: Georgia;
+.secondary-title{
+  color: $fourth-color;
+  font-size : 1.4rem;
+  font-stretch: expanded;
+  font-weight: 600;
+  text-align : center;
+  margin : auto;
+  margin-top: 20px;
+}
+
+app-home-page, app-theme, app-sous-theme{
+  width: 100%;
+}
+
+app-formation-card, app-sous-theme-card , app-theme-card{
+  justify-content: center;
 }
