@@ -74,7 +74,7 @@ import { SideBarComponent } from './_commons/side-bar/side-bar.component';
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
