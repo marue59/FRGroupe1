@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "utilisateur")
 @DiscriminatorValue("formateur")
 public class Formateur extends Utilisateur{
         @Column(name = "note_moyenne")

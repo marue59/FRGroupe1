@@ -11,45 +11,41 @@ public class Logistique {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "is_salleInstallee")
+    @Column(name = "is_salle_installee")
     public boolean isSalleInstallee;
 
-    @Column(name = "is_salleReservee")
+    @Column(name = "is_salle_reservee")
     public boolean isSalleReservee;
 
-    @Column(name = "is_supportImprime")
+    @Column(name = "is_support_imprime")
     public boolean isSupportImprime;
 
-    @Column(name = "is_machineInstallee")
+    @Column(name = "is_machine_installee")
     public boolean isMachineInstallee;
 
-    @Column(name = "is_formateurContacte")
+    @Column(name = "is_formateur_contacte")
     public boolean isFormateurContacte;
 
-    @Column(name = "is_formulaireGenere")
+    @Column(name = "is_formulaire_genere")
     public boolean isFormulaireGenere;
 
-    @Column(name = "is_convocationEnvoyee")
+    @Column(name = "is_convocation_envoyee")
     public boolean isConvocationEnvoyee;
 
-    @Column(name = "is_planningAJour")
+    @Column(name = "is_planning_ajour")
     public boolean isPlanningAJour;
 
-    @Column(name = "is_listeImprimee")
+    @Column(name = "is_liste_imprimee")
     public boolean isListeImprimee;
 
-    @Column(name = "is_ticketRepasImprimee")
-    public boolean isTicketRepasImprimee;
+    @Column(name = "is_ticket_imprime")
+    public boolean isTicketRepasImprime;
 
-    // Construct
+
     public Logistique() {
-        super();
     }
 
-    public Logistique(Long id, boolean isSalleInstallee, boolean isSalleReservee, boolean isSupportImprime,
-                      boolean isMachineInstallee, boolean isFormateurContacte, boolean isFormulaireGenere,
-                      boolean isConvocationEnvoyee, boolean isPlanningAJour, boolean isListeImprimee,
-                      boolean isTicketRepasImprimee) {
+    public Logistique(Long id, boolean isSalleInstallee, boolean isSalleReservee, boolean isSupportImprime, boolean isMachineInstallee, boolean isFormateurContacte, boolean isFormulaireGenere, boolean isConvocationEnvoyee, boolean isPlanningAJour, boolean isListeImprimee, boolean isTicketRepasImprimee) {
         this.id = id;
         this.isSalleInstallee = isSalleInstallee;
         this.isSalleReservee = isSalleReservee;
@@ -60,8 +56,9 @@ public class Logistique {
         this.isConvocationEnvoyee = isConvocationEnvoyee;
         this.isPlanningAJour = isPlanningAJour;
         this.isListeImprimee = isListeImprimee;
-        this.isTicketRepasImprimee = isTicketRepasImprimee;
+        this.isTicketRepasImprime = isTicketRepasImprimee;
     }
+
 
     public Long getId() {
         return id;
@@ -144,12 +141,13 @@ public class Logistique {
     }
 
     public boolean isTicketRepasImprimee() {
-        return isTicketRepasImprimee;
+        return isTicketRepasImprime;
     }
 
     public void setTicketRepasImprimee(boolean ticketRepasImprimee) {
-        isTicketRepasImprimee = ticketRepasImprimee;
+        isTicketRepasImprime = ticketRepasImprimee;
     }
+
 
     @Override
     public String toString() {
@@ -164,7 +162,7 @@ public class Logistique {
         sb.append(", isConvocationEnvoyee=").append(isConvocationEnvoyee);
         sb.append(", isPlanningAJour=").append(isPlanningAJour);
         sb.append(", isListeImprimee=").append(isListeImprimee);
-        sb.append(", isTicketRepasImprimee=").append(isTicketRepasImprimee);
+        sb.append(", isTicketRepasImprimee=").append(isTicketRepasImprime);
         sb.append('}');
         return sb.toString();
     }
