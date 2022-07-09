@@ -8,36 +8,32 @@ import java.util.Date;
 public class Session {
 
     @Id
-    @Column(name = "idSession", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "date")
     private Date date;
 
-    @Column(name = "prix")
-    private double prix;
-
-    @Column(name = "isIntra")
+    @Column(name = "is_intra")
     private boolean isIntra;
 
     @Column(name = "lieu")
     private String lieu;
 
     // Construct
-  public Session() {
-      super();
-  }
+    public Session() {
+        super();
+    }
 
-    public Session(Long id, Date date, double prix, boolean isIntra, String lieu) {
+    public Session(Long id, Date date, boolean isIntra, String lieu) {
         this.id = id;
         this.date = date;
-        this.prix = prix;
         this.isIntra = isIntra;
         this.lieu = lieu;
     }
 
-     // Getter Setter
+    // Getter Setter
 
     public Long getId() {
         return id;
@@ -53,14 +49,6 @@ public class Session {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public double getPrix() {
-        return prix;
-    }
-
-    public void setPrix(double prix) {
-        this.prix = prix;
     }
 
     public boolean isIntra() {
@@ -81,14 +69,15 @@ public class Session {
 
     // Methodes :
 
+
     @Override
     public String toString() {
-        return "Session{" +
-                "id=" + id +
-                ", date=" + date +
-                ", prix=" + prix +
-                ", isIntra=" + isIntra +
-                ", lieu='" + lieu + '\'' +
-                '}';
+        final StringBuilder sb = new StringBuilder("Session{");
+        sb.append("id=").append(id);
+        sb.append(", date=").append(date);
+        sb.append(", isIntra=").append(isIntra);
+        sb.append(", lieu='").append(lieu).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

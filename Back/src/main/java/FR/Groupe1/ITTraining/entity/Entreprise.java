@@ -7,11 +7,11 @@ import javax.persistence.*;
 public class Entreprise {
 
     @Id
-    @Column(name = "id_entreprise")
+    @Column(name = "id")
     @GeneratedValue
     private Long id;
 
-    @Column(name = "nom_entreprise")
+    @Column(name = "nom")
     private String nom;
 
     @Column(name = "adresse")
@@ -20,7 +20,7 @@ public class Entreprise {
     @Column(name = "code_postal")
     private String codePostal;
 
-    @Column(name = "numTel")
+    @Column(name = "telephone")
     private String telephone;
 
     @Column(name = "ville")
@@ -29,7 +29,7 @@ public class Entreprise {
     @Column(name = "email")
     private String email;
 
-  // Construct
+    // Construct
     public Entreprise() {
     }
 
@@ -54,6 +54,7 @@ public class Entreprise {
     }
 
     // Getter Setter
+
 
     public Long getId() {
         return id;

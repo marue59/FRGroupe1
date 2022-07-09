@@ -7,14 +7,14 @@ import javax.persistence.*;
 public class Domaine {
 
     @Id
-    @Column(name = "idDomaine", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "nom")
     private String nom;
 
-     // Construct
+    // Construct
     public Domaine(){
         super();
     }
@@ -24,7 +24,7 @@ public class Domaine {
         this.nom = nom;
     }
 
-   // Getter Setter
+    // Getter Setter
     public Long getId() {
         return id;
     }
@@ -41,7 +41,7 @@ public class Domaine {
         this.nom = nom;
     }
 
-     // Methodes :
+    // Methodes :
 
     @Override
     public String toString() {

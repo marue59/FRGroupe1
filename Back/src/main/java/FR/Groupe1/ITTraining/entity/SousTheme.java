@@ -6,20 +6,20 @@ import javax.persistence.*;
 @Table(name = "sous_theme")
 public class SousTheme {
     @Id
-    @Column(name = "idSousTheme")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "nom_sous_theme")
-    private String nomSousTheme;
+    @Column(name = "nom")
+    private String nom;
 
     public SousTheme() {
         super();
     }
 
-    public SousTheme(Long id, String nomSousTheme) {
+    public SousTheme(Long id, String nom) {
         this.id = id;
-        this.nomSousTheme = nomSousTheme;
+        this.nom = nom;
     }
 
     public Long getId() {
@@ -30,19 +30,19 @@ public class SousTheme {
         this.id = id;
     }
 
-    public String getNomSousTheme() {
-        return nomSousTheme;
+    public String getNom() {
+        return nom;
     }
 
-    public void setNomSousTheme(String nomSousTheme) {
-        this.nomSousTheme = nomSousTheme;
+    public void setNom(String nomSousTheme) {
+        this.nom = nomSousTheme;
     }
 
     @Override
     public String toString() {
         return "SousThemeDo{" +
                 "id=" + id +
-                ", nomSousTheme='" + nomSousTheme + '\'' +
+                ", nomSousTheme='" + nom + '\'' +
                 '}';
     }
 }

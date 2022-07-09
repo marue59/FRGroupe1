@@ -7,20 +7,24 @@ import javax.persistence.*;
 public class Theme {
 
     @Id
-    @Column(name = "idTheme")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "nom")
     private String nom;
 
+    @Column(name = "description")
+    private String description;
+
+
     public Theme() {
-        super();
     }
 
-    public Theme(Long id, String nom) {
+    public Theme(Long id, String nom, String description) {
         this.id = id;
         this.nom = nom;
+        this.description = description;
     }
 
     public Long getId() {
@@ -38,6 +42,15 @@ public class Theme {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 
     @Override
     public String toString() {

@@ -7,63 +7,61 @@ import javax.persistence.*;
 public class Logistique {
 
     @Id
-    @Column(name = "idLogistique", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "salleReserve")
-    public boolean salleReserve;
+    @Column(name = "is_salleInstallee")
+    public boolean isSalleInstallee;
 
-    @Column(name = "salleInstallee")
-    public boolean salleInstallee;
+    @Column(name = "is_salleReservee")
+    public boolean isSalleReservee;
 
-    @Column(name = "supportImprime")
-    public boolean supportImprime;
+    @Column(name = "is_supportImprime")
+    public boolean isSupportImprime;
 
-    @Column(name = "machineInstallee")
-    public boolean machineInstallee;
+    @Column(name = "is_machineInstallee")
+    public boolean isMachineInstallee;
 
-    @Column(name = "formateurContacte")
-    public boolean formateurContacte;
+    @Column(name = "is_formateurContacte")
+    public boolean isFormateurContacte;
 
-    @Column(name = "formulaireGenere")
-    public boolean formulaireGenere;
+    @Column(name = "is_formulaireGenere")
+    public boolean isFormulaireGenere;
 
-    @Column(name = "convocationStagiaireEnvoyee")
-    public boolean convocationStagiaireEnvoyee;
+    @Column(name = "is_convocationEnvoyee")
+    public boolean isConvocationEnvoyee;
 
-    @Column(name = "planning")
-    public boolean planningAJour;
+    @Column(name = "is_planningAJour")
+    public boolean isPlanningAJour;
 
-    @Column(name = "listeImprimee")
-    public boolean listeImprimee;
+    @Column(name = "is_listeImprimee")
+    public boolean isListeImprimee;
 
-    @Column(name = "ticketRepasImprime")
-    public boolean ticketRepasImprime;
+    @Column(name = "is_ticketRepasImprimee")
+    public boolean isTicketRepasImprimee;
 
     // Construct
     public Logistique() {
         super();
     }
 
-    public Logistique(Long id, boolean salleReserve, boolean salleInstallee, boolean supportImprime,
-                      boolean machineInstallee, boolean formateurContacte, boolean formulaireGenere,
-                      boolean convocationStagiaireEnvoyee, boolean planningAJour, boolean listeImprimee,
-                      boolean ticketRepasImprime) {
+    public Logistique(Long id, boolean isSalleInstallee, boolean isSalleReservee, boolean isSupportImprime,
+                      boolean isMachineInstallee, boolean isFormateurContacte, boolean isFormulaireGenere,
+                      boolean isConvocationEnvoyee, boolean isPlanningAJour, boolean isListeImprimee,
+                      boolean isTicketRepasImprimee) {
         this.id = id;
-        this.salleReserve = salleReserve;
-        this.salleInstallee = salleInstallee;
-        this.supportImprime = supportImprime;
-        this.machineInstallee = machineInstallee;
-        this.formateurContacte = formateurContacte;
-        this.formulaireGenere = formulaireGenere;
-        this.convocationStagiaireEnvoyee = convocationStagiaireEnvoyee;
-        this.planningAJour = planningAJour;
-        this.listeImprimee = listeImprimee;
-        this.ticketRepasImprime = ticketRepasImprime;
+        this.isSalleInstallee = isSalleInstallee;
+        this.isSalleReservee = isSalleReservee;
+        this.isSupportImprime = isSupportImprime;
+        this.isMachineInstallee = isMachineInstallee;
+        this.isFormateurContacte = isFormateurContacte;
+        this.isFormulaireGenere = isFormulaireGenere;
+        this.isConvocationEnvoyee = isConvocationEnvoyee;
+        this.isPlanningAJour = isPlanningAJour;
+        this.isListeImprimee = isListeImprimee;
+        this.isTicketRepasImprimee = isTicketRepasImprimee;
     }
-
-    // Getter Setter
 
     public Long getId() {
         return id;
@@ -73,102 +71,101 @@ public class Logistique {
         this.id = id;
     }
 
-    public boolean isSalleReserve() {
-        return salleReserve;
-    }
-
-    public void setSalleReserve(boolean salleReserve) {
-        this.salleReserve = salleReserve;
-    }
-
     public boolean isSalleInstallee() {
-        return salleInstallee;
+        return isSalleInstallee;
     }
 
     public void setSalleInstallee(boolean salleInstallee) {
-        this.salleInstallee = salleInstallee;
+        isSalleInstallee = salleInstallee;
+    }
+
+    public boolean isSalleReservee() {
+        return isSalleReservee;
+    }
+
+    public void setSalleReservee(boolean salleReservee) {
+        isSalleReservee = salleReservee;
     }
 
     public boolean isSupportImprime() {
-        return supportImprime;
+        return isSupportImprime;
     }
 
     public void setSupportImprime(boolean supportImprime) {
-        this.supportImprime = supportImprime;
+        isSupportImprime = supportImprime;
     }
 
     public boolean isMachineInstallee() {
-        return machineInstallee;
+        return isMachineInstallee;
     }
 
     public void setMachineInstallee(boolean machineInstallee) {
-        this.machineInstallee = machineInstallee;
+        isMachineInstallee = machineInstallee;
     }
 
     public boolean isFormateurContacte() {
-        return formateurContacte;
+        return isFormateurContacte;
     }
 
     public void setFormateurContacte(boolean formateurContacte) {
-        this.formateurContacte = formateurContacte;
+        isFormateurContacte = formateurContacte;
     }
 
     public boolean isFormulaireGenere() {
-        return formulaireGenere;
+        return isFormulaireGenere;
     }
 
     public void setFormulaireGenere(boolean formulaireGenere) {
-        this.formulaireGenere = formulaireGenere;
+        isFormulaireGenere = formulaireGenere;
     }
 
-    public boolean isConvocationStagiaireEnvoyee() {
-        return convocationStagiaireEnvoyee;
+    public boolean isConvocationEnvoyee() {
+        return isConvocationEnvoyee;
     }
 
-    public void setConvocationStagiaireEnvoyee(boolean convocationStagiaireEnvoyee) {
-        this.convocationStagiaireEnvoyee = convocationStagiaireEnvoyee;
+    public void setConvocationEnvoyee(boolean convocationEnvoyee) {
+        isConvocationEnvoyee = convocationEnvoyee;
     }
 
     public boolean isPlanningAJour() {
-        return planningAJour;
+        return isPlanningAJour;
     }
 
     public void setPlanningAJour(boolean planningAJour) {
-        this.planningAJour = planningAJour;
+        isPlanningAJour = planningAJour;
     }
 
     public boolean isListeImprimee() {
-        return listeImprimee;
+        return isListeImprimee;
     }
 
     public void setListeImprimee(boolean listeImprimee) {
-        this.listeImprimee = listeImprimee;
+        isListeImprimee = listeImprimee;
     }
 
-    public boolean isTicketRepasImprime() {
-        return ticketRepasImprime;
+    public boolean isTicketRepasImprimee() {
+        return isTicketRepasImprimee;
     }
 
-    public void setTicketRepasImprime(boolean ticketRepasImprime) {
-        this.ticketRepasImprime = ticketRepasImprime;
+    public void setTicketRepasImprimee(boolean ticketRepasImprimee) {
+        isTicketRepasImprimee = ticketRepasImprimee;
     }
-
-     // Methodes :
 
     @Override
     public String toString() {
-        return "Logistique{" +
-                "id=" + id +
-                ", salleReserve=" + salleReserve +
-                ", salleInstallee=" + salleInstallee +
-                ", supportImprime=" + supportImprime +
-                ", machineInstallee=" + machineInstallee +
-                ", formateurContacte=" + formateurContacte +
-                ", formulaireGenere=" + formulaireGenere +
-                ", convocationStagiaireEnvoyee=" + convocationStagiaireEnvoyee +
-                ", planningAJour=" + planningAJour +
-                ", listeImprimee=" + listeImprimee +
-                ", ticketRepasImprime=" + ticketRepasImprime +
-                '}';
+        final StringBuilder sb = new StringBuilder("Logistique{");
+        sb.append("id=").append(id);
+        sb.append(", isSalleInstallee=").append(isSalleInstallee);
+        sb.append(", isSalleReservee=").append(isSalleReservee);
+        sb.append(", isSupportImprime=").append(isSupportImprime);
+        sb.append(", isMachineInstallee=").append(isMachineInstallee);
+        sb.append(", isFormateurContacte=").append(isFormateurContacte);
+        sb.append(", isFormulaireGenere=").append(isFormulaireGenere);
+        sb.append(", isConvocationEnvoyee=").append(isConvocationEnvoyee);
+        sb.append(", isPlanningAJour=").append(isPlanningAJour);
+        sb.append(", isListeImprimee=").append(isListeImprimee);
+        sb.append(", isTicketRepasImprimee=").append(isTicketRepasImprimee);
+        sb.append('}');
+        return sb.toString();
     }
 }

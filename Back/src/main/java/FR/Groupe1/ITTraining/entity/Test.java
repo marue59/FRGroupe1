@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Test {
 
     @Id
-    @Column(name = "idTest", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -17,7 +17,7 @@ public class Test {
     @Column(name = "reponse")
     private String reponse;
 
-  // Construct
+    // Construct
 
     public Test() {
         super();
