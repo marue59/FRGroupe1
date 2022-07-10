@@ -23,7 +23,15 @@ public class Sav {
     @Column(name = "nombre_formation")
     private int nombreFormation;
 
-    // Constructor
+
+
+
+
+
+
+
+
+    // Constructeurs
 
     public Sav() {
     }
@@ -36,7 +44,13 @@ public class Sav {
         this.nombreFormation = nombreFormation;
     }
 
-    // Getter Setter
+
+
+
+
+
+
+    // Getters & Setters
 
     public Long getId() {
         return id;
@@ -77,6 +91,15 @@ public class Sav {
     public void setNombreFormation(int nombreFormation) {
         this.nombreFormation = nombreFormation;
     }
+
+
+
+
+
+
+
+
+    // Méthodes
 
     @Override
     public String toString() {

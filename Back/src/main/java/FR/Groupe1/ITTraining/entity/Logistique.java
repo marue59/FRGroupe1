@@ -12,40 +12,63 @@ public class Logistique {
     private Long id;
 
     @Column(name = "is_salle_installee")
-    public boolean isSalleInstallee;
+    private boolean isSalleInstallee;
 
     @Column(name = "is_salle_reservee")
-    public boolean isSalleReservee;
+    private boolean isSalleReservee;
 
     @Column(name = "is_support_imprime")
-    public boolean isSupportImprime;
+    private boolean isSupportImprime;
 
     @Column(name = "is_machine_installee")
-    public boolean isMachineInstallee;
+    private boolean isMachineInstallee;
 
     @Column(name = "is_formateur_contacte")
-    public boolean isFormateurContacte;
+    private boolean isFormateurContacte;
 
     @Column(name = "is_formulaire_genere")
-    public boolean isFormulaireGenere;
+    private boolean isFormulaireGenere;
 
     @Column(name = "is_convocation_envoyee")
-    public boolean isConvocationEnvoyee;
+    private boolean isConvocationEnvoyee;
 
     @Column(name = "is_planning_ajour")
-    public boolean isPlanningAJour;
+    private boolean isPlanningAJour;
 
     @Column(name = "is_liste_imprimee")
-    public boolean isListeImprimee;
+    private boolean isListeImprimee;
 
     @Column(name = "is_ticket_imprime")
-    public boolean isTicketRepasImprime;
+    private boolean isTicketRepasImprime;
 
+
+
+
+
+
+
+    // Clé étrangère
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "sav_id", referencedColumnName = "id")
+    private Sav sav;
+
+
+
+
+
+
+
+
+    // Constructeurs
 
     public Logistique() {
     }
 
-    public Logistique(Long id, boolean isSalleInstallee, boolean isSalleReservee, boolean isSupportImprime, boolean isMachineInstallee, boolean isFormateurContacte, boolean isFormulaireGenere, boolean isConvocationEnvoyee, boolean isPlanningAJour, boolean isListeImprimee, boolean isTicketRepasImprimee) {
+    public Logistique(Long id, boolean isSalleInstallee, boolean isSalleReservee, boolean isSupportImprime,
+                      boolean isMachineInstallee, boolean isFormateurContacte, boolean isFormulaireGenere,
+                      boolean isConvocationEnvoyee, boolean isPlanningAJour, boolean isListeImprimee,
+                      boolean isTicketRepasImprime, Sav sav) {
         this.id = id;
         this.isSalleInstallee = isSalleInstallee;
         this.isSalleReservee = isSalleReservee;
@@ -56,9 +79,18 @@ public class Logistique {
         this.isConvocationEnvoyee = isConvocationEnvoyee;
         this.isPlanningAJour = isPlanningAJour;
         this.isListeImprimee = isListeImprimee;
-        this.isTicketRepasImprime = isTicketRepasImprimee;
+        this.isTicketRepasImprime = isTicketRepasImprime;
+        this.sav = sav;
     }
 
+
+
+
+
+
+
+
+    // Getters & Setters
 
     public Long getId() {
         return id;
@@ -148,6 +180,30 @@ public class Logistique {
         isTicketRepasImprime = ticketRepasImprimee;
     }
 
+    public boolean isTicketRepasImprime() {
+        return isTicketRepasImprime;
+    }
+
+    public void setTicketRepasImprime(boolean ticketRepasImprime) {
+        isTicketRepasImprime = ticketRepasImprime;
+    }
+
+    public Sav getSav() {
+        return sav;
+    }
+
+    public void setSav(Sav sav) {
+        this.sav = sav;
+    }
+
+
+
+
+
+
+
+
+    // Méthodes
 
     @Override
     public String toString() {

@@ -18,8 +18,12 @@ public class FormationService {
         return formationDao.findAll();
     }
 
-    public <S extends Formation> S save(S entity) {
-        return formationDao.save(entity);
+    public Formation create(Formation formation) {
+        return formationDao.save(formation);
+    }
+
+    public Formation  update(Formation formation) {
+        return formationDao.save(formation);
     }
 
     public Optional<Formation> findById(Long aLong) {

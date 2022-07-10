@@ -18,15 +18,44 @@ public class Theme {
     private String description;
 
 
+
+
+
+
+
+
+    // Clé étrangère
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "domaine_id",referencedColumnName = "id")
+    private Domaine domaine;
+
+
+
+
+
+
+
+    // Constructeurs
+
     public Theme() {
     }
 
-    public Theme(Long id, String nom, String description) {
+    public Theme(Long id, String nom, String description, Domaine domaine) {
         this.id = id;
         this.nom = nom;
         this.description = description;
+        this.domaine = domaine;
     }
 
+
+
+
+
+
+
+
+    // Getters & Setters
     public Long getId() {
         return id;
     }
@@ -51,12 +80,31 @@ public class Theme {
         this.description = description;
     }
 
+    public Domaine getDomaine() {
+        return domaine;
+    }
+
+    public void setDomaine(Domaine domaine) {
+        this.domaine = domaine;
+    }
+
+
+
+
+
+
+
+
+    // Méthodes
 
     @Override
     public String toString() {
-        return "ThemeDo{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                '}';
+        final StringBuilder sb = new StringBuilder("Theme{");
+        sb.append("id=").append(id);
+        sb.append(", nom='").append(nom).append('\'');
+        sb.append(", description='").append(description).append('\'');
+        sb.append(", domaine=").append(domaine);
+        sb.append('}');
+        return sb.toString();
     }
 }

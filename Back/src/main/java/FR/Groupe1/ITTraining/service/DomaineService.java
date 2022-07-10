@@ -21,8 +21,8 @@ public class DomaineService {
         return domaineDao.findAll();
     }
 
-    public <S extends Domaine> S save(S entity) {
-        return domaineDao.save(entity);
+    public Domaine  save(Domaine domaine) {
+        return domaineDao.save(domaine);
     }
 
     public Optional<Domaine> findById(Long aLong) {

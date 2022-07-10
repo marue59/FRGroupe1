@@ -21,19 +21,49 @@ public class Session {
     @Column(name = "lieu")
     private String lieu;
 
-    // Construct
+
+
+
+
+
+
+    // Clés étrangères
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "formation_id", referencedColumnName = "id")
+    private Formation formation;
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "logistique_id", referencedColumnName = "id")
+    private Logistique logistique;
+
+
+
+
+
+
+
+    // Constructeurs
     public Session() {
         super();
     }
 
-    public Session(Long id, Date date, boolean isIntra, String lieu) {
+    public Session(Long id, Date date, boolean isIntra, String lieu, Formation formation, Logistique logistique) {
         this.id = id;
         this.date = date;
         this.isIntra = isIntra;
         this.lieu = lieu;
+        this.formation = formation;
+        this.logistique = logistique;
     }
 
-    // Getter Setter
+
+
+
+
+
+
+    // Getters & Setters
 
     public Long getId() {
         return id;
@@ -66,6 +96,28 @@ public class Session {
     public void setLieu(String lieu) {
         this.lieu = lieu;
     }
+
+    public Formation getFormation() {
+        return formation;
+    }
+
+    public void setFormation(Formation formation) {
+        this.formation = formation;
+    }
+
+    public Logistique getLogistique() {
+        return logistique;
+    }
+
+    public void setLogistique(Logistique logistique) {
+        this.logistique = logistique;
+    }
+
+
+
+
+
+
 
     // Methodes :
 

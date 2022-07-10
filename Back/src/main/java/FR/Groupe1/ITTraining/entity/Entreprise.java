@@ -29,7 +29,15 @@ public class Entreprise {
     @Column(name = "email")
     private String email;
 
-    // Construct
+
+
+
+
+
+
+
+
+    // Constructeurs
     public Entreprise() {
     }
 
@@ -53,7 +61,15 @@ public class Entreprise {
         this.email = email;
     }
 
-    // Getter Setter
+
+
+
+
+
+
+
+
+    // Getters & Setters
 
 
     public Long getId() {
@@ -111,6 +127,14 @@ public class Entreprise {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+
+
+
+
+
+    // Méthodes
 
     @Override
     public String toString() {

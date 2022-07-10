@@ -1,7 +1,8 @@
 package FR.Groupe1.ITTraining.controller;
 
+import FR.Groupe1.ITTraining.entity.Domaine;
 import FR.Groupe1.ITTraining.entity.Formation;
-import FR.Groupe1.ITTraining.service.FormationService;
+import FR.Groupe1.ITTraining.service.DomaineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -10,46 +11,40 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/formations")
+@RequestMapping("/domaines")
 @CrossOrigin(origins = "http://localhost:4200")
-public class FormationController {
+public class DomaineController {
 
     @Autowired
-    private FormationService formationService;
+    private DomaineService domaineService;
 
     @GetMapping("")
     @ResponseStatus(code = HttpStatus.OK)
-    public List<Formation> findAll(){
-        return this.formationService.findAll();
+    public List<Domaine> findAll(){
+        return this.domaineService.findAll();
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
-    public Optional<Formation> findById(@PathVariable Long id){
-        return this.formationService.findById(id);
+    public Optional<Domaine> findById(@PathVariable Long id){
+        return this.domaineService.findById(id);
     }
 
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public Formation create(@RequestBody Formation formation){
-        return this.formationService.create(formation);
+    public Domaine create(@RequestBody Domaine domaine){
+        return this.domaineService.save(domaine);
     }
 
     @PutMapping("/{id}")
-    @ResponseStatus(code = HttpStatus.ACCEPTED)
-    public Formation update(@RequestBody Formation formation, @PathVariable Long id){
-        return this.formationService.update(formation);
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public Domaine update(@RequestBody Domaine domaine, @PathVariable Long id){
+        return this.domaineService.save(domaine);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.GONE)
     public void deleteById(@PathVariable Long id){
-        this.formationService.deleteById(id);
+        this.domaineService.deleteById(id);
     }
-
-
-
-
-
-
 }

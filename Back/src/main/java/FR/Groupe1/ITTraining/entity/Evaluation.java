@@ -42,6 +42,28 @@ public class Evaluation {
     @Column(name = "moyenne_note")
     private Double moyenneNote;
 
+
+
+
+
+
+
+
+
+    // Clé étrangère
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "sav_id", referencedColumnName = "id")
+    private Sav sav;
+
+
+
+
+
+
+
+    // Constructeurs
+
     public Evaluation() {
         super();
     }
@@ -49,7 +71,7 @@ public class Evaluation {
     public Evaluation(Long id, Integer qualiteAccueil, Integer qualiteEnvironnement, Integer qualiteStage, Date date,
                       Integer pedagogieFormateur, Integer maitriseFormateur, Integer disponibiliteFormateur,
                       Integer reponseFormateur, Integer animationFormateur, Integer satisfactionUtilisateur,
-                      Integer autreProjet, Double moyenneNote) {
+                      Integer autreProjet, Double moyenneNote, Sav sav) {
         this.id = id;
         this.qualiteAccueil = qualiteAccueil;
         this.qualiteEnvironnement = qualiteEnvironnement;
@@ -63,7 +85,19 @@ public class Evaluation {
         this.satisfactionUtilisateur = satisfactionUtilisateur;
         this.autreProjet = autreProjet;
         this.moyenneNote = moyenneNote;
+        this.sav = sav;
     }
+
+
+
+
+
+
+
+
+
+
+    // Getters & Setters
 
     public Long getId() {
         return id;
@@ -169,6 +203,23 @@ public class Evaluation {
         this.moyenneNote = moyenneNote;
     }
 
+    public Sav getSav() {
+        return sav;
+    }
+
+    public void setSav(Sav sav) {
+        this.sav = sav;
+    }
+
+
+
+
+
+
+
+
+
+    // Méthodes
 
     @Override
     public String toString() {

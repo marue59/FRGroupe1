@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@DiscriminatorValue("formateur")
+@DiscriminatorValue("formateur") // la valeur de la colonne 'role' qui permet de déterminer si c'est un formateur ou non.
 public class Formateur extends Utilisateur{
         @Column(name = "note_moyenne")
         private Double noteMoyenne;
@@ -20,17 +20,31 @@ public class Formateur extends Utilisateur{
         @Column(name = "is_prerequis")
         private boolean isPrerequis;
 
-    public Formateur(Long id, String nom, String prenom, String adresse, String email, String telephone, Double noteMoyenne, boolean isTechnique, boolean isPedagogique, boolean isPrerequis) {
-        super(id, nom, prenom, adresse, email, telephone);
+
+
+
+
+
+
+        // Constructeurs
+    public Formateur() {
+    }
+
+
+    public Formateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, Sav sav, Double noteMoyenne, boolean isTechnique, boolean isPedagogique, boolean isPrerequis) {
+        super(id, nom, prenom, adresse, email, telephone, isTest, session, test, entreprise, evaluation, sav);
         this.noteMoyenne = noteMoyenne;
         this.isTechnique = isTechnique;
         this.isPedagogique = isPedagogique;
         this.isPrerequis = isPrerequis;
     }
 
-    public Formateur() {
-    }
 
+
+
+
+
+    // Getters & Setters
 
         public Double getNoteMoyenne() {
         return noteMoyenne;
@@ -63,6 +77,14 @@ public class Formateur extends Utilisateur{
         public void setPrerequis(boolean prerequis) {
         isPrerequis = prerequis;
     }
+
+
+
+
+
+
+
+        // Méthodes
 
         @Override
         public String toString() {

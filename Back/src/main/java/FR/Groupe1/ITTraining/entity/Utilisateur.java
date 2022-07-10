@@ -7,8 +7,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "utilisateur")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "role")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // la table est héritée par la classe Formateur
+@DiscriminatorColumn(name = "role") // La colonne role joue le role du discriminant est permet de différencier le formateur du non formateur
 
 public class Utilisateur {
 
@@ -37,12 +37,44 @@ public class Utilisateur {
 
 
 
-    // Construct
+
+
+    // Clés étrangères
+
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "session_id", referencedColumnName = "id")
+    private Session session;
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "test_id", referencedColumnName = "id")
+    private Test test;
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "entreprise_id", referencedColumnName = "id")
+    private Entreprise entreprise;
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "evaluation_id", referencedColumnName = "id")
+    private Evaluation evaluation;
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "sav_id", referencedColumnName = "id")
+    private Sav sav;
+
+
+
+
+
+
+
+
+    // Constructeurs
     public Utilisateur() {
         super();
     }
 
-    public Utilisateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest) {
+    public Utilisateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, Sav sav) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -50,18 +82,23 @@ public class Utilisateur {
         this.email = email;
         this.telephone = telephone;
         this.isTest = isTest;
+        this.session = session;
+        this.test = test;
+        this.entreprise = entreprise;
+        this.evaluation = evaluation;
+        this.sav = sav;
     }
 
-    public Utilisateur(Long id, String nom, String prenom, String adresse, String email, String telephone) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.adresse = adresse;
-        this.email = email;
-        this.telephone = telephone;
-    }
 
-    // Getter Setter
+
+
+
+
+
+
+
+
+    // Getters &  Setters
     public Long getId() {
         return id;
     }
@@ -119,6 +156,49 @@ public class Utilisateur {
     public void setTest(boolean test) {
         isTest = test;
     }
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
+
+    public Test getTest() {
+        return test;
+    }
+
+    public void setTest(Test test) {
+        this.test = test;
+    }
+
+    public Entreprise getEntreprise() {
+        return entreprise;
+    }
+
+    public void setEntreprise(Entreprise entreprise) {
+        this.entreprise = entreprise;
+    }
+
+    public Evaluation getEvaluation() {
+        return evaluation;
+    }
+
+    public void setEvaluation(Evaluation evaluation) {
+        this.evaluation = evaluation;
+    }
+
+    public Sav getSav() {
+        return sav;
+    }
+
+    public void setSav(Sav sav) {
+        this.sav = sav;
+    }
+
+
+
 
 
 
