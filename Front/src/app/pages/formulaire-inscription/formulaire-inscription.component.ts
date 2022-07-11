@@ -11,24 +11,31 @@ import { Validators } from '@angular/forms';
 })
 export class FormulaireInscriptionComponent implements OnInit {
 
-  constructor(private formbuild : FormBuilder) { }
+  detailUtilisateurForm: FormGroup;
 
-  ngOnInit(): void {
+  constructor(private formbuild : FormBuilder) {
   }
-  profileForm = this.formbuild.group({
-    firstName: ['', Validators.required],
-    lastName: [''],
-    email: [''],
-    numTel:[''],
-    address: this.formbuild.group({
-      street: [''],
-      city: [''],
-      state: ['']
+
+  
+
+  ngOnInit(): void {  
+       this.createForms();
+  }
+
+createForms(){
+  this.detailUtilisateurForm = this.formbuild.group({
+    nom: ['', Validators.required],
+    prenom: ['', Validators.required],
+    genre:['', Validators.required],
+    email: ['', Validators.required],
+    numTel:['', Validators.required],
+    addresse: this.formbuild.group({
+      rue: [''],
+      ville: [''],
+      pays: ['']
     })
-})
+})}
+  
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
   }
- 
 }

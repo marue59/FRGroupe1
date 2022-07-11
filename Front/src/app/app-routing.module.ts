@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'themes', component: ThemeComponent },
   { path: 'themes/:id', component: ThemeComponent },
   { path: 'sous-themes', component: SousThemeComponent },
-  {path:'formulaire-inscription', component: FormulaireInscriptionComponent }
+  {path:'formulaire-inscription', component: FormulaireInscriptionComponent },
   { path: 'sous-themes/:id', component: SousThemeComponent },
 ];
 
