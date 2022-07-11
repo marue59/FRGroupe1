@@ -8,36 +8,62 @@ import java.util.Date;
 public class Session {
 
     @Id
-    @Column(name = "idSession", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "date")
     private Date date;
 
-    @Column(name = "prix")
-    private double prix;
-
-    @Column(name = "isIntra")
+    @Column(name = "is_intra")
     private boolean isIntra;
 
     @Column(name = "lieu")
     private String lieu;
 
-    // Construct
-  public Session() {
-      super();
-  }
 
-    public Session(Long id, Date date, double prix, boolean isIntra, String lieu) {
-        this.id = id;
-        this.date = date;
-        this.prix = prix;
-        this.isIntra = isIntra;
-        this.lieu = lieu;
+
+
+
+
+
+    // Clés étrangères
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "formation_id", referencedColumnName = "id")
+    private Formation formation;
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "logistique_id", referencedColumnName = "id")
+    private Logistique logistique;
+
+
+
+
+
+
+
+    // Constructeurs
+    public Session() {
+        super();
     }
 
-     // Getter Setter
+    public Session(Long id, Date date, boolean isIntra, String lieu, Formation formation, Logistique logistique) {
+        this.id = id;
+        this.date = date;
+        this.isIntra = isIntra;
+        this.lieu = lieu;
+        this.formation = formation;
+        this.logistique = logistique;
+    }
+
+
+
+
+
+
+
+    // Getters & Setters
 
     public Long getId() {
         return id;
@@ -53,14 +79,6 @@ public class Session {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public double getPrix() {
-        return prix;
-    }
-
-    public void setPrix(double prix) {
-        this.prix = prix;
     }
 
     public boolean isIntra() {
@@ -79,16 +97,39 @@ public class Session {
         this.lieu = lieu;
     }
 
+    public Formation getFormation() {
+        return formation;
+    }
+
+    public void setFormation(Formation formation) {
+        this.formation = formation;
+    }
+
+    public Logistique getLogistique() {
+        return logistique;
+    }
+
+    public void setLogistique(Logistique logistique) {
+        this.logistique = logistique;
+    }
+
+
+
+
+
+
+
     // Methodes :
+
 
     @Override
     public String toString() {
-        return "Session{" +
-                "id=" + id +
-                ", date=" + date +
-                ", prix=" + prix +
-                ", isIntra=" + isIntra +
-                ", lieu='" + lieu + '\'' +
-                '}';
+        final StringBuilder sb = new StringBuilder("Session{");
+        sb.append("id=").append(id);
+        sb.append(", date=").append(date);
+        sb.append(", isIntra=").append(isIntra);
+        sb.append(", lieu='").append(lieu).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

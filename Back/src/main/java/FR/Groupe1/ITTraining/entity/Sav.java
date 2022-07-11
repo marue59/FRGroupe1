@@ -3,11 +3,11 @@ package FR.Groupe1.ITTraining.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "service_commerciale_sav")
-public class ServiceCommercialeSav {
+@Table(name = "sav")
+public class Sav {
 
     @Id
-    @Column(name = "idServiceCom")
+    @Column(name = "id")
     @GeneratedValue
     private Long id;
 
@@ -23,26 +23,34 @@ public class ServiceCommercialeSav {
     @Column(name = "nombre_formation")
     private int nombreFormation;
 
-    // Construct
-    public ServiceCommercialeSav() {
+
+
+
+
+
+
+
+
+    // Constructeurs
+
+    public Sav() {
     }
 
-    public ServiceCommercialeSav(String client, String questionStagiaire, Double ca, int nombreFormation) {
-        this.client = client;
-        this.questionStagiaire = questionStagiaire;
-        this.ca = ca;
-        this.nombreFormation = nombreFormation;
-    }
-
-
-    public ServiceCommercialeSav(Long id, String client, String questionStagiaire, Double ca, int nombreFormation) {
+    public Sav(Long id, String client, String questionStagiaire, Double ca, int nombreFormation) {
         this.id = id;
         this.client = client;
         this.questionStagiaire = questionStagiaire;
         this.ca = ca;
         this.nombreFormation = nombreFormation;
     }
-        // Getter Setter
+
+
+
+
+
+
+
+    // Getters & Setters
 
     public Long getId() {
         return id;
@@ -83,6 +91,15 @@ public class ServiceCommercialeSav {
     public void setNombreFormation(int nombreFormation) {
         this.nombreFormation = nombreFormation;
     }
+
+
+
+
+
+
+
+
+    // Méthodes
 
     @Override
     public String toString() {

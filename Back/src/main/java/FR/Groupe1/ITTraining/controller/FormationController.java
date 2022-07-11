@@ -1,13 +1,15 @@
 package FR.Groupe1.ITTraining.controller;
 
+
 import FR.Groupe1.ITTraining.entity.Formation;
 import FR.Groupe1.ITTraining.service.FormationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/formations")
@@ -25,20 +27,29 @@ public class FormationController {
 
     @GetMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
-    public Optional<Formation> findById(@PathVariable Long id){
+    public Formation findById(@PathVariable long id){
         return this.formationService.findById(id);
     }
 
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public Formation save(@RequestBody Formation formation){
-        return this.formationService.save(formation);
+    public Formation create(@RequestBody Formation formation){
+        return this.formationService.create(formation);
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.ACCEPTED)
+    public Formation update(@RequestBody Formation formation, @PathVariable Long id){
+        if (!id.equals(formation.getId())){
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "mauvaise formation à mettre à jour");
+        }
+        return this.formationService.update(formation);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.GONE)
-    public void deleteById(@PathVariable Long id){
-        this.formationService.deleteById(id);
+    public void delete(@PathVariable Long id){
+        this.formationService.delete(id);
     }
 
 

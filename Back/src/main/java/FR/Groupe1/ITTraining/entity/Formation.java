@@ -1,48 +1,86 @@
 package FR.Groupe1.ITTraining.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "formation")
 public class Formation {
 
     @Id
-    @Column(name = "idformation")
+    @Column(name = "id")
     @GeneratedValue
     private Long id;
 
-    @Column(name = "nom_formation")
+    @Column(name = "nom")
     private String nom;
 
-    @Column(name = "contenu")
-    private String contenu;
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "objectifs")
+    private String objectifs;
+
+    @Column(name = "programme")
+    private String programme;
 
     @Column(name = "prix")
     private int prix;
 
-    @Column(name = "formation_personnalisee")
+    @Column(name = "heures")
+    private int heures;
+
+    @Column(name = "jours")
+    private int jours;
+
+    @Column(name = "is_personnalisee")
     private boolean isPersonnalisee;
 
-    // Construct
+
+
+
+
+
+
+
+    // Mapping vers la table avec la relation many to many
+
+    @ManyToMany(mappedBy = "formations")
+    @JsonIgnore // Obligé pour éviter l'erreur sendError(). Les sous-thèmes sont ignorés dans les méthodes GET POST PUT, mais peuvent-être récupérés en passant par la table sous-thème.
+    private Set<SousTheme> sousThemes;
+
+
+
+
+
+
+    // Constructeurs
     public Formation() {
     }
 
-    public Formation(String nom, String contenu, int prix, boolean isPersonnalisee) {
-        this.nom = nom;
-        this.contenu = contenu;
-        this.prix = prix;
-        this.isPersonnalisee = isPersonnalisee;
-    }
-
-    public Formation(Long id, String nom, String contenu, int prix, boolean isPersonnalisee) {
+    public Formation(Long id, String nom, String description, String objectifs, String programme, int prix, int heures, int jours, boolean isPersonnalisee, Set<SousTheme> sousThemes) {
         this.id = id;
         this.nom = nom;
-        this.contenu = contenu;
+        this.description = description;
+        this.objectifs = objectifs;
+        this.programme = programme;
         this.prix = prix;
+        this.heures = heures;
+        this.jours = jours;
         this.isPersonnalisee = isPersonnalisee;
+        this.sousThemes = sousThemes;
     }
 
-    // Getter Setter
+
+
+
+
+
+
+    // Getters & Setters
     public Long getId() {
         return id;
     }
@@ -59,13 +97,6 @@ public class Formation {
         this.nom = nom;
     }
 
-    public String getContenu() {
-        return contenu;
-    }
-
-    public void setContenu(String contenu) {
-        this.contenu = contenu;
-    }
 
     public int getPrix() {
         return prix;
@@ -83,16 +114,77 @@ public class Formation {
         isPersonnalisee = personnalisee;
     }
 
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getObjectifs() {
+        return objectifs;
+    }
+
+    public void setObjectifs(String objectifs) {
+        this.objectifs = objectifs;
+    }
+
+    public String getProgramme() {
+        return programme;
+    }
+
+    public void setProgramme(String programme) {
+        this.programme = programme;
+    }
+
+    public int getHeures() {
+        return heures;
+    }
+
+    public void setHeures(int heures) {
+        this.heures = heures;
+    }
+
+    public int getJours() {
+        return jours;
+    }
+
+    public void setJours(int jours) {
+        this.jours = jours;
+    }
+
+    public Set<SousTheme> getSousThemes() {
+        return sousThemes;
+    }
+
+    public void setSousThemes(Set<SousTheme> sousThemes) {
+        this.sousThemes = sousThemes;
+    }
+
+
+
+
+
+
+
+
+    // Méthodes
+
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("FormationDO{");
+        final StringBuilder sb = new StringBuilder("Formation{");
         sb.append("id=").append(id);
         sb.append(", nom='").append(nom).append('\'');
-        sb.append(", contenu='").append(contenu).append('\'');
+        sb.append(", description='").append(description).append('\'');
+        sb.append(", objectifs='").append(objectifs).append('\'');
+        sb.append(", programme='").append(programme).append('\'');
         sb.append(", prix=").append(prix);
+        sb.append(", heures=").append(heures);
+        sb.append(", jours=").append(jours);
         sb.append(", isPersonnalisee=").append(isPersonnalisee);
         sb.append('}');
         return sb.toString();
     }
-
 }
