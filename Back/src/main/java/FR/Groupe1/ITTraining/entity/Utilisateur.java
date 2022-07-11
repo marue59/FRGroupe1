@@ -15,6 +15,10 @@ public class Utilisateur {
     private String nom;
     @Column(name = "prenom")
     private String prenom;
+
+    @Column(name = "adresse")
+    private String adresse;
+
     @Column(name = "numTel")
     private String telephone;
     @Column(name = "email")
@@ -39,12 +43,13 @@ public class Utilisateur {
         super();
     }
 
-    public Utilisateur(Long id, String nom, String prenom, String telephone, String email, boolean testIsValide,
+    public Utilisateur(Long id, String nom, String prenom, String adresse, String telephone, String email, boolean testIsValide,
                        Double noteMoyenne, boolean seanceValidationTechnique, boolean seanceValidationPedagigique,
                        boolean prerequisStagiaireValide, Role role) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
+        this.adresse = adresse;
         this.telephone = telephone;
         this.email = email;
         this.testIsValide = testIsValide;
@@ -135,6 +140,14 @@ public class Utilisateur {
 
     public void setPrerequisStagiaireValide(boolean prerequisStagiaireValide) {
         this.prerequisStagiaireValide = prerequisStagiaireValide;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
     }
 
     public Role getRole() {
