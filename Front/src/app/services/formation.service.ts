@@ -11,23 +11,29 @@ export class FormationService {
 
   constructor(private httpClient: HttpClient) {}
 
-getFormations(): Observable<Formation[]>{
-  return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations`);
-}
+  getFormations(): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations`);
+  }
 
-getFormation(id: number): Observable<Formation>{
-  return this.httpClient.get<Formation>(`${this.apiUrl}/formations/${id}`);
-}
+  getFormation(id: number): Observable<Formation> {
+    return this.httpClient.get<Formation>(`${this.apiUrl}/formations/${id}`);
+  }
 
-createFormation(formation: Formation): Observable<Formation>{
-  return this.httpClient.post<Formation>(`${this.apiUrl}/formations`, formation);
-}
+  createFormation(formation: Formation): Observable<Formation> {
+    return this.httpClient.post<Formation>(
+      `${this.apiUrl}/formations`,
+      formation
+    );
+  }
 
-updateFormation(formation: Formation): Observable<Formation>{
-  return this.httpClient.put<Formation>(`${this.apiUrl}/${formation.id}`,formation);
-}
+  updateFormation(formation: Formation): Observable<Formation> {
+    return this.httpClient.put<Formation>(
+      `${this.apiUrl}/${formation.id}`,
+      formation
+    );
+  }
 
-deleteFormation(id: number): Observable<Formation>{
-  return this.httpClient.delete<Formation>(`${this.apiUrl}/formations/${id}`);
-}
+  deleteFormation(id: number): Observable<Formation> {
+    return this.httpClient.delete<Formation>(`${this.apiUrl}/formations/${id}`);
+  }
 }

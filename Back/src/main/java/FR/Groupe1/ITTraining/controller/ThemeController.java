@@ -20,26 +20,26 @@ public class ThemeController {
 
     @GetMapping("")
     @ResponseStatus(code = HttpStatus.OK)
-    public List<Theme> findAll(){
+    public List<Theme> findAll() {
         return this.themeService.findAll();
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
-    public Theme findById(@PathVariable long id){
+    public Theme findById(@PathVariable long id) {
         return this.themeService.findById(id);
     }
 
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public Theme create(@RequestBody Theme theme){
+    public Theme create(@RequestBody Theme theme) {
         return this.themeService.create(theme);
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
-    public Theme update(@RequestBody Theme theme, @PathVariable Long id){
-        if (!id.equals(theme.getId())){
+    public Theme update(@RequestBody Theme theme, @PathVariable Long id) {
+        if (!id.equals(theme.getId())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "mauvais theme à mettre à jour");
         }
         return this.themeService.update(theme);
@@ -47,9 +47,7 @@ public class ThemeController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.GONE)
-    public void delete(@PathVariable Long id){
+    public void delete(@PathVariable Long id) {
         this.themeService.delete(id);
     }
-
-
 }

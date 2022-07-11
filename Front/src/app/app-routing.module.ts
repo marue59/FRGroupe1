@@ -7,17 +7,19 @@ import { FormationComponent } from './pages/formation/formation.component';
 import { ThemeComponent } from './pages/theme/theme.component';
 import { SousThemeComponent } from './pages/sous-theme/sous-theme.component';
 import { FormulaireInscriptionComponent } from './pages/formulaire-inscription/formulaire-inscription.component';
+import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/ComposantePrincipale/interface-utilisateur/interface-utilisateur.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'formations', component: FormationComponent },
-  { path: 'formations/:id', component: DetailsFormationComponent},
+  { path: 'formations/:id', component: DetailsFormationComponent },
   { path: 'themes', component: ThemeComponent },
   { path: 'themes/:id', component: ThemeComponent },
   { path: 'sous-themes', component: SousThemeComponent },
-  {path:'formulaire-inscription', component: FormulaireInscriptionComponent }
+  { path: 'formulaire-inscription', component: FormulaireInscriptionComponent },
   { path: 'sous-themes/:id', component: SousThemeComponent },
+  { path: 'connexion', component: InterfaceUtilisateurComponent },
 ];
 
 @NgModule({

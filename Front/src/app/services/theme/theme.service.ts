@@ -8,7 +8,8 @@ import Theme from 'src/app/models/theme.model';
   providedIn: 'root',
 })
 export class ThemeService {
-  private apiUrl = 'http://localhost:3000';
+  // declarer l'url pour le back
+  private apiUrl = 'http://localhost:8080';
 
   private themeSource = new BehaviorSubject(null);
   currentTheme = this.themeSource.asObservable();
@@ -16,17 +17,26 @@ export class ThemeService {
   constructor(private httpClient: HttpClient) {
     this.httpClient.get(`${this.apiUrl}/themes`).subscribe((theme: any) => {
       this.themeSource.next(theme);
-      console.log(theme);
     });
   }
 
   getThemes(): Observable<Theme[]> {
     return this.httpClient.get<Theme[]>(`${this.apiUrl}/themes`);
-    // ou en plus simple
-    // return this.httpClient.get<Film>(this.apiUrl + '/formation');
   }
 
   getTheme(id: number): Observable<Theme> {
     return this.httpClient.get<Theme>(`${this.apiUrl}/themes/${id}`);
+  }
+
+  createTheme(theme: Theme): Observable<Theme> {
+    return this.httpClient.post<Theme>(`${this.apiUrl}/themes`, theme);
+  }
+
+  updateTheme(theme: Theme): Observable<Theme> {
+    return this.httpClient.put<Theme>(`${this.apiUrl}/${theme.id}`, theme);
+  }
+
+  deleteTheme(id: number): Observable<Theme> {
+    return this.httpClient.delete<Theme>(`${this.apiUrl}/themes/${id}`);
   }
 }

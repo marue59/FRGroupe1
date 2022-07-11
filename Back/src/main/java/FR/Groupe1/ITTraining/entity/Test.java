@@ -17,7 +17,13 @@ public class Test {
     @Column(name = "reponse")
     private String reponse;
 
-  // Construct
+
+
+
+
+
+
+    // Constructeurs
 
     public Test() {
         super();
@@ -29,7 +35,13 @@ public class Test {
         this.reponse = reponse;
     }
 
-    // Getter Setter
+
+
+
+
+
+
+    // Getters & Setters
 
     public Long getId() {
         return id;
@@ -54,6 +66,15 @@ public class Test {
     public void setReponse(String reponse) {
         this.reponse = reponse;
     }
+
+
+
+
+
+
+
+
+
 
     // Methodes :
 

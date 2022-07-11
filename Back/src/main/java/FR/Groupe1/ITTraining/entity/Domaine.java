@@ -14,7 +14,11 @@ public class Domaine {
     @Column(name = "nom")
     private String nom;
 
-     // Construct
+
+
+
+
+    // Constructeurs
     public Domaine(){
         super();
     }
@@ -24,7 +28,11 @@ public class Domaine {
         this.nom = nom;
     }
 
-   // Getter Setter
+
+
+
+
+    // Getters &  Setters
     public Long getId() {
         return id;
     }
@@ -41,7 +49,12 @@ public class Domaine {
         this.nom = nom;
     }
 
-     // Methodes :
+
+
+
+
+
+    // Methodes :
 
     @Override
     public String toString() {
