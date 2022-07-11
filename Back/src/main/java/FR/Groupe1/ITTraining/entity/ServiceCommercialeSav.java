@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class ServiceCommercialeSav {
 
     @Id
-    @Column(name = "idServiceCom")
+    @Column(name = "id")
     @GeneratedValue
     private Long id;
 

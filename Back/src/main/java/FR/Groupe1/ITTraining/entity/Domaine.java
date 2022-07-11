@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Domaine {
 
     @Id
-    @Column(name = "idDomaine", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 

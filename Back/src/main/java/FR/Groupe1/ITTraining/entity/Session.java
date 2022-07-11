@@ -8,7 +8,7 @@ import java.util.Date;
 public class Session {
 
     @Id
-    @Column(name = "idSession", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 

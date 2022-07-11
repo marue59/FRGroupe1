@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Formation {
 
     @Id
-    @Column(name = "idformation")
+    @Column(name = "id")
     @GeneratedValue
     private Long id;
 

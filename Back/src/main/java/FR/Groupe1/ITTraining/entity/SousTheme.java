@@ -6,11 +6,11 @@ import javax.persistence.*;
 @Table(name = "sous_theme")
 public class SousTheme {
     @Id
-    @Column(name = "idSousTheme")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "nom_sous_theme")
+    @Column(name = "nom")
     private String nomSousTheme;
 
     public SousTheme() {
@@ -42,7 +42,7 @@ public class SousTheme {
     public String toString() {
         return "SousThemeDo{" +
                 "id=" + id +
-                ", nomSousTheme='" + nomSousTheme + '\'' +
+                ", nom='" + nomSousTheme + '\'' +
                 '}';
     }
 }
