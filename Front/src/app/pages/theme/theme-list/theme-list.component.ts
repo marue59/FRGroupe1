@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SousThemeListComponent } from '../../sous-theme/sous-theme-list/sous-theme-list.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ThemeService } from 'src/app/services/theme/theme.service';
+
+import Theme from 'src/app/models/theme.model';
 
 @Component({
   selector: 'app-theme-list',
@@ -8,7 +11,29 @@ import { SousThemeListComponent } from '../../sous-theme/sous-theme-list/sous-th
 })
 export class ThemeListComponent implements OnInit {
   @Input() themes: any;
-  constructor() {}
+  theme!: Theme;
 
-  ngOnInit(): void {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private themeService: ThemeService
+  ) {}
+
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+
+    this.setSubscribe(id);
+  }
+
+  private subscribeThemes(id: number) {
+    this.themeService.getTheme(id).subscribe((themes) => {
+      this.themes = themes;
+    });
+  }
+
+  private setSubscribe(id: string | null) {
+    if (id) {
+      this.subscribeThemes(+id);
+    }
+  }
 }

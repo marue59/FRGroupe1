@@ -1,15 +1,3 @@
-<!--<div class="d-flex justify-content-center" *ngFor="let sousTheme of sousThemes"
-[sousThemes]="sousTheme"
-routerLink="sous-themes/{{ sousThemes.id }}"
->{{ sousThemes.nom }}
- <app-sous-theme-card
-    class="w3-bar-item w3-button w3-padding-16 w3-medium"
-    *ngFor="let sousTheme of sousThemes"
-    [sousThemes]="sousTheme"
-    routerLink="sous-themes/{{ sousThemes.id }}"
-    >{{ sousThemes.nom }}</app-sous-theme-card
-  >
-</div>-->
 <!-- Pour la sideBar-->
 <ul class="w3-dropdown-content w3-bar-block">
   <li
@@ -17,6 +5,6 @@ routerLink="sous-themes/{{ sousThemes.id }}"
     *ngFor="let sousTheme of sousThemes"
     routerLink="sous-themes/{{ sousTheme.id }}"
   >
-    {{ sousTheme.nom }}
+    {{ sousTheme.nomSousTheme }}
   </li>
 </ul>
