@@ -13,10 +13,12 @@ import { FormulaireUtilisateurService } from 'src/app/services/formulaireUtilisa
 })
 export class FormulaireInscriptionComponent implements OnInit {
 
- detailUtilisateurForm!: FormGroup;
-  us!:FormulaireUtilisateurService;
+  
 
-  genre = [
+  detailUtilisateurForm!: FormGroup;
+  us!: FormulaireUtilisateurService;
+
+  genres = [
     "Homme",
     "Femme",
     "Autre"
@@ -42,7 +44,7 @@ export class FormulaireInscriptionComponent implements OnInit {
     'email': [
       { type: 'maxlength', message: 'Champs devant etre rempli' },
     ],
-    
+
     'numTel': [
       { type: 'required', message: 'Le numéro de téléphone est requis' },
     ]
@@ -71,27 +73,28 @@ export class FormulaireInscriptionComponent implements OnInit {
   }
 
 
-  constructor(private formbuild : FormBuilder) {
-  }  
-
-  ngOnInit(): void {  
-       this.createForms();
+  constructor(private formbuild: FormBuilder) {
   }
 
-createForms(){
-  this.detailUtilisateurForm = this.formbuild.group({
-    nom: ['', Validators.required],
-    prenom: ['', Validators.required],
-    genre:['', Validators.required],
-    email: ['', Validators.required],
-    numTel:['', Validators.required],
-    lieu:[''],
-    date:[''],
-    addresse:['', Validators.required]
-})}
-
-
-  onSubmit(value:any) {
-console.log(value);
+  ngOnInit(): void {
+    this.createForms();
   }
+
+  createForms() {
+    this.detailUtilisateurForm = this.formbuild.group({
+      nom: ['', Validators.required],
+      prenom: ['', Validators.required],
+      gender: new FormControl(this.genres[0], Validators.required),
+      email: ['', Validators.required],
+      numTel: ['', Validators.required],
+      lieu: [''],
+      date: [''],
+      addresse: ['', Validators.required]
+    })
+  }
+
+
+  onSubmit(detailUtilisateurForm:FormGroup) {
+    console.log('valeurs: ', JSON.stringify(detailUtilisateurForm.value))
+    }
 }
