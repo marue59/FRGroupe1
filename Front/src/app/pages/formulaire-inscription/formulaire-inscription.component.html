@@ -1,42 +1,46 @@
 <div formGroupName="address" class="bordure">
-  <form [formGroup]="detailUtilisateurForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="detailUtilisateurForm" (ngSubmit)="onSubmit(detailUtilisateurForm.value)">
 
 
     <div id="container " class="d-flex flex-direction justify-content-around flex-column">
       <h1>Formulaire d'inscription</h1>
       <p class="d-flex">
         <label for="nom"> <span>Nom :</span></label>
-        <input id="nom" type="text" formControlName="nom" size="100" required>
+        <input id="nom" type="text" formControlName="nom" size="50" required>
       </p>
 
       <p class="d-flex"> <label for="prenom"><span>Prénom :</span> </label>
-        <input id="prenom" type="text" formControlName="prenom" size="100" required>
+        <input id="prenom" type="text" formControlName="prenom" size="50" required>
+      </p>
+
+      <p class="d-flex"> <label for="genre"><span>Genre :</span> </label>
+        <input id="genre" type="text" formControlName="genre" size="50" required>
       </p>
 
       <p class="d-flex"><label for="adresse"><span>Adresse : </span></label>
-        <input id="adresse" type="text" formControlName="adresse" size="100" required>
+        <input id="adresse" type="text" formControlName="adresse" size="50" required>
       </p>
     
       <p class="d-flex">
         <label for="email"><span>Email : </span></label>
-        <input id="email" type="text" formControlName="email" size="100" required>
+        <input id="email" type="text" formControlName="email" size="50" required>
       </p>
 
       <p class="d-flex">
         <label for="numTel"><span>Telephone : </span></label>
-        <input id="numTel" type="text" formControlName="numTel" size="100" required>
+        <input id="numTel" type="text" formControlName="numTel" size="50" required>
       </p>
 
 
       <div id="container " class="d-flex flex-direction justify-content-around flex-column">
         <p class="d-flex">
           <label for="lieu"><span>Lieu : </span></label>
-          <input id="lieu" type="hidden" formControlName="lieu" size="100" required>
+          <input id="lieu" type="hidden" formControlName="lieu" size="50" required>
         </p>
   
         <p class="d-flex">
           <label for="date"><span>Date : </span></label>
-          <input id="date" type="hidden" formControlName="date" size="100" required>
+          <input id="date" type="hidden" formControlName="date" size="50" required>
         </p>
   
       </div>

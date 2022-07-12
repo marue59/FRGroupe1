@@ -16,6 +16,49 @@ export class FormulaireInscriptionComponent implements OnInit {
  detailUtilisateurForm!: FormGroup;
   us!:FormulaireUtilisateurService;
 
+  genre = [
+    "Homme",
+    "Femme",
+    "Autre"
+  ];
+
+  validation_messages = {
+    'nom': [
+      { type: 'required', message: 'Champs devant etre rempli' }
+    ],
+
+    'prenom': [
+      { type: 'required', message: 'Champs devant etre rempli' }
+    ],
+
+    'genre': [
+      { type: 'required', message: 'Champs devant etre rempli' }
+    ],
+
+    'adresse': [
+      { type: 'required', message: 'Champs devant etre rempli' }
+    ],
+
+    'email': [
+      { type: 'maxlength', message: 'Champs devant etre rempli' },
+    ],
+    
+    'numTel': [
+      { type: 'required', message: 'Le numéro de téléphone est requis' },
+    ]
+  };
+
+
+  account_validation_messages = {
+    'nom': [
+      { type: 'required', message: 'Le nom est requis' },
+      
+    ],
+    'email': [
+      { type: 'required', message: 'Email requis' },
+      { type: 'pattern', message: 'Entrez un email valide' }
+    ]    
+  }
 
   constructor(private formbuild : FormBuilder) {
   }  
@@ -37,7 +80,7 @@ createForms(){
 })}
 
 
-  onSubmit() {
-
+  onSubmit(value:any) {
+console.log(value);
   }
 }
