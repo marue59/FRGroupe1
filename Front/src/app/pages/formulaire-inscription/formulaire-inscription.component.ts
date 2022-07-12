@@ -48,17 +48,28 @@ export class FormulaireInscriptionComponent implements OnInit {
     ]
   };
 
-
   account_validation_messages = {
     'nom': [
-      { type: 'required', message: 'Le nom est requis' },
-      
+      { type: 'required', message: 'Nom requis' },
+    ],
+    'prenom': [
+      { type: 'required', message: 'Prénom requis' },
+    ],
+    'genre': [
+      { type: 'required', message: 'genre requis' },
+    ],
+    'adresse': [
+      { type: 'required', message: 'Adresse requise' },
     ],
     'email': [
-      { type: 'required', message: 'Email requis' },
-      { type: 'pattern', message: 'Entrez un email valide' }
-    ]    
+      { type: 'required', message: 'Email is required' },
+      { type: 'pattern', message: 'Enter a valid email' }
+    ],
+    'numTel': [
+      { type: 'required', message: 'Téléphone requis' },
+    ],
   }
+
 
   constructor(private formbuild : FormBuilder) {
   }  
