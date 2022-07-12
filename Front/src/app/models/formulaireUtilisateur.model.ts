@@ -5,9 +5,6 @@ export default interface FormulaireUtilisateur{
     prenom:string;
     genre:string;
     adresse:string;
-    rue:string;
-    ville:string;
-    pays:string;
     email:string;
     numTel:PhoneNumber;
     

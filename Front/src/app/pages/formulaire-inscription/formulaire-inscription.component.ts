@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import FormulaireUtilisateur from 'src/app/models/formulaireUtilisateur.model';
+import { FormulaireUtilisateurService } from 'src/app/services/formulaireUtilisateur/formulaireUtilisateur.service';
 
 
 @Component({
@@ -11,12 +13,12 @@ import { Validators } from '@angular/forms';
 })
 export class FormulaireInscriptionComponent implements OnInit {
 
-  detailUtilisateurForm: FormGroup;
+ detailUtilisateurForm!: FormGroup;
+  us!:FormulaireUtilisateurService;
+
 
   constructor(private formbuild : FormBuilder) {
-  }
-
-  
+  }  
 
   ngOnInit(): void {  
        this.createForms();
@@ -29,13 +31,13 @@ createForms(){
     genre:['', Validators.required],
     email: ['', Validators.required],
     numTel:['', Validators.required],
-    addresse: this.formbuild.group({
-      rue: [''],
-      ville: [''],
-      pays: ['']
-    })
+    lieu:[''],
+    date:[''],
+    addresse:['', Validators.required]
 })}
-  
+
+
   onSubmit() {
+
   }
 }

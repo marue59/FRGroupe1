@@ -1,5 +1,5 @@
 <div formGroupName="address" class="bordure">
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="detailUtilisateurForm" (ngSubmit)="onSubmit()">
 
 
     <div id="container " class="d-flex flex-direction justify-content-around flex-column">
@@ -13,19 +13,8 @@
         <input id="prenom" type="text" formControlName="prenom" size="100" required>
       </p>
 
-      <h2>Adresse personnelle</h2>
-      <p class="d-flex"><label for="rue"><span>Rue : </span></label>
-        <input id="rue" type="text" formControlName="rue" size="100" required>
-      </p>
-
-      <p class="d-flex">
-        <label for="ville"><span>Ville : </span></label>
-        <input id="ville" type="text" formControlName="ville" size="100" required>
-      </p>
-
-      <p class="d-flex">
-        <label for="pays"><span>Pays : </span></label>
-        <input id="pays" type="text" formControlName="pays" size="100" required>
+      <p class="d-flex"><label for="adresse"><span>Adresse : </span></label>
+        <input id="adresse" type="text" formControlName="adresse" size="100" required>
       </p>
     
       <p class="d-flex">
@@ -38,8 +27,22 @@
         <input id="numTel" type="text" formControlName="numTel" size="100" required>
       </p>
 
+
+      <div id="container " class="d-flex flex-direction justify-content-around flex-column">
+        <p class="d-flex">
+          <label for="lieu"><span>Lieu : </span></label>
+          <input id="lieu" type="hidden" formControlName="lieu" size="100" required>
+        </p>
+  
+        <p class="d-flex">
+          <label for="date"><span>Date : </span></label>
+          <input id="date" type="hidden" formControlName="date" size="100" required>
+        </p>
+  
+      </div>
+
       <div id="button">
-        <button type="submit" [disabled]="!profileForm.valid" (click)="createFormulaire()">Valider</button>
+        <button type="submit">Valider</button>
       </div>
 
     </div>
