@@ -3,13 +3,48 @@
 <div class="globalContainer">
 
     <!-- Les détails de la formation -->
-    <div class="infos">
+    <div class="infos" #texte>
 
         <!-- Le texte des infos sur la formation -->
-        <div class="texte">
-            {{text}}
-
+        <div class="texte" *ngIf="boutonNom === 'Présentation'">
+            {{formation?.description}}
         </div>
+
+        <!-- Le texte des objectifs de la formation -->
+        <div class="texte" *ngIf="boutonNom === 'Objectifs'">
+            <div *ngIf="textLines(formation.objectifs).length > 1;else formationObjectif">
+                <ul *ngFor="let text of textLines(formation.objectifs)">
+                    <li>
+                        {{text}}
+                    </li>
+                </ul>
+            </div>
+            <!-- ng-template pour la condition else -->
+            <ng-template #formationObjectif>
+                {{formation?.objectifs}}
+            </ng-template>
+        </div>
+
+        <!-- Le texte pour le programme de la formation -->
+        <div class="texte" *ngIf="boutonNom === 'Programme'">
+            <div *ngIf="textLines(formation.programme).length > 1;else formationProgramme">
+                <ul *ngFor="let text of textLines(formation.programme)">
+                    <li>
+                        {{text}}
+                    </li>
+                </ul>
+            </div>
+            <!-- ng-template pour la condition else -->
+            <ng-template #formationProgramme>
+                {{formation?.programme}}
+            </ng-template>
+        </div>
+
+        <!-- Contacter le responsable formation -->
+        <div class="texte" *ngIf="boutonNom === 'Contact'">
+            contact
+        </div>
+
     </div>
 
 </div>

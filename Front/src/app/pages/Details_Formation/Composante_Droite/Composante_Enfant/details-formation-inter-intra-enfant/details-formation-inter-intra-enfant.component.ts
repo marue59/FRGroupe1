@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import Formation from 'src/app/models/formation.model';
+import Session from 'src/app/models/session.model';
 
 @Component({
   selector: 'app-details-formation-inter-intra-enfant',
@@ -12,6 +14,12 @@ export class DetailsFormationInterIntraEnfantComponent implements OnInit {
    */
    @Input()
    boutons!: any;
+
+   @Input()
+   formation!: Formation;
+
+   @Input()
+   session!: Session;
 
   constructor() { }
 

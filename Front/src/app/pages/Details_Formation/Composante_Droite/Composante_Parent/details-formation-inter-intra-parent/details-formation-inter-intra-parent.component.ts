@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import Formation from 'src/app/models/formation.model';
+import Session from 'src/app/models/session.model';
 
 @Component({
   selector: 'app-details-formation-inter-intra-parent',
@@ -46,6 +48,12 @@ export class DetailsFormationInterIntraParentComponent implements OnInit {
     date: 'Texte 3'
   }
 ]
+
+@Input()
+formation!: Formation;
+
+@Input()
+session!: Session;
 
   constructor() { }
 

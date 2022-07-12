@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import Formation from 'src/app/models/formation.model';
+import Session from 'src/app/models/session.model';
 import { FormationService } from 'src/app/services/formation.service';
+import { SessionService } from 'src/app/services/session/session.service';
 
 @Component({
   selector: 'app-details-formation',
@@ -11,10 +13,13 @@ import { FormationService } from 'src/app/services/formation.service';
 export class DetailsFormationComponent implements OnInit {
   formation!: Formation;
 
+  session!: Session;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private formationService: FormationService
+    private formationService: FormationService,
+    private sessionService: SessionService
   ) {}
 
   ngOnInit(): void {
@@ -29,9 +34,16 @@ export class DetailsFormationComponent implements OnInit {
     });
   }
 
+  private subscribeSession(id: number){
+    this.sessionService.getSession(id).subscribe((data) => {
+      this.session = data;
+    })
+  }
+
   private setSubscribe(id: string | null) {
     if (id) {
       this.subscribeFormations(+id);
+      this.subscribeSession(+id);
     }
   }
 }
