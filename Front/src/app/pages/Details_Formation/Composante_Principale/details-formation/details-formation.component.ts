@@ -12,9 +12,19 @@ import { SessionService } from 'src/app/services/session/session.service';
 })
 export class DetailsFormationComponent implements OnInit {
 
-  formation!: Formation;
+  formation: Formation = {
+    id: 1,
+    nom: '',
+    description: '',
+    prix: 0,
+    isPersonnalise: false,
+    objectifs: '',
+    programme: '',
+    heures: 0,
+    jours: 0
+  }
   id!: number;
-  
+
   session!: Session;
 
   constructor(
