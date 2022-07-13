@@ -4,10 +4,16 @@
   routerLink="/themes/{{ theme.id }}"
 >
   <div class="card bg-light">
-    <img src="" class="card-img-top" alt="..." />
-    <div class="card-body">
+    <div class="card-body text-center">
       <h2 class="card-title secondary-title">{{ theme.nom }}</h2>
-      <p class="card-text">{{ theme.description }}</p>
+      <p class="card-text text-justify m-4">{{ theme.contenu }}</p>
+      <app-sous-theme-list></app-sous-theme-list>
+      <button
+        routerLink="/formulaire-inscription"
+        class="btn btn-secondary m-3"
+      >
+        Information et inscription
+      </button>
     </div>
   </div>
 </div>

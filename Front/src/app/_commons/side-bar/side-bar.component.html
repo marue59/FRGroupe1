@@ -6,32 +6,30 @@
   <div class="sideItems"></div>
   <!-- Themes -->
   <div class="w3-dropdown-hover">
-    <button class="w3-button w3-padding-24 w3-large" routerLink="/themes">
+    <button class="w3-button w3-padding-32 w3-xlarge" routerLink="/themes">
       Thèmes<i class="fa fa-caret-down"></i>
     </button>
-    <div class="w3-dropdown-content w3-bar-block w3-large">
-      <p class="w3-button w3-padding-24 w3-large">
-        <app-theme-list [themes]="themes"></app-theme-list>
-      </p>
+    <div class="w3-dropdown-content w3-bar-block w3-xlarge">
+      <app-theme-list [themes]="themes"></app-theme-list>
     </div>
   </div>
 
   <!-- Sous-Themes -->
   <div class="w3-dropdown-hover">
-    <button class="w3-button w3-padding-24 w3-large" routerLink="/sous-themes">
+    <button class="w3-button w3-padding-32 w3-xlarge" routerLink="/sous-themes">
       Sous-Thèmes<i class="fa fa-caret-down"></i>
     </button>
-    <div class="w3-dropdown-content w3-bar-block">
+    <div class="w3-dropdown-content w3-bar-block w3-xlarge">
       <app-sous-theme-list [sousThemes]="sousThemes"></app-sous-theme-list>
     </div>
   </div>
 
   <!-- Formations -->
   <div class="w3-dropdown-hover">
-    <button class="w3-button w3-padding-24 w3-large" routerLink="/formations">
+    <button class="w3-button w3-padding-32 w3-xlarge" routerLink="/formations">
       Formations<i class="fa fa-caret-down"></i>
     </button>
-    <div class="w3-dropdown-content w3-bar-block">
+    <div class="w3-dropdown-content w3-bar-block w3-xlarge">
       <app-formation-list [formations]="formations"></app-formation-list>
     </div>
   </div>

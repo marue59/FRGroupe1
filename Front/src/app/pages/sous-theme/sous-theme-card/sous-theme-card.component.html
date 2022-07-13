@@ -4,10 +4,11 @@
   routerLink="/sous-themes/{{ sousTheme.id }}"
 >
   <div class="card bg-light">
-    <img src="" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h2 class="card-title secondary-title">{{ sousTheme.nom }}</h2>
-      <p class="card-text">{{ sousTheme.description }}</p>
+    <div class="card-body text-center">
+      <h2 class="card-title secondary-title">{{ sousTheme.nomSousTheme }}</h2>
+      <button routerLink="/formations" class="btn btn-secondary m-3">
+        Voir les formations
+      </button>
     </div>
   </div>
 </div>

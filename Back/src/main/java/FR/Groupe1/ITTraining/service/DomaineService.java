@@ -17,19 +17,37 @@ public class DomaineService {
     private DomaineDao domaineDao;
 
 
-    public List<Domaine> findAll() {
-        return domaineDao.findAll();
+    public List<Domaine> findAll(){
+        return this.domaineDao.findAll();
     }
 
-    public <S extends Domaine> S save(S entity) {
-        return domaineDao.save(entity);
+    public Domaine findById(Long id){
+        Optional<Domaine> optionalDomaine =  this.domaineDao.findById(id);
+        if(optionalDomaine.isPresent()){
+            return optionalDomaine.get();
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
     }
 
-    public Optional<Domaine> findById(Long aLong) {
-        return domaineDao.findById(aLong);
+    public Domaine create(Domaine domaine){
+        return this.domaineDao.save(domaine);
     }
 
-    public void deleteById(Long aLong) {
-        domaineDao.deleteById(aLong);
+    public Domaine update(Domaine domaine){
+        if(!this.domaineDao.existsById(domaine.getId())){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Impossible de mettre à jour le domaine");
+        }
+        return this.domaineDao.save(domaine);
+    }
+
+    public void delete(Long id){
+        if (!this.domaineDao.existsById(id)){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        this.domaineDao.deleteById(id);
+        if (this.domaineDao.existsById(id)){
+            throw new ResponseStatusException(HttpStatus.EXPECTATION_FAILED);
+        }
     }
 }

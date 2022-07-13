@@ -5,9 +5,15 @@
 >
   <div class="card bg-light">
     <img src="" class="card-img-top" alt="..." />
-    <div class="card-body">
+    <div class="card-body text-center">
       <h2 class="card-title secondary-title">{{ formation.nom }}</h2>
-      <p class="card-text">{{ formation.description }}</p>
+      <p class="card-text text-justify">{{ formation.contenu }}</p>
+      <button
+        routerLink="/formations/{{ formations.id }}"
+        class="btn btn-secondary m-3"
+      >
+        Voir la formation
+      </button>
     </div>
   </div>
 </div>

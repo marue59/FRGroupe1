@@ -4,11 +4,11 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "evaluationSession")
+@Table(name = "evaluation")
 public class Evaluation {
 
     @Id
-    @Column(name = "idEvaluation")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "qualite_accueil")
@@ -21,41 +21,83 @@ public class Evaluation {
     private Date date;
     @Column(name = "pedagogie_formateur")
     private Integer pedagogieFormateur;
-    @Column(name = "maitrise_domaine_formateur")
-    private Integer maitriseDomaineFormateur;
+
+    @Column(name = "maitrise_formateur")
+    private Integer maitriseFormateur;
     @Column(name = "disponibilite_formateur")
     private Integer disponibiliteFormateur;
-    @Column(name = "reponse_question_formateur")
-    private Integer reponseQuestionFormateur;
 
-    @Column(name = "technique_animation_formateur")
+    @Column(name = "reponse_formateur")
+    private Integer reponseFormateur;
+
+    @Column(name = "animation_formateur")
+    private Integer animationFormateur;
+
+    @Column(name = "satisfaction_utilisateur")
     private Integer satisfactionUtilisateur;
-    @Column(name = "autre_projet_formation")
-    private Integer autreProjetFormation;
-    @Column(name = "moyenne")
-    private Integer moyenne;
+
+    @Column(name = "autre_projet")
+    private Integer autreProjet;
+
+    @Column(name = "moyenne_note")
+    private Double moyenneNote;
+
+
+
+
+
+
+
+
+
+    // Clé étrangère
+
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name = "sav_id", referencedColumnName = "id")
+    private Sav sav;
+
+
+
+
+
+
+
+    // Constructeurs
 
     public Evaluation() {
         super();
     }
 
-    public Evaluation(Long id, Integer qualiteAccueil, Integer qualiteEnvironnement, Integer qualiteStage,
-                      Date date, Integer pedagogieFormateur, Integer maitriseDomaineFormateur, Integer disponibiliteFormateur,
-                      Integer reponseQuestionFormateur, Integer satisfactionUtilisateur,
-                      Integer autreProjetFormation, Integer moyenne) {
+    public Evaluation(Long id, Integer qualiteAccueil, Integer qualiteEnvironnement, Integer qualiteStage, Date date,
+                      Integer pedagogieFormateur, Integer maitriseFormateur, Integer disponibiliteFormateur,
+                      Integer reponseFormateur, Integer animationFormateur, Integer satisfactionUtilisateur,
+                      Integer autreProjet, Double moyenneNote, Sav sav) {
         this.id = id;
         this.qualiteAccueil = qualiteAccueil;
         this.qualiteEnvironnement = qualiteEnvironnement;
         this.qualiteStage = qualiteStage;
         this.date = date;
         this.pedagogieFormateur = pedagogieFormateur;
-        this.maitriseDomaineFormateur = maitriseDomaineFormateur;
+        this.maitriseFormateur = maitriseFormateur;
         this.disponibiliteFormateur = disponibiliteFormateur;
-        this.reponseQuestionFormateur = reponseQuestionFormateur;
+        this.reponseFormateur = reponseFormateur;
+        this.animationFormateur = animationFormateur;
         this.satisfactionUtilisateur = satisfactionUtilisateur;
-        this.autreProjetFormation = autreProjetFormation;
-        this.moyenne = moyenne;
+        this.autreProjet = autreProjet;
+        this.moyenneNote = moyenneNote;
+        this.sav = sav;
     }
+
+
+
+
+
+
+
+
+
+
+    // Getters & Setters
 
     public Long getId() {
         return id;
@@ -105,12 +147,12 @@ public class Evaluation {
         this.pedagogieFormateur = pedagogieFormateur;
     }
 
-    public Integer getMaitriseDomaineFormateur() {
-        return maitriseDomaineFormateur;
+    public Integer getMaitriseFormateur() {
+        return maitriseFormateur;
     }
 
-    public void setMaitriseDomaineFormateur(Integer maitriseDomaineFormateur) {
-        this.maitriseDomaineFormateur = maitriseDomaineFormateur;
+    public void setMaitriseFormateur(Integer maitriseFormateur) {
+        this.maitriseFormateur = maitriseFormateur;
     }
 
     public Integer getDisponibiliteFormateur() {
@@ -121,14 +163,21 @@ public class Evaluation {
         this.disponibiliteFormateur = disponibiliteFormateur;
     }
 
-    public Integer getReponseQuestionFormateur() {
-        return reponseQuestionFormateur;
+    public Integer getReponseFormateur() {
+        return reponseFormateur;
     }
 
-    public void setReponseQuestionFormateur(Integer reponseQuestionFormateur) {
-        this.reponseQuestionFormateur = reponseQuestionFormateur;
+    public void setReponseFormateur(Integer reponseFormateur) {
+        this.reponseFormateur = reponseFormateur;
     }
 
+    public Integer getAnimationFormateur() {
+        return animationFormateur;
+    }
+
+    public void setAnimationFormateur(Integer animationFormateur) {
+        this.animationFormateur = animationFormateur;
+    }
 
     public Integer getSatisfactionUtilisateur() {
         return satisfactionUtilisateur;
@@ -138,37 +187,57 @@ public class Evaluation {
         this.satisfactionUtilisateur = satisfactionUtilisateur;
     }
 
-    public Integer getAutreProjetFormation() {
-        return autreProjetFormation;
+    public Integer getAutreProjet() {
+        return autreProjet;
     }
 
-    public void setAutreProjetFormation(Integer autreProjetFormation) {
-        this.autreProjetFormation = autreProjetFormation;
+    public void setAutreProjet(Integer autreProjet) {
+        this.autreProjet = autreProjet;
     }
 
-    public Integer getMoyenne() {
-        return moyenne;
+    public Double getMoyenneNote() {
+        return moyenneNote;
     }
 
-    public void setMoyenne(Integer moyenne) {
-        this.moyenne = moyenne;
+    public void setMoyenneNote(Double moyenneNote) {
+        this.moyenneNote = moyenneNote;
     }
+
+    public Sav getSav() {
+        return sav;
+    }
+
+    public void setSav(Sav sav) {
+        this.sav = sav;
+    }
+
+
+
+
+
+
+
+
+
+    // Méthodes
 
     @Override
     public String toString() {
-        return "EvaluationSessionDo{" +
-                "id=" + id +
-                ", qualiteAccueil=" + qualiteAccueil +
-                ", qualiteEnvironnement=" + qualiteEnvironnement +
-                ", qualiteStage=" + qualiteStage +
-                ", date=" + date +
-                ", pedagogieFormateur=" + pedagogieFormateur +
-                ", maitriseDomaineFormateur=" + maitriseDomaineFormateur +
-                ", disponibiliteFormateur=" + disponibiliteFormateur +
-                ", reponseQuestionFormateur=" + reponseQuestionFormateur +
-                ", satisfactionUtilisateur=" + satisfactionUtilisateur +
-                ", autreProjetFormation=" + autreProjetFormation +
-                ", moyenne=" + moyenne +
-                '}';
+        final StringBuilder sb = new StringBuilder("Evaluation{");
+        sb.append("id=").append(id);
+        sb.append(", qualiteAccueil=").append(qualiteAccueil);
+        sb.append(", qualiteEnvironnement=").append(qualiteEnvironnement);
+        sb.append(", qualiteStage=").append(qualiteStage);
+        sb.append(", date=").append(date);
+        sb.append(", pedagogieFormateur=").append(pedagogieFormateur);
+        sb.append(", maitriseFormateur=").append(maitriseFormateur);
+        sb.append(", disponibiliteFormateur=").append(disponibiliteFormateur);
+        sb.append(", reponseFormateur=").append(reponseFormateur);
+        sb.append(", animationFormateur=").append(animationFormateur);
+        sb.append(", satisfactionUtilisateur=").append(satisfactionUtilisateur);
+        sb.append(", autreProjet=").append(autreProjet);
+        sb.append(", moyenneNote=").append(moyenneNote);
+        sb.append('}');
+        return sb.toString();
     }
 }

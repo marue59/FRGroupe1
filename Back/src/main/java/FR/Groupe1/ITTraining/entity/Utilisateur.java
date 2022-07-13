@@ -1,9 +1,15 @@
 package FR.Groupe1.ITTraining.entity;
 
+import org.hibernate.annotations.DiscriminatorFormula;
+
+import javax.management.relation.Role;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "utilisateur")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // la table est héritée par la classe Formateur
+@DiscriminatorColumn(name = "role") // La colonne role joue le role du discriminant est permet de différencier le formateur du non formateur
+
 public class Utilisateur {
 
     @Id
@@ -26,6 +32,11 @@ public class Utilisateur {
 
     @Column(name = "is_test")
     private boolean isTest;
+
+
+
+
+
 
 
     // Clés étrangères

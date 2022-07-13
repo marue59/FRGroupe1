@@ -13,11 +13,13 @@ import { SousThemeService } from 'src/app/services/sousTheme/sous-theme.service'
 })
 export class SousThemeComponent implements OnInit {
   sousThemes: SousTheme[] = [];
+
   constructor(private sousThemeService: SousThemeService) {}
 
   ngOnInit(): void {
     this.sousThemeService.getSousThemes().subscribe((sousThemes) => {
       this.sousThemes = sousThemes;
+      console.log(sousThemes);
     });
   }
 }
