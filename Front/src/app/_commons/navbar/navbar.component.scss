@@ -5,17 +5,15 @@ nav {
     background-color: $primary-color;
     width: auto;
     height: 120px;
-    font-size: 1.2rem;
 }
 
 .nav-link {
   color : white;
-
-  font-weight: 500;
+  font-weight: 550;
   margin-right: 30px;
   margin-left: 30px;
-
 }
+
 // Ajuste la hauteur et la largeur de la barre de recherche
 input {
     height: 35px;
@@ -23,15 +21,16 @@ input {
     border-radius: 5px;
     border: 1px solid #8b8691;
 }
-
-// Positionne la barre de recherche à droite puis au centre de l'axe vertical
-.form {
-    display: flex;
-    align-items: center;
+.dropdownSearch {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: pink;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-// Quand l'utilisateur aura cliqué sur le barre de recherche :
-input:focus {
-    box-shadow: 0 0 5px 1px #939ca7; // Met en valeur le text input de la barre de recherche
-    outline: none; // Désactive l'outine par défaut
+p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

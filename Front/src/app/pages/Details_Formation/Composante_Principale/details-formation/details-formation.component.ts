@@ -10,6 +10,7 @@ import { FormationService } from 'src/app/services/formation.service';
 })
 export class DetailsFormationComponent implements OnInit {
   formation!: Formation;
+  id!: number;
 
   constructor(
     private router: Router,
@@ -18,20 +19,15 @@ export class DetailsFormationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-
-    this.setSubscribe(id);
+    const id = this.route.params.subscribe((params) => {
+      this.id = params['id'];
+      this.subscribeFormations(this.id);
+    });
   }
 
   private subscribeFormations(id: number) {
     this.formationService.getFormation(id).subscribe((formation) => {
       this.formation = formation;
     });
-  }
-
-  private setSubscribe(id: string | null) {
-    if (id) {
-      this.subscribeFormations(+id);
-    }
   }
 }

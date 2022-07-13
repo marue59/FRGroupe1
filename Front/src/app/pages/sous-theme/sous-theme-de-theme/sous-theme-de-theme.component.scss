@@ -1,0 +1,14 @@
+@import "../Front/src/styles.scss";
+
+.sousThemeDeTheme {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-left: 0px;
+}
+li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

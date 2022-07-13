@@ -1,19 +1,14 @@
-<div
-  *ngFor="let theme of themes"
-  class="container-card d-flex justify-content-space-around"
-  routerLink="/themes/{{ theme.id }}"
->
-  <div class="card bg-light">
-    <div class="card-body text-center">
-      <h2 class="card-title secondary-title">{{ theme.nom }}</h2>
-      <p class="card-text text-justify m-4">{{ theme.contenu }}</p>
-      <app-sous-theme-list></app-sous-theme-list>
-      <button
-        routerLink="/formulaire-inscription"
-        class="btn btn-secondary m-3"
-      >
-        Information et inscription
-      </button>
-    </div>
+<div class="card bg-light">
+  <div class="card-body text-center">
+    <h2 class="card-title secondary-title">{{ theme.nom }}</h2>
+    <p class="card-text text-justify m-4">{{ theme.description }}</p>
+
+    <app-sous-theme-de-theme
+      [sousThemes]="theme.sousThemesList"
+    ></app-sous-theme-de-theme>
+
+    <button routerLink="/formulaire-inscription" class="btn btn-secondary m-3">
+      Voir les formations
+    </button>
   </div>
 </div>

@@ -20,6 +20,7 @@ public class SousTheme {
     // Clé étrangère
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "theme_id",referencedColumnName = "id")
+    @JsonIgnore
     private Theme theme;
 
     // Table pour une relation many to many

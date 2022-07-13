@@ -11,7 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/sous_themes")
+@RequestMapping("/sous-themes")
 @CrossOrigin(origins = "http://localhost:4200")
 public class SousThemeController {
 

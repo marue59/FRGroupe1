@@ -36,6 +36,7 @@ import { SousThemeListComponent } from './pages/sous-theme/sous-theme-list/sous-
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormulaireInscriptionComponent } from './pages/formulaire-inscription/formulaire-inscription.component';
 import { SideBarComponent } from './_commons/side-bar/side-bar.component';
+import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-theme/sous-theme-de-theme.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { SideBarComponent } from './_commons/side-bar/side-bar.component';
     SousThemeListComponent,
     FormulaireInscriptionComponent,
     SideBarComponent,
+    SousThemeDeThemeComponent,
   ],
   imports: [
     BrowserModule,

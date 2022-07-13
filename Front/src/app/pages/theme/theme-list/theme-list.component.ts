@@ -11,29 +11,13 @@ import Theme from 'src/app/models/theme.model';
 })
 export class ThemeListComponent implements OnInit {
   @Input() themes: any;
-  theme!: Theme;
 
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private themeService: ThemeService
-  ) {}
+  constructor(private router: Router, private themeService: ThemeService) {}
 
-  ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
+  ngOnInit(): void {}
 
-    this.setSubscribe(id);
-  }
-
-  private subscribeThemes(id: number) {
-    this.themeService.getTheme(id).subscribe((themes) => {
-      this.themes = themes;
-    });
-  }
-
-  private setSubscribe(id: string | null) {
-    if (id) {
-      this.subscribeThemes(+id);
-    }
+  changeRoute(id: number) {
+    this.router.navigate(['themes', id]);
+    this.themeService.getThemeById(id);
   }
 }
