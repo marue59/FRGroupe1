@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import Formation from 'src/app/models/formation.model';
 
 @Component({
   selector: 'app-details-formation-infos-parent',
@@ -40,6 +41,9 @@ export class DetailsFormationInfosParentComponent implements OnInit {
       isHover : false
     }
   ]
+
+  @Input()
+  formation!: Formation;
 
   constructor() { }
 

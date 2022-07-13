@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import Formation from 'src/app/models/formation.model';
 
 @Component({
   selector: 'app-details-formation-infos-enfant',
@@ -12,6 +13,10 @@ export class DetailsFormationInfosEnfantComponent implements OnInit {
    */
 @Input()
 boutons!: any;
+
+@Input()
+formation!: Formation;
+
 
   constructor() { }
 
