@@ -17,6 +17,7 @@ boutons!: any;
 @Input()
 formation!: Formation;
 
+
   constructor() { }
 
   ngOnInit(): void {

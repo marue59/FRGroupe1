@@ -1,4 +1,5 @@
 import { Component, Input, OnInit} from '@angular/core';
+import { max } from 'rxjs';
 import Formation from 'src/app/models/formation.model';
 
 
@@ -36,5 +37,4 @@ export class DetailsFormationInfosCardComponent implements OnInit {
   textLines(text: string): string[]{
     return text.split("//");
   }
-
 }

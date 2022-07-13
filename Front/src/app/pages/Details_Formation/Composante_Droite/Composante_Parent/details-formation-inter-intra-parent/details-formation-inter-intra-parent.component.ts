@@ -31,7 +31,7 @@ export class DetailsFormationInterIntraParentComponent implements OnInit {
     nom : 'Intra',
     isFocus : false,
     text : 'Texte 2',
-    submit : 'Inscription',
+    submit : 'Contacter notre service Intra',
     heure : 'Texte 2',
     lieu : 'Texte 2',
     prix: 'Texte 2',

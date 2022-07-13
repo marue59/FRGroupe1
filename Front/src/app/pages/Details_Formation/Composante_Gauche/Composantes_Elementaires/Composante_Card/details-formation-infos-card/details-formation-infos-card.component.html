@@ -3,12 +3,25 @@
 <div class="globalContainer">
 
     <!-- Les détails de la formation -->
-    <div class="infos" #texte>
+    <div class="infos">
 
         <!-- Le texte des infos sur la formation -->
         <div class="texte" *ngIf="boutonNom === 'Présentation'">
-            {{formation?.description}}
+            <div *ngIf="textLines(formation.description).length > 1;else formationDescription">
+                <div *ngFor="let text of textLines(formation.description)">
+                    <p>
+                        {{text}}
+                    </p>
+                </div>
+            </div>
+            <!-- ng-template pour la condition else -->
+            <ng-template #formationDescription>
+                {{formation?.description}}
+            </ng-template>
         </div>
+
+
+
 
         <!-- Le texte des objectifs de la formation -->
         <div class="texte" *ngIf="boutonNom === 'Objectifs'">
@@ -28,11 +41,13 @@
         <!-- Le texte pour le programme de la formation -->
         <div class="texte" *ngIf="boutonNom === 'Programme'">
             <div *ngIf="textLines(formation.programme).length > 1;else formationProgramme">
-                <ul *ngFor="let text of textLines(formation.programme)">
-                    <li>
-                        {{text}}
-                    </li>
-                </ul>
+                <ol>
+                    <div *ngFor="let text of textLines(formation.programme)">
+                        <li class="listeOrdonnee">
+                            {{text}}
+                        </li>
+                    </div>
+                </ol>
             </div>
             <!-- ng-template pour la condition else -->
             <ng-template #formationProgramme>

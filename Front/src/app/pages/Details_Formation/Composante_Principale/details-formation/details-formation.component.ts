@@ -11,7 +11,17 @@ import { SessionService } from 'src/app/services/session/session.service';
   styleUrls: ['./details-formation.component.scss'],
 })
 export class DetailsFormationComponent implements OnInit {
-  formation!: Formation;
+  formation: Formation = {
+    id: 1,
+    nom: '',
+    description: '',
+    prix: 0,
+    isPersonnalise: false,
+    objectifs: '',
+    programme: '',
+    heures: 0,
+    jours: 0
+  }
 
   session!: Session;
 
