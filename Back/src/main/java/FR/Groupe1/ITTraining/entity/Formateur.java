@@ -3,7 +3,6 @@ package FR.Groupe1.ITTraining.entity;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
 @DiscriminatorValue("formateur") // la valeur de la colonne 'role' qui permet de déterminer si c'est un formateur ou non.
@@ -31,7 +30,7 @@ public class Formateur extends Utilisateur{
     }
 
 
-    public Formateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, Sav sav, Double noteMoyenne, boolean isTechnique, boolean isPedagogique, boolean isPrerequis) {
+    public Formateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, ServiceCommercialeSav sav, Double noteMoyenne, boolean isTechnique, boolean isPedagogique, boolean isPrerequis) {
         super(id, nom, prenom, adresse, email, telephone, isTest, session, test, entreprise, evaluation, sav);
         this.noteMoyenne = noteMoyenne;
         this.isTechnique = isTechnique;

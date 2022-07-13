@@ -54,7 +54,7 @@ public class Evaluation {
 
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "sav_id", referencedColumnName = "id")
-    private Sav sav;
+    private ServiceCommercialeSav sav;
 
 
 
@@ -71,7 +71,7 @@ public class Evaluation {
     public Evaluation(Long id, Integer qualiteAccueil, Integer qualiteEnvironnement, Integer qualiteStage, Date date,
                       Integer pedagogieFormateur, Integer maitriseFormateur, Integer disponibiliteFormateur,
                       Integer reponseFormateur, Integer animationFormateur, Integer satisfactionUtilisateur,
-                      Integer autreProjet, Double moyenneNote, Sav sav) {
+                      Integer autreProjet, Double moyenneNote, ServiceCommercialeSav sav) {
         this.id = id;
         this.qualiteAccueil = qualiteAccueil;
         this.qualiteEnvironnement = qualiteEnvironnement;
@@ -203,11 +203,11 @@ public class Evaluation {
         this.moyenneNote = moyenneNote;
     }
 
-    public Sav getSav() {
+    public ServiceCommercialeSav getSav() {
         return sav;
     }
 
-    public void setSav(Sav sav) {
+    public void setSav(ServiceCommercialeSav sav) {
         this.sav = sav;
     }
 

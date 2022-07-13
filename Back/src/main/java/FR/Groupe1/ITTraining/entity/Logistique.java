@@ -51,7 +51,7 @@ public class Logistique {
 
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "sav_id", referencedColumnName = "id")
-    private Sav sav;
+    private ServiceCommercialeSav sav;
 
 
 
@@ -68,7 +68,7 @@ public class Logistique {
     public Logistique(Long id, boolean isSalleInstallee, boolean isSalleReservee, boolean isSupportImprime,
                       boolean isMachineInstallee, boolean isFormateurContacte, boolean isFormulaireGenere,
                       boolean isConvocationEnvoyee, boolean isPlanningAJour, boolean isListeImprimee,
-                      boolean isTicketRepasImprime, Sav sav) {
+                      boolean isTicketRepasImprime, ServiceCommercialeSav sav) {
         this.id = id;
         this.isSalleInstallee = isSalleInstallee;
         this.isSalleReservee = isSalleReservee;
@@ -188,11 +188,11 @@ public class Logistique {
         isTicketRepasImprime = ticketRepasImprime;
     }
 
-    public Sav getSav() {
+    public ServiceCommercialeSav getSav() {
         return sav;
     }
 
-    public void setSav(Sav sav) {
+    public void setSav(ServiceCommercialeSav sav) {
         this.sav = sav;
     }
 
