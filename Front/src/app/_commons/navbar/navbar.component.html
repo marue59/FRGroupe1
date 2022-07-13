@@ -46,6 +46,8 @@
     <!-- barre de recherche -->
     <input
       (click)="onClick()"
+      (ngModelChange)="onChangeFormationInput($event)"
+      [(ngModel)]="forma"
       type="search"
       placeholder=" Rechercher une formation"
     />

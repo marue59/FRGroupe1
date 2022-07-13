@@ -12,6 +12,7 @@ import { FormationService } from 'src/app/services/formation.service';
 export class NavbarComponent implements OnInit {
   formations: Formation[] = [];
   click: boolean = false;
+  forma: any;
 
   constructor(
     private formationService: FormationService,
@@ -23,8 +24,16 @@ export class NavbarComponent implements OnInit {
       this.formations = formations;
     });
   }
+
+  //SearchBar
   onClick() {
     this.click = !this.click;
+  }
+  onChangeFormationInput($event: any) {
+    console.log($event);
+    this.formations = this.formations.filter((formationObject) =>
+      formationObject.nom.includes($event)
+    );
   }
 
   goToFormation(id: number) {

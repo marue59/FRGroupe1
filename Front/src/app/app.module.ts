@@ -37,6 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormulaireInscriptionComponent } from './pages/formulaire-inscription/formulaire-inscription.component';
 import { SideBarComponent } from './_commons/side-bar/side-bar.component';
 import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-theme/sous-theme-de-theme.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-them
     MatButtonModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
