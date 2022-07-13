@@ -2,18 +2,30 @@
 
 <!-- Le titre de la formation (pax exemple : Formation développeur Java) -->
 <div class="titreFormation primary-title">
-  <h1 class="primary-title">{{ formation.nom }}</h1>
+
+    <h1 class="primary-title">Formation {{formation?.nom}}</h1>
+
 </div>
 
 <!-- un conteneur contenant deux bordures : -->
 <div class="container">
-  <!-- Dans cette bordure est affichée les infos sur la formation (présentation, objectifs, programme, contact) -->
-  <div class="infos">
-    <app-details-formation-infos-parent></app-details-formation-infos-parent>
-  </div>
+    <!-- Dans cette bordure est affichée les infos sur la formation (présentation, objectifs, programme, contact) -->
+    <div class="infos">
+        <app-details-formation-infos-parent></app-details-formation-infos-parent>
+    </div>
 
-  <!-- Et cette bordure qui est placée à gauche contient les options Inter/Intra/Personnalisée avec un bouton en bas pour accéder à la page inscription -->
-  <div class="InterIntra">
-    <app-details-formation-inter-intra-parent></app-details-formation-inter-intra-parent>
-  </div>
+    <!-- Dans cette bordure est affichée les infos sur la formation (présentation, objectifs, programme, contact) -->
+    <div class="infos">
+
+        <app-details-formation-infos-parent [formation]="formation"></app-details-formation-infos-parent>
+
+    </div>
+
+    <!-- Et cette bordure qui est placée à gauche contient les options Inter/Intra/Personnalisée avec un bouton en bas pour accéder à la page inscription -->
+    <div class="InterIntra">
+
+        <app-details-formation-inter-intra-parent [formation]="formation" [session]="session"></app-details-formation-inter-intra-parent>
+
+    </div>
+
 </div>

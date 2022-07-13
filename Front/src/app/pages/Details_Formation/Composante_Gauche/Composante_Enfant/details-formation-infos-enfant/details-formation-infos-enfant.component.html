@@ -19,7 +19,7 @@
             <!-- Condition if pour afficher le texte selon l'onglet où on se trouve -->
             <div *ngIf="bouton.isFocus">
 
-                <app-details-formation-infos-card [text]="bouton.text"></app-details-formation-infos-card>
+                <app-details-formation-infos-card [formation]="formation" [boutonNom]="bouton.nom"></app-details-formation-infos-card>
 
             </div>
 

@@ -60,13 +60,7 @@ public class Utilisateur {
 
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "sav_id", referencedColumnName = "id")
-    private Sav sav;
-
-
-
-
-
-
+    private ServiceCommercialeSav sav;
 
 
     // Constructeurs
@@ -74,7 +68,7 @@ public class Utilisateur {
         super();
     }
 
-    public Utilisateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, Sav sav) {
+    public Utilisateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, ServiceCommercialeSav sav) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -88,14 +82,6 @@ public class Utilisateur {
         this.evaluation = evaluation;
         this.sav = sav;
     }
-
-
-
-
-
-
-
-
 
 
     // Getters &  Setters
@@ -189,18 +175,13 @@ public class Utilisateur {
         this.evaluation = evaluation;
     }
 
-    public Sav getSav() {
+    public ServiceCommercialeSav getSav() {
         return sav;
     }
 
-    public void setSav(Sav sav) {
+    public void setSav(ServiceCommercialeSav sav) {
         this.sav = sav;
     }
-
-
-
-
-
 
     // Methodes :
 
