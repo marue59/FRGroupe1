@@ -1,8 +1,5 @@
 package FR.Groupe1.ITTraining.entity;
 
-import org.hibernate.annotations.DiscriminatorFormula;
-
-import javax.management.relation.Role;
 import javax.persistence.*;
 
 @Entity
@@ -60,7 +57,7 @@ public class Utilisateur {
 
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "sav_id", referencedColumnName = "id")
-    private ServiceCommercialeSav sav;
+    private Sav sav;
 
 
     // Constructeurs
@@ -68,7 +65,7 @@ public class Utilisateur {
         super();
     }
 
-    public Utilisateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, ServiceCommercialeSav sav) {
+    public Utilisateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, Sav sav) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -175,11 +172,11 @@ public class Utilisateur {
         this.evaluation = evaluation;
     }
 
-    public ServiceCommercialeSav getSav() {
+    public Sav getSav() {
         return sav;
     }
 
-    public void setSav(ServiceCommercialeSav sav) {
+    public void setSav(Sav sav) {
         this.sav = sav;
     }
 

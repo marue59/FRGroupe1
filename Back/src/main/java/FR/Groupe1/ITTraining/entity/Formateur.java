@@ -3,7 +3,6 @@ package FR.Groupe1.ITTraining.entity;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
 @DiscriminatorValue("formateur") // la valeur de la colonne 'role' qui permet de déterminer si c'est un formateur ou non.
