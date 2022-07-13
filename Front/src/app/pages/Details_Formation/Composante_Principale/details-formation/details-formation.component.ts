@@ -14,7 +14,7 @@ export class DetailsFormationComponent implements OnInit {
 
   formation!: Formation;
   id!: number;
-  
+
   session!: Session;
 
   constructor(

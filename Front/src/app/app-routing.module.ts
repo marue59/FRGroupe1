@@ -5,7 +5,6 @@ import { DetailsFormationComponent } from './pages/Details_Formation/Composante_
 import { FormationComponent } from './pages/formation/formation.component';
 import { ThemeComponent } from './pages/theme/theme.component';
 import { SousThemeComponent } from './pages/sous-theme/sous-theme.component';
-import { FormulaireInscriptionComponent } from './pages/formulaire-inscription/formulaire-inscription.component';
 import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/ComposantePrincipale/interface-utilisateur/interface-utilisateur.component';
 import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-theme/sous-theme-de-theme.component';
 import { SousThemeCardComponent } from './pages/sous-theme/sous-theme-card/sous-theme-card.component';
