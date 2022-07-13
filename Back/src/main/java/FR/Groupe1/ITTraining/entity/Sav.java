@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "sav")
-public class ServiceCommercialeSav {
+public class Sav {
 
     @Id
     @Column(name = "id")
@@ -33,10 +33,10 @@ public class ServiceCommercialeSav {
 
     // Constructeurs
 
-    public ServiceCommercialeSav() {
+    public Sav() {
     }
 
-    public ServiceCommercialeSav(Long id, String client, String questionStagiaire, Double ca, int nombreFormation) {
+    public Sav(Long id, String client, String questionStagiaire, Double ca, int nombreFormation) {
         this.id = id;
         this.client = client;
         this.questionStagiaire = questionStagiaire;

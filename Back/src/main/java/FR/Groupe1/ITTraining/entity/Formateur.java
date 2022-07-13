@@ -30,7 +30,7 @@ public class Formateur extends Utilisateur{
     }
 
 
-    public Formateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, ServiceCommercialeSav sav, Double noteMoyenne, boolean isTechnique, boolean isPedagogique, boolean isPrerequis) {
+    public Formateur(Long id, String nom, String prenom, String adresse, String email, String telephone, boolean isTest, Session session, Test test, Entreprise entreprise, Evaluation evaluation, Sav sav, Double noteMoyenne, boolean isTechnique, boolean isPedagogique, boolean isPrerequis) {
         super(id, nom, prenom, adresse, email, telephone, isTest, session, test, entreprise, evaluation, sav);
         this.noteMoyenne = noteMoyenne;
         this.isTechnique = isTechnique;

@@ -1,7 +1,7 @@
 package FR.Groupe1.ITTraining.service;
 
 import FR.Groupe1.ITTraining.dao.SavDao;
-import FR.Groupe1.ITTraining.entity.ServiceCommercialeSav;
+import FR.Groupe1.ITTraining.entity.Sav;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -16,12 +16,12 @@ public class SavService {
     @Autowired
     private SavDao savDao;
 
-    public List<ServiceCommercialeSav> findAll(){
+    public List<Sav> findAll(){
         return this.savDao.findAll();
     }
 
-    public ServiceCommercialeSav findById(Long id){
-        Optional<ServiceCommercialeSav> optionalSav =  this.savDao.findById(id);
+    public Sav findById(Long id){
+        Optional<Sav> optionalSav =  this.savDao.findById(id);
         if(optionalSav.isPresent()){
             return optionalSav.get();
         } else {
@@ -29,11 +29,11 @@ public class SavService {
         }
     }
 
-    public ServiceCommercialeSav create(ServiceCommercialeSav sav){
+    public Sav create(Sav sav){
         return this.savDao.save(sav);
     }
 
-    public ServiceCommercialeSav update(ServiceCommercialeSav sav){
+    public Sav update(Sav sav){
         if(!this.savDao.existsById(sav.getId())){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Impossible de mettre à jour le SAV");
         }
