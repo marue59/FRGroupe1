@@ -38,6 +38,7 @@ public class ThemeService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Impossible de mettre à jour le theme");
         }
         return this.themeDao.save(theme);
+
     }
 
     public void delete(Long id){

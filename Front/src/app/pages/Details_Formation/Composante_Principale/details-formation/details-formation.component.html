@@ -1,15 +1,18 @@
 <!-- La page principale de la page 'Details Formation', contenant : -->
 
 <!-- Le titre de la formation (pax exemple : Formation développeur Java) -->
-<div class="titreFormation">
+<div class="titreFormation primary-title">
 
-    <h1>Formation {{formation?.nom}}</h1>
+    <h1 class="primary-title">Formation {{formation?.nom}}</h1>
 
 </div>
 
-
 <!-- un conteneur contenant deux bordures : -->
 <div class="container">
+    <!-- Dans cette bordure est affichée les infos sur la formation (présentation, objectifs, programme, contact) -->
+    <div class="infos">
+        <app-details-formation-infos-parent></app-details-formation-infos-parent>
+    </div>
 
     <!-- Dans cette bordure est affichée les infos sur la formation (présentation, objectifs, programme, contact) -->
     <div class="infos">

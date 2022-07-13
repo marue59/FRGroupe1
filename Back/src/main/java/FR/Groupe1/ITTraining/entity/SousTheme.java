@@ -17,14 +17,7 @@ public class SousTheme {
     @Column(name = "nom")
     private String nom;
 
-
-
-
-
-
-
     // Clé étrangère
-
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "theme_id",referencedColumnName = "id")
     private Theme theme;
@@ -34,12 +27,6 @@ public class SousTheme {
     @ManyToMany
     @JoinTable(name = "sous_theme_has_formation", joinColumns = @JoinColumn(name = "sous_theme_id"), inverseJoinColumns = @JoinColumn(name = "formation_id"))
     private Set<Formation> formations;
-
-
-
-
-
-
 
 
     // Constructeurs
@@ -56,13 +43,7 @@ public class SousTheme {
     }
 
 
-
-
-
-
-
     // Getters & Setters
-
 
     public Long getId() {
         return id;
@@ -96,12 +77,6 @@ public class SousTheme {
     public void setFormations(Set<Formation> formations) {
         this.formations = formations;
     }
-
-
-
-
-
-
 
 
     // Méthodes

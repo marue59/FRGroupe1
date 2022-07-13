@@ -9,7 +9,7 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
 })
 export class ThemeCardComponent implements OnInit {
   @Input() themes: any;
-
+  @Input() sousThemes: any;
   themeArray: Themes[] = [];
 
   constructor(private themeService: ThemeService) {}

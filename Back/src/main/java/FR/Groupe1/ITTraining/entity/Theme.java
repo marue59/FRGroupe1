@@ -17,23 +17,11 @@ public class Theme {
     @Column(name = "description")
     private String description;
 
-
-
-
-
-
-
-
     // Clé étrangère
 
     @ManyToOne
-    @PrimaryKeyJoinColumn(name = "domaine_id",referencedColumnName = "id")
+    @PrimaryKeyJoinColumn(name = "domaine_id", referencedColumnName = "id")
     private Domaine domaine;
-
-
-
-
-
 
 
     // Constructeurs
@@ -47,12 +35,6 @@ public class Theme {
         this.description = description;
         this.domaine = domaine;
     }
-
-
-
-
-
-
 
 
     // Getters & Setters
@@ -89,14 +71,7 @@ public class Theme {
     }
 
 
-
-
-
-
-
-
     // Méthodes
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Theme{");

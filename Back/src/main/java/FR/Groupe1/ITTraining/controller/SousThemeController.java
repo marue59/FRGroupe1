@@ -21,26 +21,26 @@ public class SousThemeController {
 
     @GetMapping("")
     @ResponseStatus(code = HttpStatus.OK)
-    public List<SousTheme> findAll(){
+    public List<SousTheme> findAll() {
         return this.sousThemeService.findAll();
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
-    public SousTheme findById(@PathVariable long id){
+    public SousTheme findById(@PathVariable long id) {
         return this.sousThemeService.findById(id);
     }
 
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public SousTheme create(@RequestBody SousTheme sousTheme){
+    public SousTheme create(@RequestBody SousTheme sousTheme) {
         return this.sousThemeService.create(sousTheme);
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
-    public SousTheme update(@RequestBody SousTheme sousTheme, @PathVariable Long id){
-        if (!id.equals(sousTheme.getId())){
+    public SousTheme update(@RequestBody SousTheme sousTheme, @PathVariable Long id) {
+        if (!id.equals(sousTheme.getId())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "mauvais sous-theme à mettre à jour");
         }
         return this.sousThemeService.update(sousTheme);
@@ -48,11 +48,7 @@ public class SousThemeController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.GONE)
-    public void delete(@PathVariable Long id){
+    public void delete(@PathVariable Long id) {
         this.sousThemeService.delete(id);
     }
-
-
-
-
 }
