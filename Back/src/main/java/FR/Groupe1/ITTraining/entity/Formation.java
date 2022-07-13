@@ -40,21 +40,12 @@ public class Formation {
     private boolean isPersonnalisee;
 
 
-
-
-
-
-
-
     // Mapping vers la table avec la relation many to many
 
-    @ManyToMany(mappedBy = "formations")
+    @ManyToMany
+    @JoinTable(name = "sous_theme_has_formation", joinColumns = @JoinColumn(name = "formation_id"), inverseJoinColumns = @JoinColumn(name = "sous_theme_id"))
     @JsonIgnore // Obligé pour éviter l'erreur sendError(). Les sous-thèmes sont ignorés dans les méthodes GET POST PUT, mais peuvent-être récupérés en passant par la table sous-thème.
     private Set<SousTheme> sousThemes;
-
-
-
-
 
 
     // Constructeurs

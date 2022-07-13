@@ -34,13 +34,21 @@ p {
   margin : auto;
   margin-top: 20px;
 }
+.third-title{
+  color: $fourth-color;
+  font-size : 0.4rem;
+  font-stretch: expanded;
+  font-weight: 600;
+  text-align : center;
+  margin-top: 10px;
+}
 
-
-app-home-page, app-theme, app-sous-theme, app-sous-theme-card, app-formation, app-formation-card,
-app-details-formationapp-sous-theme-card , app-theme-card, app-details-formation, app-details-formation-infos-parent,
- app-details-formation-inter-intra-parent,
- app-interface-utilisateur-card-formations-finis,
- app-interface-utilisateur{
+app-home-page, app-theme, app-theme-card,
+app-sous-theme,app-sous-theme-list, app-sous-theme-card,
+app-formation, app-formation-card,
+app-details-formation, app-details-formation-infos-parent, app-details-formation-inter-intra-parent,
+app-interface-utilisateur-card-formations-finis,
+app-interface-utilisateur{
   width: 100%;
   justify-content: center;
 }
@@ -51,6 +59,22 @@ app-details-formationapp-sous-theme-card , app-theme-card, app-details-formation
   width: 400px;
   margin: 25px;
 
+}
+.container-card-themes {
+  width: 500px;
+  margin: 25px;
+
+}
+.container-card-sousThemesTheme {
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container-card-sousThemes {
+  width: 400px;
+  margin: 15px;
 }
 .card {
   width: 100%;

@@ -1,3 +1,4 @@
+import { SlicePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 
 // import des Models
@@ -17,9 +18,7 @@ export class FormationComponent implements OnInit {
   constructor(private formationService: FormationService) {}
 
   ngOnInit(): void {
-    // recuperer la liste de tout les films
-    // utiliser l'observable qui est un objet et qui du coup a des methodes
-    // faire fonction anonyme
+    // recuperer la liste de toute les formations
     this.formationService.getFormations().subscribe((formations) => {
       this.formations = formations;
     });

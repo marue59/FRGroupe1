@@ -13,15 +13,27 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
   styleUrls: ['./theme.component.scss'],
 })
 export class ThemeComponent implements OnInit {
-  themes!: any;
+  themes!: Theme[];
+  theme: any;
   subscription!: Subscription;
 
   constructor(private themeService: ThemeService) {}
 
   // Recuperer la liste de tout les themes a travers l'observable
   ngOnInit(): void {
-    this.subscription = this.themeService.currentTheme.subscribe(
-      (themes) => (this.themes = themes)
-    );
+    this.subscription = this.themeService.getThemes().subscribe((themes) => {
+      this.themes = themes;
+    });
+  }
+  private subscribeSousThemes(id: number) {
+    this.themeService.getTheme(id).subscribe((theme) => {
+      this.theme = theme;
+    });
+  }
+
+  private setSubscribe(id: string | null) {
+    if (id) {
+      this.subscribeSousThemes(+id);
+    }
   }
 }

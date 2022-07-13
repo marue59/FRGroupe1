@@ -24,27 +24,37 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav p-2">
           <li class="nav-item m-2">
-            <a class="nav-link w3-large" routerLink="/">Accueil</a>
+            <a class="nav-link w3-xlarge" routerLink="/">Accueil</a>
           </li>
           <li class="nav-item m-2">
-            <a class="nav-link w3-large" routerLink="/">Actualités</a>
+            <a class="nav-link w3-xlarge" routerLink="/">Actualités</a>
           </li>
           <li class="nav-item m-2">
-            <a class="nav-link w3-large" routerLink="/formations">Formations</a>
+            <a class="nav-link w3-xlarge" routerLink="/formations"
+              >Formations</a
+            >
           </li>
-
           <li class="nav-item m-2">
-            <a class="nav-link w3-large" routerLink="/connexion">Connexion</a>
+            <a class="nav-link w3-xlarge" routerLink="/connexion">Connexion</a>
           </li>
-          <div class="form m-2">
-            <!-- div form pour séparer la barre de recherche des 3 boutons et pouvoir àjuster sa position -->
-            <form class="w3-large">
-              <!-- barre de recherche -->
-              <input type="search" placeholder=" Rechercher une formation" />
-            </form>
-          </div>
+          <!-- div form pour séparer la barre de recherche des 3 boutons et pouvoir àjuster sa position -->
         </ul>
       </div>
+    </div>
+  </div>
+  <div>
+    <!-- barre de recherche -->
+    <input
+      (click)="onClick()"
+      (ngModelChange)="onChangeFormationInput($event)"
+      [(ngModel)]="forma"
+      type="search"
+      placeholder=" Rechercher une formation"
+    />
+    <div *ngIf="click" class="dropdownSearch">
+      <ng-container *ngFor="let formation of formations">
+        <p (click)="goToFormation(formation.id)">{{ formation.nom }}</p>
+      </ng-container>
     </div>
   </div>
 </nav>

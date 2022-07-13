@@ -1,0 +1,11 @@
+<div class="container-card-sousThemesTheme">
+  <ul class="sousThemeDeTheme">
+    <li
+      class=""
+      *ngFor="let sousTheme of sousThemes"
+      routerLink="/sous-themes/{{ sousTheme.id }}"
+    >
+      {{ sousTheme.nom }}
+    </li>
+  </ul>
+</div>

@@ -11,18 +11,10 @@ import { SessionService } from 'src/app/services/session/session.service';
   styleUrls: ['./details-formation.component.scss'],
 })
 export class DetailsFormationComponent implements OnInit {
-  formation: Formation = {
-    id: 1,
-    nom: '',
-    description: '',
-    prix: 0,
-    isPersonnalise: false,
-    objectifs: '',
-    programme: '',
-    heures: 0,
-    jours: 0
-  }
 
+  formation!: Formation;
+  id!: number;
+  
   session!: Session;
 
   constructor(
@@ -33,9 +25,10 @@ export class DetailsFormationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-
-    this.setSubscribe(id);
+    const id = this.route.params.subscribe((params) => {
+      this.id = params['id'];
+      this.subscribeFormations(this.id);
+    });
   }
 
   private subscribeFormations(id: number) {

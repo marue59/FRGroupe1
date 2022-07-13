@@ -1,6 +1,8 @@
 package FR.Groupe1.ITTraining.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "theme")
@@ -17,7 +19,11 @@ public class Theme {
     @Column(name = "description")
     private String description;
 
+
     // Clé étrangère
+    @OneToMany(mappedBy = "theme")
+    @Column(name = "sous-themes")
+    private List<SousTheme> sousThemesList = new ArrayList<>();
 
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "domaine_id", referencedColumnName = "id")
@@ -29,13 +35,13 @@ public class Theme {
     public Theme() {
     }
 
-    public Theme(Long id, String nom, String description, Domaine domaine) {
+    public Theme(Long id, String nom, String description, List<SousTheme> sousThemesList, Domaine domaine) {
         this.id = id;
         this.nom = nom;
         this.description = description;
+        this.sousThemesList = sousThemesList;
         this.domaine = domaine;
     }
-
 
     // Getters & Setters
     public Long getId() {
@@ -70,6 +76,13 @@ public class Theme {
         this.domaine = domaine;
     }
 
+    public List<SousTheme> getSousThemesList() {
+        return sousThemesList;
+    }
+
+    public void setSousThemesList(List<SousTheme> sousThemesList) {
+        this.sousThemesList = sousThemesList;
+    }
 
     // Méthodes
     @Override

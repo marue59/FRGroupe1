@@ -4,7 +4,7 @@
     <li
       class="w3-bar-item w3-button w3-padding-32 w3-large"
       *ngFor="let theme of themes"
-      routerLink="themes/{{ theme.id }}"
+      (click)="changeRoute(theme.id)"
     >
       {{ theme.nom }}
     </li>
