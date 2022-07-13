@@ -6,7 +6,7 @@ import { DetailsFormationComponent } from './pages/Details_Formation/Composante_
 import { FormationComponent } from './pages/formation/formation.component';
 import { ThemeComponent } from './pages/theme/theme.component';
 import { SousThemeComponent } from './pages/sous-theme/sous-theme.component';
-import { FormulaireInscriptionComponent } from './pages/formulaire-inscription/formulaire-inscription.component';
+import { UtilisateurComponent } from './pages/utilisateurFormulaire/utilisateur.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'themes', component: ThemeComponent },
   { path: 'themes/:id', component: ThemeComponent },
   { path: 'sous-themes', component: SousThemeComponent },
-  {path:'formulaire-inscription', component: FormulaireInscriptionComponent },
+  {path:'formulaire-inscription', component: UtilisateurComponent },
   { path: 'sous-themes/:id', component: SousThemeComponent },
 ];
 
