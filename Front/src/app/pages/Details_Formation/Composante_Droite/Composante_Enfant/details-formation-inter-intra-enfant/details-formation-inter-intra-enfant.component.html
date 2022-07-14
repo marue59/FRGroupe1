@@ -30,7 +30,7 @@
                     <ion-icon name="time-outline"></ion-icon> <span> {{formation?.jours}} jours ({{formation?.heures}}h)</span></p>
 
                 <p>
-                    <ion-icon name="location-outline"></ion-icon> <span>{{bouton.lieu}}</span>
+                    <ion-icon name="location-outline"></ion-icon> <span>{{session.lieu}}</span>
                 </p>
 
                 <p>
@@ -38,7 +38,7 @@
                 </p>
 
                 <p>
-                    <ion-icon name="calendar-outline"></ion-icon><span>{{bouton.date}}</span>
+                    <ion-icon name="calendar-outline"></ion-icon><span>{{session.date | date:'dd-MM-yyyy'}}</span>
                 </p>
 
             </div>
