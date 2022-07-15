@@ -10,11 +10,13 @@ Le site web donne aussi la possibilité à l'admin d'ajouter des formations à p
 
 Finalement, une side bar est présente à gauche pour permettre à l'utilisateur un accés plus rapide aux différentes formations que présente le portail web.
 
-<img src="https://media.giphy.com/media/KDLPxbdJXfDWzywrwK/giphy.gif" title="" alt="Alt text" data-align="center">
+<p align="center">
+<img src="https://media.giphy.com/media/KDLPxbdJXfDWzywrwK/giphy.gif" title="Projet fil rouge" alt="Projet Fil Rouge">
+ </p>
 
 ## Prérequis
 
-- [bibliothèques JDK version 11.0.9]([Java Archive Downloads - Java SE 11 | Oracle France](https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html))
+- [bibliothèques JDK version 11.0.9](https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html)
 
 - [NodeJs 16.15.1](https://nodejs.org/en/download/)
 
