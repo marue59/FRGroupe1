@@ -77,7 +77,7 @@ import { UtilisateurComponent } from './pages/utilisateurFormulaire/utilisateur.
     MatButtonModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

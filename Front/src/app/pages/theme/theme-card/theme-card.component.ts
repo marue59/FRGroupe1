@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import SousTheme from 'src/app/models/sousTheme.models';
 import Theme from 'src/app/models/theme.model';
 import Themes from 'src/app/models/theme.model';
@@ -13,9 +14,7 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
 })
 export class ThemeCardComponent implements OnInit {
   @Input() theme!: Theme;
-
   sousThemes: SousTheme[] = [];
-  themes: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,16 +23,18 @@ export class ThemeCardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-
-    this.setSubscribe(id);
+    // a chaque fois que l'id change on met a jours la variable
+    this.route.paramMap.subscribe((params) => {
+      const id = params.get('id');
+      this.setSubscribe(id);
+    });
 
     // recuperer la liste de toute les sous themes
-    this.sousThemesService.getSousThemes().subscribe((sousThemes) => {
+    /*this.sousThemesService.getSousThemes().subscribe((sousThemes) =.> {
       this.sousThemes = sousThemes;
-    });
+    });*/
   }
-
+  // recuperer la liste de toute des themes par l'id
   private subscribeThemes(id: number) {
     this.themeService.getTheme(id).subscribe((theme) => {
       this.theme = theme;

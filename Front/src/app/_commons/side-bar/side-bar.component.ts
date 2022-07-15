@@ -3,10 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { SousThemeService } from 'src/app/services/sousTheme/sous-theme.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
-import { Subscription } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
 
 import SousTheme from 'src/app/models/sousTheme.models';
 import { FormationService } from 'src/app/services/formation.service';
+import Theme from 'src/app/models/theme.model';
 
 @Component({
   selector: 'app-side-bar',
@@ -14,7 +15,7 @@ import { FormationService } from 'src/app/services/formation.service';
   styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent implements OnInit {
-  themes!: any;
+  themes: any = [];
   subscription!: Subscription;
   sousThemes: any[] = [];
   formations: any[] = [];
@@ -27,14 +28,20 @@ export class SideBarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.subscription = this.themeService.currentTheme.subscribe((themes) => {
-      this.themes = themes;
-    });
-
-    // Souscription au service sousThemes pour récupérer les formations
-    this.sousThemeService.getSousThemes().subscribe((sousThemes) => {
-      this.sousThemes = sousThemes;
-    });
+    // Souscription au service themes pour récupérer les themes
+    this.themeService.getThemes();
+    this.subscription = this.themeService.currentTheme.subscribe(
+      (themes: any) => {
+        this.themes = themes;
+      }
+    );
+    // Souscription au service sousThemes pour récupérer les sousThemes
+    this.sousThemeService.getSousThemes();
+    this.subscription = this.sousThemeService.currentSousTheme.subscribe(
+      (sousThemes) => {
+        this.sousThemes = sousThemes;
+      }
+    );
 
     // Souscription au service formation pour récupérer les formations
     this.formationService.getFormations().subscribe((formations) => {

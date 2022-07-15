@@ -17,12 +17,4 @@ export class SousThemeListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
-
-  changeRoute(id: number) {
-    console.log('toto');
-    console.log(id);
-
-    this.router.navigate(['sous-themes', id]);
-    this.sousThemeService.getSousThemeById(id);
-  }
 }

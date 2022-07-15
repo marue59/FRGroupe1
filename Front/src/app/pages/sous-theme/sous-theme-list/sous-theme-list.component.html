@@ -3,7 +3,7 @@
   <li
     class="w3-bar-item w3-button w3-padding-32 w3-large"
     *ngFor="let sousTheme of sousThemes"
-    (click)="changeRoute(sousTheme.id)"
+    routerLink="sous-themes/{{ sousTheme.id }}"
   >
     {{ sousTheme.nom }}
   </li>

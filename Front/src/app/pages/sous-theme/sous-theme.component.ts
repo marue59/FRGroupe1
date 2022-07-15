@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 // import du Model
 import SousTheme from 'src/app/models/sousTheme.models';
@@ -14,7 +15,8 @@ import { SousThemeService } from 'src/app/services/sousTheme/sous-theme.service'
 })
 export class SousThemeComponent implements OnInit {
   //sousThem!: SousTheme;
-  @Input() sousThemes: any;
+  sousThemes: SousTheme[] = [];
+  subscription!: Subscription;
 
   constructor(
     private sousThemeService: SousThemeService,
@@ -23,23 +25,10 @@ export class SousThemeComponent implements OnInit {
 
   ngOnInit(): void {
     // recuperer la liste de toute les sousThemes
-    this.sousThemeService.getSousThemes().subscribe((sousThemes) => {
-      this.sousThemes = sousThemes;
-    });
+    this.subscription = this.sousThemeService.currentSousTheme.subscribe(
+      (sousThemes) => {
+        this.sousThemes = sousThemes;
+      }
+    );
   }
-
-  /* const id = this.route.snapshot.paramMap.get('id');
-    this.setSubscribe(id);
-  }
-
-  setSubscribe(id: string | null) {
-    throw new Error('Method not implemented.');
-  }
-
-  private subscribeSousTheme(id: number): void {
-    this.sousThemeService.getSousTheme(id).subscribe((sousTheme: SousTheme) => {
-      this.sousThem = sousTheme;
-      console.log(sousTheme);
-    });
-  }*/
 }
