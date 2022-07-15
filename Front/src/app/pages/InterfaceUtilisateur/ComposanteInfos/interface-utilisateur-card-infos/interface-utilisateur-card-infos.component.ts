@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import Utilisateur from 'src/app/models/utilisateur.model';
 
 @Component({
   selector: 'app-interface-utilisateur-card-infos',
@@ -12,7 +13,7 @@ export class InterfaceUtilisateurCardInfosComponent implements OnInit {
  * qui a pour attributs : id, nom, prenom, tel, email, role, isTest
  */
    @Input()
-   utilisateur!: any;
+   utilisateur!: Utilisateur;
 
   constructor() { }
 
