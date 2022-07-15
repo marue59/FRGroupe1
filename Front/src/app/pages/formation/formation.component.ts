@@ -18,7 +18,7 @@ export class FormationComponent implements OnInit {
   constructor(private formationService: FormationService) {}
 
   ngOnInit(): void {
-    // recuperer la liste de toute les formations
+    // recuperer la liste de toute les formations => seulement les x premières + random
     this.formationService.getFormations().subscribe((formations) => {
       this.formations = formations;
     });

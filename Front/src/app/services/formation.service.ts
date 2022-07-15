@@ -26,6 +26,17 @@ export class FormationService {
     return this.httpClient.get<Formation>(`${this.apiUrl}/formations/${id}`);
   }
 
+   randomNumber(min: number, max: number) {
+    return Math.random() * (max - min) + min;
+  }
+
+/*getRandomFormation(): Observable<Formation[]>{
+  for (let i = 0; i < 5; i++){
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/${this.randomNumber(1,12)}`);
+  }
+  
+}
+
   /*getFormationById(id: number) {
     this.httpClient
       .get<Formation>(`${this.apiUrl}/formations/${id}`)
@@ -51,4 +62,7 @@ export class FormationService {
   deleteFormation(id: number): Observable<Formation> {
     return this.httpClient.delete<Formation>(`${this.apiUrl}/formations/${id}`);
   }
+
+ 
+
 }
