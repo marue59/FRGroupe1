@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-details-formation-inter-intra-inscription',
@@ -13,9 +14,17 @@ export class DetailsFormationInterIntraInscriptionComponent implements OnInit {
    @Input()
    boutonNom!: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
+
+  changePage(){
+    if(this.boutonNom === 'Inscription'){
+      this.router.navigateByUrl('formulaire-inscription');
+    }
+  }
+
 
 }
