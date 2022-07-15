@@ -2,9 +2,9 @@
 
 ## Présentation
 
-Projet fil rouge pour la réalisation d'un portail web de catalogue de formations. 
+Projet fil rouge pour la réalisation d'un portail web de catalogue de formations.
 
-Le site web permet à l'utilisateur de consulter le catalogue de formation, d'obtenir des informations sur une formation particulière, et de s'y inscrire. Il peut consulter de plus, à l'aide d'un tableaud de bord, ses informations personnelles et la formation en cours qu'il est entrain d'y assister. 
+Le site web permet à l'utilisateur de consulter le catalogue de formation, d'obtenir des informations sur une formation particulière, et de s'y inscrire. Il peut consulter de plus, à l'aide d'un tableaud de bord, ses informations personnelles et la formation en cours qu'il est entrain d'y assister.
 
 Le site web donne aussi la possibilité à l'admin d'ajouter des formations à partir du navigateur.
 
@@ -16,21 +16,21 @@ Finalement, une side bar est présente à gauche pour permettre à l'utilisateur
 
 - [bibliothèques JDK version 11.0.9]([Java Archive Downloads - Java SE 11 | Oracle France](https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html))
 
-- [NodeJs 16.15.1]([Download | Node.js](https://nodejs.org/en/download/))
+- [NodeJs 16.15.1](https://nodejs.org/en/download/)
 
-- [MySQL version 8.0.29]([MySQL :: Download MySQL Installer](https://dev.mysql.com/downloads/installer/))
+- [MySQL version 8.0.29](https://dev.mysql.com/downloads/installer/)
 
 ## Technologies utilisées
 
-- [Angular 14.0.2]([Angular](https://angular.io/guide/setup-local))
+- [Angular 14.0.2](https://angular.io/guide/setup-local)
 
-- [Spring Boot 2.7.1]([Getting Started](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.installing))
+- [Spring Boot 2.7.1](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.installing)
 
-- [MySQL version 8.0.29]([MySQL :: Download MySQL Installer](https://dev.mysql.com/downloads/installer/))
+- [MySQL version 8.0.29](https://dev.mysql.com/downloads/installer/)
 
 - [Visual Studio Code](https://code.visualstudio.com/) 
 
-- [IntelliJ IDEA]([Télécharger IntelliJ IDEA: l'IDE Java performant et ergonomique de JetBrains](https://www.jetbrains.com/fr-fr/idea/download/#section=windows))
+- [IntelliJ IDEA](https://www.jetbrains.com/fr-fr/idea/download/#section=windows)
 
 ## Installation
 
@@ -60,8 +60,8 @@ Finalement, une side bar est présente à gauche pour permettre à l'utilisateur
 
 ## Membres de l'équipe de développement
 
-> - Amine Laaroussi
+> - Amine Laaroussi 
 > 
-> - Marie Defretin
+> - Marie Defretin 
 > 
-> - Thomas Barré
+> - Thomas Barré 
