@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import Formation from 'src/app/models/formation.model';
 import { FormationService } from 'src/app/services/formation.service';
 
@@ -11,8 +12,10 @@ import { FormationService } from 'src/app/services/formation.service';
 })
 export class NavbarComponent implements OnInit {
   formations: Formation[] = [];
+  formationsCopy: Formation[] = [];
   click: boolean = false;
   forma: any;
+  subscription!: Subscription;
 
   constructor(
     private formationService: FormationService,
@@ -22,6 +25,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.formationService.getFormations().subscribe((formations) => {
       this.formations = formations;
+      this.formationsCopy = formations;
     });
   }
 
@@ -30,9 +34,12 @@ export class NavbarComponent implements OnInit {
     this.click = !this.click;
   }
   onChangeFormationInput($event: any) {
-    this.formations = this.formations.filter((formationObject) =>
+    console.log($event);
+
+    this.formationsCopy = this.formations.filter((formationObject: any) =>
       formationObject.nom.includes($event)
     );
+    this.router.navigate(['formations', $event]);
   }
 
   goToFormation(id: number) {

@@ -10,6 +10,16 @@
       <h2 class="card-title third-title">
         {{ sousTheme.nom }}
       </h2>
+      <div>
+        <ul>
+          <li
+            *ngFor="let formation of sousTheme.formations"
+            routerLink="/formations/{{ formation.id }}"
+          >
+            {{ formation.nom }}
+          </li>
+        </ul>
+      </div>
       <button routerLink="/formations" class="btn btn-dark m-1">
         Voir les formations
       </button>

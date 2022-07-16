@@ -13,9 +13,8 @@ import { FormationService } from 'src/app/services/formation.service';
   styleUrls: ['./formation-card.component.scss'],
 })
 export class FormationCardComponent implements OnInit {
-  // @Input() formations: any;
   formation: any;
-  formations: Formation[] = [];
+  @Input() formations: Formation[] = [];
   subscription!: Subscription;
 
   constructor(

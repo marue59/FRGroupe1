@@ -31,6 +31,8 @@ export class SousThemeCardComponent implements OnInit {
           .getSousThemeByIdObs(params.get('id'))
           .subscribe((sousTheme) => {
             this.sousTheme = sousTheme;
+
+            console.log(sousTheme);
           });
       }
       // this.setSubscribe(id);

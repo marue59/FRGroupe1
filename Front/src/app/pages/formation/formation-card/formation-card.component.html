@@ -1,19 +1,17 @@
 <div
   *ngFor="let formation of formations"
-  class="container-card d-flex justify-content-space-around"
+  class="container-card"
   routerLink="/formations/{{ formation.id }}"
 >
-  <div class="card bg-light">
-    <img src="" class="card-img-top" alt="..." />
-    <div class="card-body text-center">
-      <h2 class="card-title secondary-title">{{ formation.nom }}</h2>
-      <p class="card-text text-justify">{{ formation.description }}</p>
-      <button
-        routerLink="/formations/{{ formation.id }}"
-        class="btn btn-secondary m-3"
-      >
-        Voir la formation
-      </button>
-    </div>
-  </div>
+  <img src="" class="card-img-top" alt="..." />
+  <h2 class="secondary-title">{{ formation.nom }}</h2>
+  <p class="text-justify">
+    {{ formation.description | slice: 0:250 }}
+  </p>
+  <button
+    routerLink="/formations/{{ formation.id }}"
+    class="btn btn-secondary m-3"
+  >
+    Voir la formation
+  </button>
 </div>

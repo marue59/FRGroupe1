@@ -52,7 +52,7 @@
       placeholder=" Rechercher une formation"
     />
     <div *ngIf="click" class="dropdownSearch">
-      <ng-container *ngFor="let formation of formations">
+      <ng-container *ngFor="let formation of formationsCopy">
         <p (click)="goToFormation(formation.id)">{{ formation.nom }}</p>
       </ng-container>
     </div>

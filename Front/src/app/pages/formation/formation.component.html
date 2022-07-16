@@ -1,5 +1,8 @@
 <div class="d-flex flex-column">
   <h1 class="primary-title">Nos formations</h1>
-  <app-formation-card class="d-flex flex-wrap" [formations]="formations">
+  <app-formation-card class="d-flex flex-wrap" [formations]="formationsCopy">
   </app-formation-card>
+</div>
+<div *ngIf="formationsCopy.length == 0">
+  Il n'y a pas de formations disponible
 </div>

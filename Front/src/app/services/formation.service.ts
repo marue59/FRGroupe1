@@ -16,6 +16,10 @@ export class FormationService {
   private formationSource = new BehaviorSubject(null);
   currentFormation = this.formationSource.asObservable();
 
+  // Permet au dropdown de partager la recherche
+  private dropdownSource = new BehaviorSubject('');
+  currentDropdown = this.dropdownSource.asObservable();
+
   constructor(private httpClient: HttpClient) {}
 
   getFormations(): Observable<Formation[]> {
@@ -50,5 +54,10 @@ export class FormationService {
 
   deleteFormation(id: number): Observable<Formation> {
     return this.httpClient.delete<Formation>(`${this.apiUrl}/formations/${id}`);
+  }
+
+  // Fonction qui permet au dropdown de partager la recherche
+  shareFormations(value: string) {
+    this.dropdownSource.next(value);
   }
 }

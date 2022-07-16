@@ -1,14 +1,12 @@
-<div class="card bg-light" *ngIf="theme">
-  <div class="card-body text-center">
-    <h2 class="card-title secondary-title">{{ theme.nom }}</h2>
-    <p class="card-text text-justify m-4">{{ theme.description }}</p>
+<div class="container-card text-center" *ngIf="theme">
+  <h2 class="secondary-title">{{ theme.nom }}</h2>
+  <p class="text-justify">{{ theme.description }}</p>
 
-    <app-sous-theme-de-theme
-      [sousThemes]="theme.sousThemesList"
-    ></app-sous-theme-de-theme>
+  <app-sous-theme-de-theme
+    [sousThemes]="theme.sousThemesList"
+  ></app-sous-theme-de-theme>
 
-    <button routerLink="/formulaire-inscription" class="btn btn-secondary m-3">
-      Voir les formations
-    </button>
-  </div>
+  <button routerLink="/formulaire-inscription" class="button-primary m-3">
+    Voir les formations
+  </button>
 </div>
