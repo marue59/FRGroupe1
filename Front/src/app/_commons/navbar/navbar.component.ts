@@ -39,10 +39,10 @@ export class NavbarComponent implements OnInit {
     this.formationsCopy = this.formations.filter((formationObject: any) =>
       formationObject.nom.includes($event)
     );
-    this.router.navigate(['formations', $event]);
+    this.router.navigate(['formations/search', $event]);
   }
 
-  goToFormation(id: number) {
-    this.router.navigate(['formations', id]);
+  goToFormation($event: any) {
+    this.router.navigate(['formations/search', $event]);
   }
 }

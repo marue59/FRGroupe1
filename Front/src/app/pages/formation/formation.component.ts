@@ -17,6 +17,7 @@ import { FormationService } from 'src/app/services/formation.service';
 export class FormationComponent implements OnInit {
   formations: any = [];
   formationsCopy: Formation[] = [];
+  subscription!: Subscription;
 
   constructor(
     private formationService: FormationService,
@@ -27,6 +28,7 @@ export class FormationComponent implements OnInit {
     // recuperer la liste de toute les formations
     this.route.paramMap.subscribe((params) => {
       if (params.get('value') && this.formations) {
+        console.log('1');
         let value = params.get('value');
         this.formationsCopy = this.formations.filter((formationObject: any) => {
           return formationObject.nom
@@ -36,9 +38,12 @@ export class FormationComponent implements OnInit {
       }
     });
 
+    // recuperer la liste de toute les formations par le biais du services
     this.formationService.getFormations().subscribe((formations) => {
       this.formations = formations;
-      //this.formationsCopy = formations;
+      console.log(this.formations);
+
+      this.formationsCopy = formations;
     });
   }
 }

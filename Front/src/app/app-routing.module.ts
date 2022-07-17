@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'formations', component: FormationComponent },
-  { path: 'formations/:value', component: FormationComponent },
+  { path: 'formations/search/:value', component: FormationComponent },
   { path: 'formations/:id', component: DetailsFormationComponent },
   { path: 'themes', component: ThemeComponent },
   { path: 'themes/:id', component: ThemeCardComponent },

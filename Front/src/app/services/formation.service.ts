@@ -17,7 +17,7 @@ export class FormationService {
   currentFormation = this.formationSource.asObservable();
 
   // Permet au dropdown de partager la recherche
-  private dropdownSource = new BehaviorSubject('');
+  private dropdownSource = new BehaviorSubject(null);
   currentDropdown = this.dropdownSource.asObservable();
 
   constructor(private httpClient: HttpClient) {}
@@ -57,7 +57,7 @@ export class FormationService {
   }
 
   // Fonction qui permet au dropdown de partager la recherche
-  shareFormations(value: string) {
+  shareFormations(value: any) {
     this.dropdownSource.next(value);
   }
 }
