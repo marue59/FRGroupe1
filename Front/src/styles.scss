@@ -9,12 +9,11 @@ $fourth-color : #0a0a0a;
 .button-primary {
   background-color: $primary-color;
   text-align : center;
-    vertical-align: center;
-    font-size : 1rem;
-    min-width : 150px;
-    max-width: 230px;
-    border-radius: 25px;
-    padding : 8px;
+  font-size : 1rem;
+  min-width : 150px;
+  max-width: 230px;
+  border-radius: 25px;
+  padding : 8px;
 }
 .button-secondary {
   color :#91d1bb;
@@ -24,7 +23,7 @@ $fourth-color : #0a0a0a;
 
 // Card
 p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -58,7 +57,7 @@ p {
   margin-top: 10px;
 }
 
-app-home-page, app-theme, app-theme-card,
+app-home-page, app-theme,
 app-sous-theme,app-sous-theme-list, app-sous-theme-card,
 app-formation, app-formation-card,
 app-details-formation, app-details-formation-infos-parent, app-details-formation-inter-intra-parent,
@@ -74,10 +73,10 @@ app-interface-utilisateur{
   border-radius: 5px;
   background-color: #e6e6e6;
   display: flex;
-  flex-flow: wrap column;
+  flex-direction: column;
   justify-content: space-around;
-  height: auto;
-  width: 350px;
+  height: 400px;
+  width: 400px;
   padding: 30px 30px;
   box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 3px 5px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 15%);
 }
@@ -93,10 +92,7 @@ app-interface-utilisateur{
   font-style: italic;
   text-align: center;
   text-decoration: underline;
+  cursor: pointer;
 }
 
-.container-card-sousThemes {
-  width: 400px;
-  margin: 15px;
-}
 

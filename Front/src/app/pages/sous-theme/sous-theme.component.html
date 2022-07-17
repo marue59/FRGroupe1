@@ -2,12 +2,9 @@
   <h1 class="primary-title">Les sous-thèmes</h1>
   <div
     *ngFor="let sousTheme of sousThemes"
-    class="container-card-sousThemes d-flex justify-content-space-around"
+    class="container-card"
     routerLink="/sous-themes/{{ sousTheme.id }}"
   >
-    <app-sous-theme-card
-      class="d-flex flex-wrap"
-      [sousTheme]="sousTheme"
-    ></app-sous-theme-card>
+    <app-sous-theme-card class="" [sousTheme]="sousTheme"></app-sous-theme-card>
   </div>
 </div>

@@ -4,7 +4,7 @@ nav {
     border: 1px black;
     background-color: $primary-color;
     width: auto;
-    height: 120px;
+    height: 120px; border-radius: 1px;
 }
 
 .nav-link {
@@ -16,16 +16,19 @@ nav {
 
 // Ajuste la hauteur et la largeur de la barre de recherche
 input {
-    height: 35px;
+    height: 40px;
     width: 300px;
     border-radius: 5px;
     border: 1px solid #8b8691;
+    margin-right: 10px;
+     font-size: 1.4rem;
 }
 .dropdownSearch {
   width: 100%;
   position: absolute;
   z-index: 1;
-  background-color: pink;
+  background-color: $primary-color;
+  color : white;
   padding-top: 5px;
   padding-left: 5px;
 }

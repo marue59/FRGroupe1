@@ -1,9 +1,9 @@
 <div class="d-flex flex-column">
   <h1 class="primary-title">Nos thèmes</h1>
-
-  <app-theme-card
-    *ngFor="let theme of themes"
-    class="d-flex justify-content-space-between"
-    [theme]="theme"
-  ></app-theme-card>
+  <div class="d-flex">
+    <app-theme-card
+      *ngFor="let theme of themes"
+      [theme]="theme"
+    ></app-theme-card>
+  </div>
 </div>
