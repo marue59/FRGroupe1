@@ -49,6 +49,7 @@ export class InterfaceUtilisateurComponent implements OnInit {
         jours: 0,
         objectifs: '',
         programme: '',
+        image: ''
       }
     }
   }
