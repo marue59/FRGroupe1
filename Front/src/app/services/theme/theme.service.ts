@@ -11,36 +11,24 @@ export class ThemeService {
   // declarer l'url pour le back
   private apiUrl = 'http://localhost:8080';
 
-  Theme = [];
-  Themes: any = {};
+  theme = [];
+  themes: any = [];
+  // partager le résultat de la requete aux enfants
+  private themesSource = new BehaviorSubject(this.themes);
+  currentTheme = this.themesSource.asObservable();
 
-  // Permet d'envoyer quelque chose ('resultat' de la requete) a quelqu'un d'autre
-  private themeSource = new BehaviorSubject(null);
-  currentTheme = this.themeSource.asObservable();
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient: HttpClient) {
-    this.httpClient.get(`${this.apiUrl}/themes`).subscribe((theme: any) => {
-      this.themeSource.next(theme);
-      if (this.Theme.length > 0) {
-        this.Theme = this.Themes;
-      }
-    });
-  }
-
-  getThemes(): Observable<Theme[]> {
-    return this.httpClient.get<Theme[]>(`${this.apiUrl}/themes`);
+  getThemes() {
+    this.httpClient
+      .get<Theme[]>(`${this.apiUrl}/themes`)
+      .subscribe((themes) => {
+        this.themesSource.next(themes);
+      });
   }
 
   getTheme(id: number): Observable<Theme> {
     return this.httpClient.get<Theme>(`${this.apiUrl}/themes/${id}`);
-  }
-
-  getThemeById(id: number) {
-    this.httpClient
-      .get<Theme>(`${this.apiUrl}/themes/${id}`)
-      .subscribe((resultat: any) => {
-        this.themeSource.next(resultat);
-      });
   }
 
   createTheme(theme: Theme): Observable<Theme> {

@@ -1,18 +1,18 @@
-<!--indiv
-  <div
-  *ngFor="let sousTheme of sousThemes"
-  class="container-card-sousThemes d-flex justify-content-space-around"
-  routerLink="/sous-themes/{{ sousTheme.id }}"
->-->
-<div *ngIf="sousTheme">
-  <div class="card bg-light">
-    <div class="card-body text-center">
-      <h2 class="card-title third-title">
-        {{ sousTheme.nom }}
-      </h2>
-      <button routerLink="/formations" class="btn btn-dark m-1">
-        Voir les formations
-      </button>
-    </div>
+<div *ngIf="sousTheme" class="container-card-cardsList-item text-center">
+  <h2 class="secondary-title">
+    {{ sousTheme.nom }}
+  </h2>
+  <div>
+    <p class="pSousThemes">Les différentes formations possible :</p>
+    <ul>
+      <li
+        *ngFor="let formation of sousTheme.formations"
+        routerLink="/formations/{{ formation.id }}"
+      >
+        {{ formation.nom }}
+      </li>
+    </ul>
+
+    <button routerLink="" class="button-primary mt-3">XXXX</button>
   </div>
 </div>

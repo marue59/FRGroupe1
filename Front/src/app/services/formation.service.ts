@@ -15,8 +15,13 @@ export class FormationService {
   // Permet d'envoyer quelque chose ('resultat' de la requete) a quelqu'un d'autre
   private formationSource = new BehaviorSubject(null);
   currentFormation = this.formationSource.asObservable();
-  
-  constructor(private httpClient: HttpClient) { }
+
+  // Permet au dropdown de partager la recherche
+  private dropdownSource = new BehaviorSubject(null);
+  currentDropdown = this.dropdownSource.asObservable();
+
+  constructor(private httpClient: HttpClient) {}
+
   getFormations(): Observable<Formation[]> {
     return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations`);
   }
@@ -51,4 +56,8 @@ export class FormationService {
   }
 
 
+  // Fonction qui permet au dropdown de partager la recherche
+  shareFormations(value: any) {
+    this.dropdownSource.next(value);
+  }
 }

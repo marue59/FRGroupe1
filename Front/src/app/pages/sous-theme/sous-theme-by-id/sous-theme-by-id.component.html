@@ -1,0 +1,20 @@
+<div class="globalContainer">
+  <div *ngIf="sousTheme" class="container-card-cardsList-item text-center">
+    <h2 class="secondary-title">
+      {{ sousTheme.nom }}
+    </h2>
+    <div>
+      <p class="pSousThemes">Les différentes formations possible :</p>
+      <ul>
+        <li
+          *ngFor="let formation of sousTheme.formations"
+          routerLink="/formations/{{ formation.id }}"
+        >
+          {{ formation.nom }}
+        </li>
+      </ul>
+
+      <button routerLink="" class="button-primary mt-3">XXXX</button>
+    </div>
+  </div>
+</div>

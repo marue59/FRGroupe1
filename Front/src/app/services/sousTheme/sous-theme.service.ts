@@ -12,10 +12,10 @@ export class SousThemeService {
   private apiUrl = 'http://localhost:8080';
 
   sousTheme = [];
-  sousThemes: any = {};
+  sousThemes: any = [];
 
   // Permet d'envoyer quelque chose ('resultat' de la requete) a quelqu'un d'autre
-  private sousThemeSource = new BehaviorSubject(null);
+  private sousThemeSource = new BehaviorSubject(this.sousThemes);
   currentSousTheme = this.sousThemeSource.asObservable();
 
   constructor(private httpClient: HttpClient) {
@@ -24,8 +24,12 @@ export class SousThemeService {
     }
   }
 
-  getSousThemes(): Observable<SousTheme[]> {
-    return this.httpClient.get<SousTheme[]>(`${this.apiUrl}/sous-themes`);
+  getSousThemes() {
+    this.httpClient
+      .get<SousTheme[]>(`${this.apiUrl}/sous-themes`)
+      .subscribe((sousThemes) => {
+        this.sousThemeSource.next(sousThemes);
+      });
   }
   getSousTheme(id: number): Observable<SousTheme> {
     return this.httpClient.get<SousTheme>(`${this.apiUrl}/sous-themes/${id}`);
@@ -40,7 +44,7 @@ export class SousThemeService {
       });
   }
 
-  getSousThemeByIdObs(id: number) {
+  getSousThemeByIdObs(id: any) {
     // this.httpClient.get<SousTheme>(`${this.apiUrl}/sous-themes/${id}`);
     return this.httpClient.get<SousTheme>(`${this.apiUrl}/sous-themes/${id}`);
   }

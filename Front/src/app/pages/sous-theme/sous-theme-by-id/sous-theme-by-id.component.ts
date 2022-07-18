@@ -1,19 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-
-// import du Model
 import SousTheme from 'src/app/models/sousTheme.models';
-
-// import du Service
 import { SousThemeService } from 'src/app/services/sousTheme/sous-theme.service';
 
 @Component({
-  selector: 'app-sous-theme-card',
-  templateUrl: './sous-theme-card.component.html',
-  styleUrls: ['./sous-theme-card.component.scss'],
+  selector: 'app-sous-theme-by-id',
+  templateUrl: './sous-theme-by-id.component.html',
+  styleUrls: ['./sous-theme-by-id.component.scss'],
 })
-export class SousThemeCardComponent implements OnInit {
+export class SousThemeByIdComponent implements OnInit {
   @Input() sousTheme!: SousTheme;
   sousThemes: SousTheme[] = [];
   subscription!: Subscription;

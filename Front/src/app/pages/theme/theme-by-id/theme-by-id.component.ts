@@ -1,18 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
 import SousTheme from 'src/app/models/sousTheme.models';
 import Theme from 'src/app/models/theme.model';
-import Themes from 'src/app/models/theme.model';
 import { SousThemeService } from 'src/app/services/sousTheme/sous-theme.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
-  selector: 'app-theme-card',
-  templateUrl: './theme-card.component.html',
-  styleUrls: ['./theme-card.component.scss'],
+  selector: 'app-theme-by-id',
+  templateUrl: './theme-by-id.component.html',
+  styleUrls: ['./theme-by-id.component.scss'],
 })
-export class ThemeCardComponent implements OnInit {
+export class ThemeByIdComponent implements OnInit {
   @Input() theme!: Theme;
   sousThemes: SousTheme[] = [];
 

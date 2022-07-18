@@ -15,9 +15,4 @@ export class ThemeListComponent implements OnInit {
   constructor(private router: Router, private themeService: ThemeService) {}
 
   ngOnInit(): void {}
-
-  changeRoute(id: number) {
-    this.router.navigate(['themes', id]);
-    this.themeService.getThemeById(id);
-  }
 }

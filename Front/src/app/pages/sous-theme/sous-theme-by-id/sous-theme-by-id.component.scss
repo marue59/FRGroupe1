@@ -1,5 +1,4 @@
 @import "../Front/src/styles.scss";
-
 li {
   width: 100%;
   display: flex;
@@ -12,4 +11,10 @@ li {
   margin-left: -20px;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.globalContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
