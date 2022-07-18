@@ -5,10 +5,8 @@
       *ngFor="let sousTheme of sousThemes"
       routerLink="/sous-themes/{{ sousTheme.id }}"
     >
-      <app-sous-theme-card
-        class=""
-        [sousTheme]="sousTheme"
-      ></app-sous-theme-card>
+      <app-sous-theme-by-id class="" [sousTheme]="sousTheme">
+      </app-sous-theme-by-id>
     </div>
   </div>
 </div>

@@ -37,6 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SideBarComponent } from './_commons/side-bar/side-bar.component';
 import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-theme/sous-theme-de-theme.component';
 import { UtilisateurComponent } from './pages/utilisateurFormulaire/utilisateur.component';
+import { ThemeByIdComponent } from './pages/theme/theme-by-id/theme-by-id.component';
+import { SousThemeByIdComponent } from './pages/sous-theme/sous-theme-by-id/sous-theme-by-id.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { UtilisateurComponent } from './pages/utilisateurFormulaire/utilisateur.
     SideBarComponent,
     SousThemeDeThemeComponent,
     UtilisateurComponent,
+    ThemeByIdComponent,
+    SousThemeByIdComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+<div class="globalContainer">
+  <div class="container-card text-center" *ngIf="theme">
+    <h2 class="secondary-title">{{ theme.nom }}</h2>
+    <p class="text-justify">{{ theme.description }}</p>
+
+    <app-sous-theme-de-theme
+      class="text-center m-2"
+      [sousThemes]="theme.sousThemesList"
+    ></app-sous-theme-de-theme>
+
+    <button routerLink="/formulaire-inscription" class="button-primary m-3">
+      Sinscrire à une formation
+    </button>
+  </div>
+</div>
