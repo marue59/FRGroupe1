@@ -2,7 +2,7 @@
   <h1 class="primary-title">Les sous-thèmes</h1>
   <div
     *ngFor="let sousTheme of sousThemes"
-    class="container-card"
+    class="container-sous-theme"
     routerLink="/sous-themes/{{ sousTheme.id }}"
   >
     <app-sous-theme-card class="" [sousTheme]="sousTheme"></app-sous-theme-card>

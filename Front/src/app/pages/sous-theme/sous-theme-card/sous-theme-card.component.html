@@ -1,14 +1,9 @@
-<!--indiv
-  <div
-  *ngFor="let sousTheme of sousThemes"
-  class="container-card-sousThemes d-flex justify-content-space-around"
-  routerLink="/sous-themes/{{ sousTheme.id }}"
->-->
-<div *ngIf="sousTheme" class="container-card text-center">
+<div *ngIf="sousTheme" class="text-center">
   <h2 class="secondary-title">
     {{ sousTheme.nom }}
   </h2>
-  <div class="container-card-sousThemesTheme">
+  <div>
+    <p class="pSousThemes">Les différentes formations possible :</p>
     <ul>
       <li
         *ngFor="let formation of sousTheme.formations"
@@ -18,8 +13,6 @@
       </li>
     </ul>
 
-    <button routerLink="/formations" class="button-primary mt-5">
-      Voir les formations
-    </button>
+    <button routerLink="" class="button-primary mt-3">XXXX</button>
   </div>
 </div>

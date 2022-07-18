@@ -41,12 +41,11 @@ p {
 
 .secondary-title{
   color: $fourth-color;
-  font-size : 1.4rem;
+  font-size : 1.6rem;
   font-stretch: expanded;
   font-weight: 600;
   text-align : center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .third-title{
   color: $fourth-color;
@@ -76,23 +75,45 @@ app-interface-utilisateur{
   flex-direction: column;
   justify-content: space-around;
   height: 400px;
+  width: 500px;
+  padding: 30px 30px;
+  box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 3px 5px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 15%);
+}
+.container-sous-theme {
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 350px;
   width: 400px;
   padding: 30px 30px;
   box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 3px 5px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 15%);
 }
 
-.container-card-themes {
+.container-card-sous-themes {
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
+  width: 200px;
   height: auto;
+
 }
 .container-card-sousThemesTheme {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   font-size: 1.1rem;
   font-style: italic;
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
 }
+ .pSousThemes {
+  width: 100%;
+  display: flex;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 30px;
 
+ }
 
