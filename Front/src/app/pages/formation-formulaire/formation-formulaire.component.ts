@@ -21,6 +21,7 @@ export class FormationFormulaireComponent implements OnInit {
     jours: 0,
     objectifs: '',
     programme: '',
+    image: ''
   }
 
   constructor(private formationService: FormationService,

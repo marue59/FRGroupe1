@@ -39,6 +39,9 @@ public class Formation {
     @Column(name = "is_personnalisee")
     private boolean isPersonnalisee;
 
+    @Column(name = "image")
+    private String image;
+
 
     // Mapping vers la table avec la relation many to many
 
@@ -52,7 +55,7 @@ public class Formation {
     public Formation() {
     }
 
-    public Formation(Long id, String nom, String description, String objectifs, String programme, int prix, int heures, int jours, boolean isPersonnalisee, Set<SousTheme> sousThemes) {
+    public Formation(Long id, String nom, String description, String objectifs, String programme, int prix, int heures, int jours, boolean isPersonnalisee, Set<SousTheme> sousThemes, String image) {
         this.id = id;
         this.nom = nom;
         this.description = description;
@@ -63,6 +66,7 @@ public class Formation {
         this.jours = jours;
         this.isPersonnalisee = isPersonnalisee;
         this.sousThemes = sousThemes;
+        this.image = image;
     }
 
 
@@ -154,14 +158,16 @@ public class Formation {
         this.sousThemes = sousThemes;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
 
-
-
-
-
-
-    // Méthodes
+// Méthodes
 
     @Override
     public String toString() {

@@ -22,7 +22,8 @@ export class DetailsFormationComponent implements OnInit {
     objectifs: '',
     programme: '',
     heures: 0,
-    jours: 0
+    jours: 0,
+    image: ''
   }
   id!: number;
 
@@ -40,7 +41,8 @@ export class DetailsFormationComponent implements OnInit {
     objectifs: '',
     programme: '',
     heures: 0,
-    jours: 0
+    jours: 0,
+    image: ''
     }
   }
 

@@ -1,2 +1,12 @@
 @import "../Front/src/styles.scss";
+img {
+    width: 150px;
+    height: 100px;
+}
 
+.card-formation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}

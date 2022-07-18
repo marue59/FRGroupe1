@@ -10,4 +10,5 @@ export default interface Formation extends Items {
   jours: number;
   objectifs: string;
   programme: string;
+  image: string;
 }
