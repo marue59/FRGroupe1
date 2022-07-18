@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'sous-themes', component: SousThemeComponent },
   { path: 'sous-themes/:id', component: SousThemeCardComponent },
   { path: 'connexion', component: InterfaceUtilisateurComponent },
+  { path: 'utilisateur/:id', component: InterfaceUtilisateurComponent},
   { path:'formulaire-inscription', component: UtilisateurComponent },
   { path: 'sous-themes/:id', component: SousThemeComponent },
   { path: 'formation-formulaire', component:FormationFormulaireComponent}

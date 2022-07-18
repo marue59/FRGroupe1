@@ -1,5 +1,4 @@
 @import "../Front/src/styles.scss";
-
 // marge pour l'espace entre les différentes balises des composantes
 .infos {
     margin: 50px 100px;
@@ -23,4 +22,8 @@ button {
 // couleur du triangle qui permet d'afficher/cacher les formations
 svg {
     color: #25a197;
+}
+
+.globalContainer {
+    margin-left: 200px;
 }

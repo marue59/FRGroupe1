@@ -39,6 +39,7 @@ import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-them
 import { UtilisateurComponent } from './pages/utilisateurFormulaire/utilisateur.component';
 import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 
+import { AddDays } from './pages/pipe/addDays.pipe';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,8 @@ import { FormationFormulaireComponent } from './pages/formation-formulaire/forma
     SousThemeDeThemeComponent,
     UtilisateurComponent,
     FormationFormulaireComponent,
+    AddDays,
+
   ],
   imports: [
     BrowserModule,

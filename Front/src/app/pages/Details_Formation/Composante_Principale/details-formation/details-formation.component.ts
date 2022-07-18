@@ -1,3 +1,4 @@
+import { getLocaleDateFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import Formation from 'src/app/models/formation.model';
@@ -12,10 +13,36 @@ import { SessionService } from 'src/app/services/session/session.service';
 })
 export class DetailsFormationComponent implements OnInit {
 
-  formation!: Formation;
+  formation: Formation = {
+    id: 1,
+    nom: '',
+    description: '',
+    prix: 0,
+    isPersonnalise: false,
+    objectifs: '',
+    programme: '',
+    heures: 0,
+    jours: 0
+  }
   id!: number;
-  
-  session!: Session;
+
+  session: Session = {
+    id: 1,
+    date: new Date(0,0,0),
+    isIntra: false,
+    lieu: '',
+    formation: {
+      id: 1,
+    nom: '',
+    description: '',
+    prix: 0,
+    isPersonnalise: false,
+    objectifs: '',
+    programme: '',
+    heures: 0,
+    jours: 0
+    }
+  }
 
   constructor(
     private router: Router,
@@ -28,6 +55,7 @@ export class DetailsFormationComponent implements OnInit {
     const id = this.route.params.subscribe((params) => {
       this.id = params['id'];
       this.subscribeFormations(this.id);
+      this.subscribeSession(this.id);
     });
   }
 
@@ -43,10 +71,10 @@ export class DetailsFormationComponent implements OnInit {
     })
   }
 
-  private setSubscribe(id: string | null) {
-    if (id) {
-      this.subscribeFormations(+id);
-      this.subscribeSession(+id);
-    }
-  }
+  // private setSubscribe(id: string | null) {
+  //   if (id) {
+  //     this.subscribeFormations(+id);
+  //     this.subscribeSession(+id);
+  //   }
+  // }
 }
