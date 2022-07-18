@@ -1,10 +1,14 @@
 <div class="d-flex flex-column">
   <h1 class="primary-title">Les sous-thèmes</h1>
-  <div
-    *ngFor="let sousTheme of sousThemes"
-    class="container-sous-theme"
-    routerLink="/sous-themes/{{ sousTheme.id }}"
-  >
-    <app-sous-theme-card class="" [sousTheme]="sousTheme"></app-sous-theme-card>
+  <div class="container-card-sous-themes">
+    <div
+      *ngFor="let sousTheme of sousThemes"
+      routerLink="/sous-themes/{{ sousTheme.id }}"
+    >
+      <app-sous-theme-card
+        class=""
+        [sousTheme]="sousTheme"
+      ></app-sous-theme-card>
+    </div>
   </div>
 </div>
