@@ -7,5 +7,4 @@ date: Date;
 isIntra: boolean;
 lieu: string;
 formation: Formation;
-
 }

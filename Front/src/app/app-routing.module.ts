@@ -9,6 +9,7 @@ import { InterfaceUtilisateurComponent } from './pages/InterfaceUtilisateur/Comp
 import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-theme/sous-theme-de-theme.component';
 import { SousThemeCardComponent } from './pages/sous-theme/sous-theme-card/sous-theme-card.component';
 import { UtilisateurComponent } from './pages/utilisateurFormulaire/utilisateur.component';
+import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'connexion', component: InterfaceUtilisateurComponent },
   { path: 'utilisateur/:id', component: InterfaceUtilisateurComponent},
   { path:'formulaire-inscription', component: UtilisateurComponent },
-  { path: 'sous-themes/:id', component: SousThemeComponent }
+  { path: 'sous-themes/:id', component: SousThemeComponent },
+  { path: 'formation-formulaire', component:FormationFormulaireComponent}
 ];
 
 @NgModule({

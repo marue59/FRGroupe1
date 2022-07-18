@@ -37,6 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SideBarComponent } from './_commons/side-bar/side-bar.component';
 import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-theme/sous-theme-de-theme.component';
 import { UtilisateurComponent } from './pages/utilisateurFormulaire/utilisateur.component';
+import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
+
 import { AddDays } from './pages/pipe/addDays.pipe';
 
 @NgModule({
@@ -70,7 +72,9 @@ import { AddDays } from './pages/pipe/addDays.pipe';
     SideBarComponent,
     SousThemeDeThemeComponent,
     UtilisateurComponent,
+    FormationFormulaireComponent,
     AddDays,
+
   ],
   imports: [
     BrowserModule,

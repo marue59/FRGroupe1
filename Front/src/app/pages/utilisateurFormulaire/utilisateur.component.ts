@@ -11,7 +11,7 @@ import { UtilisateurService } from 'src/app/services/utilisateur/utilisateur.ser
 })
 export class UtilisateurComponent implements OnInit {
 
-public utilisateur!: Utilisateur;
+public utilisateur!:Utilisateur;
 
   constructor(private utilisateurService: UtilisateurService,
     private router: Router)

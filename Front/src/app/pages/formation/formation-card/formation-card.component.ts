@@ -16,6 +16,7 @@ export class FormationCardComponent implements OnInit {
   // @Input() formations: any;
   formation: any;
   formations: Formation[] = [];
+  formationRandom: Formation[] = [];
   subscription!: Subscription;
 
   constructor(

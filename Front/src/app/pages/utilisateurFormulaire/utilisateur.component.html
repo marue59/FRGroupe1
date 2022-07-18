@@ -33,7 +33,7 @@
             <form-row>
                 <div class="col-md-6 mb-3">
                     <label for="">Genre :</label>
-                    <select class="form-control">
+                    <select class="form-control" placeholder="genre" [(ngModel)]="utilisateur.genre" name="genre" required>
                         <option value="">Votre genre :</option>
                         <option value="A">Masculin</option>
                         <option value="A">Feminin</option>
@@ -63,6 +63,22 @@
                     </div>
                 </div>
             </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label>Telephone</label>
+                    <input type="text" class="form-control" placeholder="Telephone" [(ngModel)]="utilisateur.telephone"
+                        name="telephone" required #telephoneVar="ngModel"
+                        [ngClass]="{'is-invalide':telephoneVar.touched && !emailVar.valid}">
+                    <div class="invalide-feedback">
+                        <span *ngIf="emailVar.errors">
+                            Entrez votre adresse mail
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
             <div class="text-right">
                 <button class="btn btn-info" (click)="addUtilisateur(utilisateurForm)">Sauvegarder</button>
             </div>
