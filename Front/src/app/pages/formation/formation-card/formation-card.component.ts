@@ -14,7 +14,9 @@ import { FormationService } from 'src/app/services/formation.service';
 })
 export class FormationCardComponent implements OnInit {
   formation: any;
+
   @Input() formations: Formation[] = [];
+
   subscription!: Subscription;
 
   constructor(

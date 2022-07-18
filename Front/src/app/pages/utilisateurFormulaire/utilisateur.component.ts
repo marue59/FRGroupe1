@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Utilisateur } from 'src/app/models/utilisateur.model';
+import Utilisateur from 'src/app/models/utilisateur.model';
 import { UtilisateurService } from 'src/app/services/utilisateur/utilisateur.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { UtilisateurService } from 'src/app/services/utilisateur/utilisateur.ser
 })
 export class UtilisateurComponent implements OnInit {
 
-public utilisateur: Utilisateur = new Utilisateur();
+public utilisateur!:Utilisateur;
 
   constructor(private utilisateurService: UtilisateurService,
     private router: Router)

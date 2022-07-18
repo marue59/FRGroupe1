@@ -29,7 +29,6 @@ export class FormationService {
   getFormation(id: number): Observable<Formation> {
     return this.httpClient.get<Formation>(`${this.apiUrl}/formations/${id}`);
   }
-
   /*getFormationById(id: number) {
     this.httpClient
       .get<Formation>(`${this.apiUrl}/formations/${id}`)
@@ -55,6 +54,7 @@ export class FormationService {
   deleteFormation(id: number): Observable<Formation> {
     return this.httpClient.delete<Formation>(`${this.apiUrl}/formations/${id}`);
   }
+
 
   // Fonction qui permet au dropdown de partager la recherche
   shareFormations(value: any) {

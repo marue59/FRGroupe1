@@ -41,8 +41,6 @@ export class FormationComponent implements OnInit {
     // recuperer la liste de toute les formations par le biais du services
     this.formationService.getFormations().subscribe((formations) => {
       this.formations = formations;
-      console.log(this.formations);
-
       this.formationsCopy = formations;
     });
   }

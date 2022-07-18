@@ -1,25 +1,31 @@
 <!-- Composante principale regroupant les autres composantes : ComposanteInfos, ComposanteFormationEnCours et ComposanteFormatiosFinis -->
 
-<!-- Balise div appelant la composante pour la carte des informations personnelles -->
-<div class="infos">
-  <h1 class="primary-title">Informations personnelles :</h1>
 
-  <app-interface-utilisateur-card-infos></app-interface-utilisateur-card-infos>
-</div>
+<div class="globalContainer">
 
-<!-- Balise div appelant la composante pour la carte de la formation en cours -->
-<div class="formationEnCours">
-  <h1 class="primary-title">Formation en cours :</h1>
 
-  <app-interface-utilisateur-card-formation-en-cours></app-interface-utilisateur-card-formation-en-cours>
-</div>
 
-<!-- Balise div contenant la composante pour la carte des formations finis, avec en plus un volet permettant d'afficher/cacher cette section -->
-<div class="formationsFinis">
-  <h1 class="primary-title">
-    Formations finis et certifications :
-    <!-- Event click permettant de changer le triangle en haut ou en bas suivant si on a cliqué dessus ou pas -->
-    <button (click)="onClick()">
+
+    <!-- Balise div appelant la composante pour la carte des informations personnelles -->
+    <div class="infos">
+        <h1 class="primary-title">Informations personnelles :</h1>
+
+        <app-interface-utilisateur-card-infos [utilisateur]="utilisateur"></app-interface-utilisateur-card-infos>
+    </div>
+
+    <!-- Balise div appelant la composante pour la carte de la formation en cours -->
+    <div class="formationEnCours">
+        <h1 class="primary-title">Formation en cours :</h1>
+
+        <app-interface-utilisateur-card-formation-en-cours [utilisateur]="utilisateur"></app-interface-utilisateur-card-formation-en-cours>
+    </div>
+
+    <!-- Balise div contenant la composante pour la carte des formations finis, avec en plus un volet permettant d'afficher/cacher cette section -->
+    <div class="formationsFinis">
+        <h1 class="primary-title">
+            Formations finis et certifications :
+            <!-- Event click permettant de changer le triangle en haut ou en bas suivant si on a cliqué dessus ou pas -->
+            <button (click)="onClick()">
       <svg
         *ngIf="!isActive"
         xmlns="http://www.w3.org/2000/svg"
@@ -47,10 +53,11 @@
         />
       </svg>
     </button>
-  </h1>
+        </h1>
 
-  <!-- NgIf pour afficher les formations suivant si isActive est en true ou en false et dont la méthode OnClick dans l'event au dessus permet de changer -->
-  <app-interface-utilisateur-card-formations-finis
-    *ngIf="isActive"
-  ></app-interface-utilisateur-card-formations-finis>
+        <!-- NgIf pour afficher les formations suivant si isActive est en true ou en false et dont la méthode OnClick dans l'event au dessus permet de changer -->
+        <app-interface-utilisateur-card-formations-finis *ngIf="isActive"></app-interface-utilisateur-card-formations-finis>
+    </div>
+
+
 </div>

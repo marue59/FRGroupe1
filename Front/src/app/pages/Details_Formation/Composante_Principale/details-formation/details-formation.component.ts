@@ -31,6 +31,17 @@ export class DetailsFormationComponent implements OnInit {
     date: new Date(0,0,0),
     isIntra: false,
     lieu: '',
+    formation: {
+      id: 1,
+    nom: '',
+    description: '',
+    prix: 0,
+    isPersonnalise: false,
+    objectifs: '',
+    programme: '',
+    heures: 0,
+    jours: 0
+    }
   }
 
   constructor(

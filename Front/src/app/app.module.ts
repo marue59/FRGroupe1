@@ -39,6 +39,8 @@ import { SousThemeDeThemeComponent } from './pages/sous-theme/sous-theme-de-them
 import { UtilisateurComponent } from './pages/utilisateurFormulaire/utilisateur.component';
 import { ThemeByIdComponent } from './pages/theme/theme-by-id/theme-by-id.component';
 import { SousThemeByIdComponent } from './pages/sous-theme/sous-theme-by-id/sous-theme-by-id.component';
+import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
+import { AddDays } from './pages/pipe/addDays.pipe';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,8 @@ import { SousThemeByIdComponent } from './pages/sous-theme/sous-theme-by-id/sous
     UtilisateurComponent,
     ThemeByIdComponent,
     SousThemeByIdComponent,
+    FormationFormulaireComponent,
+    AddDays
   ],
   imports: [
     BrowserModule,
