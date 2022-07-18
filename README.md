@@ -11,7 +11,7 @@ Le site web donne aussi la possibilité à l'admin d'ajouter des formations à p
 Finalement, une side bar est présente à gauche pour permettre à l'utilisateur un accès plus rapide aux différentes formations que présente le portail web.
 
 <p align="center">
-<img src="https://media.giphy.com/media/KDLPxbdJXfDWzywrwK/giphy.gif" title="Projet fil rouge" alt="Projet Fil Rouge">
+<img src="https://media.giphy.com/media/o409lcPopm6cY4ykGC/giphy.gif" title="Projet fil rouge" alt="Projet Fil Rouge">
  </p>
 
 ## Prérequis
