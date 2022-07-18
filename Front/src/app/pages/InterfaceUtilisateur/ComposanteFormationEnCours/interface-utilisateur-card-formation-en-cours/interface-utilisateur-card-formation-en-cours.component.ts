@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import Utilisateur from 'src/app/models/utilisateur.model';
 
 @Component({
   selector: 'app-interface-utilisateur-card-formation-en-cours',
@@ -8,13 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class InterfaceUtilisateurCardFormationEnCoursComponent implements OnInit {
 
 
-  /**
-   * Attribut de la session en cours, contenant :
-   * une date
-   * un prix
-   * un boolean : isIntra
-   */
-  session!: any;
+
+  @Input()
+  utilisateur!: Utilisateur;
 
   constructor() { }
 

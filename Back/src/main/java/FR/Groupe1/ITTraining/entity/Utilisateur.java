@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "utilisateur")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // la table est héritée par la classe Formateur
 @DiscriminatorColumn(name = "role") // La colonne role joue le role du discriminant est permet de différencier le formateur du non formateur
-
+@DiscriminatorValue(value = "utilisateur")
 public class Utilisateur {
 
     @Id

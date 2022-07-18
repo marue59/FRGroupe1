@@ -1,15 +1,17 @@
-export class Utilisateur{
+import Session from "./session.model";
 
-public nom?: string ;
-
-public prenom?: string;
-
-public genre?: string;
-
-public adresse?: string;
-
-public email?: string;
-
-public numTel?: string;
-
+export default interface Utilisateur{
+  id: number;
+  nom: string;
+  prenom: string;
+  adresse: string;
+  email: string;
+  telephone: string;
+  isTest: boolean;
+  noteMoyenne: number;
+  isTechnique: boolean;
+  isPedagogique: boolean;
+  isPrerequis: boolean;
+  genre: string;
+  session: Session;
 }
