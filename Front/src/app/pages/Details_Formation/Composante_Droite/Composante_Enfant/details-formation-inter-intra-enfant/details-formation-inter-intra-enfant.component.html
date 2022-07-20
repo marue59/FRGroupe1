@@ -1,0 +1,87 @@
+<!-- Composante enfant : bordure grise -->
+<!-- contenant : les boutons d'onglets, le texte en dessous des boutons, et un bouton redirigeant vers la page du formulaire d'inscription -->
+
+<!-- Bordure de la composante -->
+<div class="bordure">
+
+    <!-- Les 3 boutons d'onglets : Inter / Intra / Personnalisée -->
+    <div class="boutons">
+
+        <div *ngFor="let bouton of boutons, let index = index">
+
+            <!-- On appelle la composante enfant des boutons où on lui passe les infos de cette composante en plus de l'EventEmitter (onClick)="..." pour remonter les infos de la composante bouton à cette composante -->
+            <!-- changeFocus pour change le boolean isFocus en true ou false selon si le bouton a été cliqué ou pas -->
+            <app-details-formation-inter-intra-bouton-options [text]="bouton.nom" [isFocus]="bouton.isFocus" (onClick)="changeFocus(index)"></app-details-formation-inter-intra-bouton-options>
+        </div>
+
+    </div>
+
+
+    <!-- Le texte en dessous des 3 boutons d'onglets contenant le lieu, la date et le prix de la formation -->
+    <div class="text">
+
+        <div *ngFor="let bouton of boutons">
+
+            <!-- Condition if pour afficher le texte selon si c'est l'option Inter, intra ou personnalisée qui est choisie -->
+            <div *ngIf="bouton.nom === 'Inter' && bouton.isFocus">
+
+                <!-- Icons + texte dans la bordure grise en dessous des boutons d'onglet -->
+                <p class="hour">
+                    <ion-icon name="time-outline"></ion-icon> <span> {{formation?.jours}} jours ({{formation?.heures}}h)</span></p>
+
+                <p>
+                    <ion-icon name="location-outline"></ion-icon> <span>{{session.lieu}}</span>
+                </p>
+
+                <p>
+                    <ion-icon name="cash-outline"></ion-icon><span>{{formation?.prix}} €</span>
+                </p>
+
+                <p>
+                    <ion-icon name="calendar-outline"></ion-icon><span>{{session.date | date:'dd-MM-yyyy'}}</span>
+                </p>
+
+            </div>
+
+
+
+            <div *ngIf="bouton.nom === 'Intra' && bouton.isFocus">
+                <p>
+                    Cette formation est réalisable en intra-entreprise, dans vos locaux ou dans nos salles de cours. Contactez-nous pour obtenir les prochaines disponibilités de nos consultants formateurs ou nous indiquer vos souhaits.
+                </p>
+            </div>
+
+            <div *ngIf="bouton.nom === 'Personnalisée' && bouton.isFocus">
+                <p>
+                    Vous souhaitez une formation adaptée aux spécificités de votre entreprise et de vos équipes? Nos experts construisent votre formation sur mesure !
+                </p>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Le bouton d'inscption qui renvoie vers le formulaire d'inscription selon si l'option choisie c'est intra/inter ou personnalisée -->
+    <div class="inscription">
+
+        <div *ngFor="let bouton of boutons">
+
+            <div *ngIf="bouton.isFocus">
+
+                <app-details-formation-inter-intra-inscription [boutonNom]="bouton.submit"></app-details-formation-inter-intra-inscription>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

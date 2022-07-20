@@ -1,0 +1,16 @@
+@import "../Front/src/styles.scss";
+// Le conteneur des deux divs : (infos) & (InterIntra) que j'ai placé en ligne côte à côte avec le display flex
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.InterIntra {
+    margin-left: 50px;
+    margin-top: 28px;
+}
+
+.globalContainer {
+    margin-left: 50px;
+    margin-bottom: 600px;
+}

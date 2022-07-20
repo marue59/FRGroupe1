@@ -1,0 +1,69 @@
+.conteneurGlobal {
+    display: flex;
+}
+
+// la carte avec un rendu 3d
+.conteneurCard {
+    width: 1000px;
+    background: linear-gradient(4deg, rgba(251, 251, 251, 1) 37%, rgba(250, 250, 250, 1) 96%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 5px;
+    box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    display: flex;
+}
+
+// le nom de la formation avec la date mis en flex colonne
+.infosFormation {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+// .sessionEnCours {
+//     display: flex;
+//     justify-content: flex-end;
+//     margin-top: 20px;
+// }
+.titre {
+    color: #25a197;
+    align-self: center;
+    display: inline;
+}
+
+// image de la formation
+img {
+    height: 150px;
+    width: 150px;
+    padding-top: 10px;
+}
+
+span {
+    color: #1c7a73;
+}
+
+// la date de formation avec une marge en bas
+.dateFormation {
+    width: 300px;
+    margin-bottom: 28px;
+}
+
+// La description de la formation avec une bordure grise
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e6e6e6;
+    padding: 10px;
+    margin: 10px;
+}
+
+#description {
+    color: #1c7a73;
+}
+
+.certificat {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}

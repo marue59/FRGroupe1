@@ -1,0 +1,25 @@
+// border et outline en none pour enlever les valeurs par défaust du bouton
+// largeur de 100px pour avoir tous les boutons avec la même largeur
+button {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+}
+
+button:hover {
+    background: #cbf5f5;
+}
+
+.text {
+    color: #228b22;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

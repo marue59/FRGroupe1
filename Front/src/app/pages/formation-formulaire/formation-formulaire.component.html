@@ -1,0 +1,92 @@
+<div class="card">
+    <div class="card-header text-white bg-info">
+        Ajout d'une formation
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="addFormation(formationForm)" #formationForm="ngForm">
+            <div class="form-column">
+                <div class="col-md-6 mb-3">
+                    <label>Description :</label>
+                    <input type="text" class="form-control" placeholder="description" [(ngModel)]="formation.description" name="description"
+                        required #descriptionVar="ngModel" [ngClass]="{'is-invalide':descriptionVar.touched && !descriptionVar.valid}">
+                    <div class="invalide-feedback">
+                        <span *ngIf="descriptionVar.errors">
+                            Entrez la description
+                        </span>
+
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Prix :</label>
+                    <input type="text" class="form-control" placeholder="prix" [(ngModel)]="formation.prix"
+                        name="prix" required #prixVar="ngModel"
+                        [ngClass]="{'is-invalide':prixVar.touched && !prixVar.valid}">
+                    <div class="invalide-feedback">
+                        <span *ngIf="prixVar.errors">
+                            Entrez le prix
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Heures :</label>
+                    <input type="text" class="form-control" placeholder="heures" [(ngModel)]="formation.heures"
+                        name="heures" required #heuresVar="ngModel"
+                        [ngClass]="{'is-invalide':heuresVar.touched && !heuresVar.valid}">
+                    <div class="invalide-feedback">
+                        <span *ngIf="heuresVar.errors">
+                            Entrez le nombre d'heures
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Jours :</label>
+                    <input type="text" class="form-control" placeholder="jours" [(ngModel)]="formation.jours"
+                        name="jours" required #joursVar="ngModel"
+                        [ngClass]="{'is-invalide':joursVar.touched && !joursVar.valid}">
+                    <div class="invalide-feedback">
+                        <span *ngIf="joursVar.errors">
+                            Entrez le nombre de jours
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Objectifs :</label>
+                    <input type="text" class="form-control" placeholder="objectifs" [(ngModel)]="formation.objectifs"
+                        name="objectifs" required #objectifsVar="ngModel"
+                        [ngClass]="{'is-invalide':objectifsVar.touched && !objectifsVar.valid}">
+                    <div class="invalide-feedback">
+                        <span *ngIf="objectifsVar.errors">
+                            Entrez les objectifs
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Programme :</label>
+                    <input type="text" class="form-control" placeholder="programme" [(ngModel)]="formation.programme"
+                        name="programme" required #programmeVar="ngModel"
+                        [ngClass]="{'is-invalide':programmeVar.touched && !programmeVar.valid}">
+                    <div class="invalide-feedback">
+                        <span *ngIf="programmeVar.errors">
+                            Entrez le programme
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-right">
+                <button   type="submit" class="btn btn-info" (click)="addFormation(formationForm)" >Sauvegarder</button>
+            </div>
+
+        </form>
+    </div>
+</div>

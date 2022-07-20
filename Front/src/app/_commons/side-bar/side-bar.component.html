@@ -1,0 +1,47 @@
+<div class="w3-bar-block w3-collapse w3-card" id="mySidebar">
+  <div class="sideItems"></div>
+
+  <!-- Themes -->
+  <div class="w3-dropdown-hover">
+    <button
+      class="w3-button w3-padding-32 w3-xlarge"
+      routerLink="/themes"
+      type="button"
+    >
+      Thèmes<i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-xlarge">
+      <app-theme-list [themes]="themes"></app-theme-list>
+    </div>
+  </div>
+
+  <!-- Sous-Themes -->
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-padding-32 w3-xlarge" routerLink="/sous-themes">
+      Sous-Thèmes<i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-xlarge">
+      <app-sous-theme-list [sousThemes]="sousThemes"></app-sous-theme-list>
+    </div>
+  </div>
+
+  <!-- Formations -->
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-padding-32 w3-xlarge" routerLink="/formations">
+      Formations<i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-xlarge">
+      <app-formation-list [formations]="formations"></app-formation-list>
+    </div>
+  </div>
+</div>
+
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>

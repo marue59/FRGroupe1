@@ -1,0 +1,39 @@
+@import "../Front/src/styles.scss";
+// Background color pour la barre de navigation
+nav {
+    border: 1px black;
+    background-color: $primary-color;
+    width: auto;
+    height: 120px; border-radius: 1px;
+}
+
+.nav-link {
+  color : white;
+  font-weight: 550;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+// Ajuste la hauteur et la largeur de la barre de recherche
+input {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #8b8691;
+    margin-right: 10px;
+     font-size: 1.4rem;
+}
+.dropdownSearch {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: $primary-color;
+  color : white;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

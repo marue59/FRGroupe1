@@ -1,0 +1,8 @@
+<!-- La composante bouton pour les trois options : Inter/Intra/Personnalisé -->
+<!-- ngStyle pour appliquer le style selon si l'utilisateur a cliqué sur le bouton ou sur un autre bouton -->
+<!-- (click) pour appeler la méthode en output : clicked, et remonter l'info vers le parent -->
+<button class="bouton" [ngStyle]="buttonFocus()" (click)="clicked()">
+  <span class="text" [ngStyle]="textFocus()">
+    {{text}}
+  </span>
+</button>

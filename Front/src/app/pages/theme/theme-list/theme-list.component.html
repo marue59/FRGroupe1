@@ -1,0 +1,12 @@
+<!-- Pour la sideBar-->
+<div class="d-flex justify-content-center">
+  <ul class="w3-dropdown-content w3-bar-block">
+    <li
+      class="w3-bar-item w3-button w3-padding-32 w3-large"
+      *ngFor="let theme of themes"
+      routerLink="/themes/{{ theme.id }}"
+    >
+      {{ theme.nom }}
+    </li>
+  </ul>
+</div>

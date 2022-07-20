@@ -1,0 +1,39 @@
+<!-- Composante qui contiendra les informations personnelles de l'utilisateur (comme le nom/prenom/email/...etc) -->
+
+<div class="globalContainer">
+
+    <!-- Les détails de la formation -->
+    <div class="infos">
+
+        <div class="rightSection">
+
+            <!-- Le petit rectangle en haut à droite qui donne un peu de style à la carte -->
+            <div class="petitRectangle">
+
+            </div>
+
+            <!-- Donner la possibilité à l'utilisateur de changer son email ou son numéro de téléphone -->
+            <div class="infosChange">
+
+                <a href="">
+                    <p>Changer l'email</p>
+                </a>
+                <a href="">
+                    <p>Changer le numéro</p>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Les informations personnelles de l'utilisateur -->
+        <div class="texte">
+            <p> <span>Prenom:</span> {{utilisateur.prenom}}</p>
+            <p> <span>Nom:</span> {{utilisateur.nom}}</p>
+            <p> <span>Email:</span> {{utilisateur.email}}</p>
+            <p> <span>Numéro de téléphone:</span> {{utilisateur.telephone}}</p>
+
+        </div>
+    </div>
+
+</div>

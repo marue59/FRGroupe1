@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="../../../assets/IT_Training.png"
+        alt="IT Training"
+        class="logo"
+        width="150px"
+        height="50px"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-flex justify-content-around">
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav p-2">
+          <li class="nav-item m-2">
+            <a class="nav-link w3-xlarge" routerLink="/">Accueil</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link w3-xlarge" routerLink="/">Actualités</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link w3-xlarge" routerLink="/formations"
+              >Formations</a
+            >
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link w3-xlarge" routerLink="/connexion">Connexion</a>
+          </li>
+          <!-- div form pour séparer la barre de recherche des 3 boutons et pouvoir àjuster sa position -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <!-- barre de recherche -->
+    <input
+      (click)="onClick()"
+      (ngModelChange)="onChangeFormationInput($event)"
+      [(ngModel)]="forma"
+      type="search"
+      placeholder=" Rechercher une formation"
+    />
+    <div *ngIf="click" class="dropdownSearch">
+      <ng-container *ngFor="let formation of formationsCopy">
+        <p (click)="goToFormation(formation)">{{ formation.nom }}</p>
+      </ng-container>
+    </div>
+  </div>
+</nav>
